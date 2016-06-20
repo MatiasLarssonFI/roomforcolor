@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}{{ strings.page_title }}{% endblock %}
+
+{% block content %}
+<main>
+    <div class="row">
+        <div class="col-xs-12 col-md-7 video-container">
+            <div class="row">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" controls>
+                        {% for file in selected_video.get_video_files %}
+                        <source src="{{ __base_uri }}{{ file.get_url }}" type="video/{{ file.get_mime_subtype }}">
+                        {% endfor %}
+                    </video>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>{{ selected_video.get_name }}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>{{ selected_video.get_description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-offset-1 videos-list-container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3><small>{{ strings.videos_list_caption }}</small></h3>
+                </div>
+            </div>
+        {% for video in videos %}
+            <div class="row row-video">
+                <div class="col-xs-8 col-sm-5">
+                    <a href="{{ __base_uri }}/{{ lang }}/videos/{{ video.get_id }}/{{ video.get_url_name }}" title="{{ video.get_name }}">
+                        <img class="img-thumbnail" alt="" src="{{ __base_uri }}{{ video.get_thumb_url }}">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                    <a href="{{ __base_uri }}/{{ lang }}/videos/{{ video.get_id }}/{{ video.get_url_name }}" title="{{ video.get_name }}"><strong>{{ video.get_name }}</strong></a>
+                    <p>{{ video.get_description }}</p>
+                </div>
+            </div>
+            
+        {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}

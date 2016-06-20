@@ -1,0 +1,31 @@
+<div class='hidden-xs hidden-sm row'>
+    <div class='col-md-10'>
+        <nav>
+            <ul class='nav nav-pills woodparts-nav'>
+                {% for link in __nav_links %}
+                    <li {{ link.is_active ? "class='active'" : "" }}><a href='{{ __base_uri }}/{{ __lang }}/{{ link.get_action }}' title="{{ link.get_text }}">{{ link.get_text }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+    <div class='col-md-2'>
+        <ul class='lang nav nav-pills downsize'>
+            {$links_html}
+        </ul>
+    </div>
+</div>
+<div class='hidden-md hidden-lg'>
+    <nav>
+        <ul class='nav nav-pills nav-stacked woodparts-nav'>
+            {% for link in __nav_links %}
+                <li {{ link.is_active ? "class='active'" : "" }}><a href='{{ __base_uri }}/{{ __lang }}/{{ link.get_action }}' title="{{ link.get_text }}">{{ link.get_text }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <hr>
+    <ul class='lang nav nav-pills nav-stacked'>
+        {% for link in __lang_links %}
+            <li><a href='{{ __base_uri }}/{{ link.get_language }}/{{ link.get_action }}'><strong>{{ link.get_text }}</strong></a></li>
+        {% endfor %}
+    </ul>
+</div>

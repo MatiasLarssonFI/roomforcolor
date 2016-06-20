@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+            <link rel="stylesheet" href="{{ __base_uri }}/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+            
+            <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
+            <script src="{{ __base_uri }}/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+            <script src="{{ __base_uri }}/js/rfc.js"></script>
+            
+            {% block head_extra %}{% endblock %}
+            
+            <link rel="stylesheet" href="{{ __base_uri }}/css/layout.css">
+            <link rel="stylesheet" href="{{ __color_css_uri }}">
+            
+            <title>{% block title %}{% endblock %} - Room for color</title>
+            
+            <script>
+                // all AJAX shall actually be asynchronous (duh!)
+                $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+                    options.async = true;
+                });
+            </script>
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12" id="header">
+                    <img class="img-responsive" alt='WOODparts Finland' src="{{ __header_img_uri }}" id="header-img">
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-4 col-md-12">
+                   <div class="row">
+                       <div class="col-xs-12">
+                           {% include "nav.html" %}
+                       </div>
+                   </div>
+               </div>
+               <div class="col-xs-8 col-md-12">
+                {% block content %}{% endblock %}
+               </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" id="footer">
+                    <img class="img-responsive" alt='solutions for wood design' src="{{ __footer_img_uri }}" id="footer-img">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ __base_uri }}/lib/Gallery-2.18.2/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="{{ __base_uri }}/lib/Bootstrap-Image-Gallery-3.4.2/css/bootstrap-image-gallery.min.css">
+{% endblock %}
+{% block title %}{{ strings.page_title }}{% endblock %}
+
+{% block content %}
+<main>
+    <div id="wp-gallery-images" class="row">
+    {% for image in images %}
+        <div class="col-xs-4 col-md-2">
+            <a href="{{ __base_uri }}{{ image.get_original_url }}" title="{{ image.get_name }}" data-gallery data-img_id="{{ image.get_id }}">
+                <img class="img-responsive gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="{{ image.get_name }}">
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</main>
+
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ __base_uri }}/lib/Gallery-2.18.2/js/jquery.blueimp-gallery.min.js"></script>
+<script src="{{ __base_uri }}/lib/Bootstrap-Image-Gallery-3.4.2/js/bootstrap-image-gallery.min.js"></script>
+<script src="{{ __base_uri }}/js/gallery.js"></script>
+<script>
+    !function($) {
+        $(document).ready(function() {
+            wp.gallery.update();
+        });
+    }(jQuery);
+</script>
+{% endblock %}

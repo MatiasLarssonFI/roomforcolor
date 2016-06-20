@@ -1,0 +1,74 @@
+main {
+    border-top: 1px solid #C0C0C0;
+}
+
+
+.img-bar-img, .gallery-img {
+    border: 2px solid #C0C0C0;
+    box-shadow: 2px 0px 5px #C0C0C0;
+}
+
+
+.lang a {
+    border: 1px solid #dfdfdf;
+    color: #000080;
+    background-color: #eee;
+}
+
+
+.lang li > a:hover {
+    border-color: #000080;
+}
+
+
+.woodparts-nav > li > a,
+.woodparts-nav > li > a:hover,
+.woodparts-nav > li > a:visited {
+    color: #000080;
+    font-family: monospace;
+}
+
+
+.woodparts-nav > li.active > a,
+.woodparts-nav > li.active > a:focus,
+.woodparts-nav > li.active > a:hover {
+    background-color: #fff;
+    color: #000080;
+    border-bottom: 1px solid #000080;
+}
+
+
+.btn-primary {
+    background-color: #000080;
+    border-color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #000080;
+}
+
+
+.videos-list-container h3 {
+    border-bottom: 1px solid #ccc;
+}
+
+
+.videos-list-container {
+    border-left: 1px solid #ddd;
+}
+
+
+.videos-list-container .row-video:hover {
+    background-color: #eee;
+}
+
+
+.videos-list-container hr {
+    border-color: #ccc;
+}
+
+
+.video-container {
+    background-color: #f6f6f6;
+    box-shadow: 0px 0px 5px 2px #bbb;
+}

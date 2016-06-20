@@ -1,0 +1,9 @@
+Nimi: {{ message.get_name }}
+----------------------------------
+Aihe: {{ message.get_subject }}
+----------------------------------
+Sähköposti: {{ message.get_email }}
+----------------------------------
+Viesti:
+
+{{ message.get_message }}
