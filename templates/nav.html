@@ -10,7 +10,9 @@
     </div>
     <div class='col-md-2'>
         <ul class='lang nav nav-pills downsize'>
-            {$links_html}
+            {% for link in __lang_links %}
+                <li><a href='{{ __base_uri }}/{{ link.get_language }}/{{ link.get_action }}'><strong>{{ link.get_text }}</strong></a></li>
+            {% endfor %}
         </ul>
     </div>
 </div>
