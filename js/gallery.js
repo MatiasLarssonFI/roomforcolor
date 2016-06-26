@@ -6,7 +6,7 @@
         }
     };
     
-    wp.gallery = {
+    rfc.gallery = {
         update : function() {
             _update_open_by_url($("#wp-gallery-images"));
         }

@@ -1,5 +1,5 @@
 !function($) {
-    wp.contact = {
+    rfc.contact = {
         init : function() {
             $("#contact-form").unbind("submit").submit(function(e) {
                 e.preventDefault();
