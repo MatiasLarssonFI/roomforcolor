@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 20, 2016 at 10:42 PM
+-- Generation Time: Jun 21, 2016 at 09:21 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -62,20 +62,15 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (22, 'en', 'CONTACT_FIELD_ERROR_MESSAGE', 'The message must be longer than three characters.', NULL, '0000-00-00 00:00:00'),
 (23, 'fi', 'CONTACT_FIELD_ERROR___CSRF_TOKEN', 'Pahoittelumme, mutta lomake on vanhentunut. Ole hyvä ja yritä uudelleen.', '2016-04-15 19:59:42', '2016-04-13 21:00:00'),
 (24, 'en', 'CONTACT_FIELD_ERROR___CSRF_TOKEN', 'We''re sorry but the form has expired. Please try again.', '2016-04-15 19:58:48', '2016-04-13 21:00:00'),
-(25, 'se', 'NAV_FRONT_PAGE', 'Framsida', NULL, '2016-03-11 20:00:00'),
-(26, 'fi', 'NAV_FRONT_PAGE', 'Etusivu', NULL, '2016-03-11 20:00:00'),
-(27, 'en', 'NAV_FRONT_PAGE', 'Front page', NULL, '2016-03-11 20:00:00'),
+(26, 'fi', 'NAV_FRONT_PAGE', 'Koti', '2016-06-21 18:14:52', '2016-03-11 20:00:00'),
+(27, 'en', 'NAV_FRONT_PAGE', 'Home', '2016-06-21 18:14:54', '2016-03-11 20:00:00'),
 (28, 'en', 'NAV_CONTACT', 'Contact', NULL, '2016-03-11 20:00:00'),
-(29, 'se', 'NAV_CONTACT', 'Kontakt', NULL, '2016-03-11 20:00:00'),
 (30, 'fi', 'NAV_CONTACT', 'Yhteydenotto', NULL, '2016-03-11 20:00:00'),
-(31, 'fi', 'FRONT_PAGE_PROMO', 'Kehitämme ja valmistamme prototyypejä ja sisustusosia puusta. Hyödynnämme mm. cnc-tekniikkaa ja puun muotopuristusta.', '2016-05-15 15:35:20', '2016-03-05 20:00:00'),
-(32, 'se', 'FRONT_PAGE_PROMO', 'Vi utvecklar och tillverkar prototyper och inredningsdetaljer av trä. Cnc-fräsning och vakumlaminering ar några av de tekniker vi tillämpar.', '2016-03-06 14:17:29', '2016-03-05 20:00:00'),
-(33, 'en', 'FRONT_PAGE_PROMO', 'We develop and manufacture prototypes and furniture parts from various wood materials. Cnc-routing and vacuum veneering are some of the technics at our disposal.', '2016-03-06 14:17:35', '2016-03-05 20:00:00'),
-(34, 'fi', 'FRONT_PAGE_TITLE', 'Solutions for wood design', '2016-03-06 14:15:39', '2016-03-05 20:00:00'),
-(35, 'se', 'FRONT_PAGE_TITLE', 'Solutions for wood design', NULL, '2016-03-05 20:00:00'),
-(36, 'en', 'FRONT_PAGE_TITLE', 'Solutions for wood design', NULL, '2016-03-05 20:00:00'),
+(31, 'fi', 'FRONT_PAGE_PROMO', 'Etusivu', '2016-06-21 18:03:57', '2016-03-05 20:00:00'),
+(33, 'en', 'FRONT_PAGE_PROMO', 'Front page', '2016-06-21 18:04:02', '2016-03-05 20:00:00'),
+(34, 'fi', 'FRONT_PAGE_TITLE', 'Room for color', '2016-06-21 18:04:39', '2016-03-05 20:00:00'),
+(36, 'en', 'FRONT_PAGE_TITLE', 'Room for color', '2016-06-21 18:04:50', '2016-03-05 20:00:00'),
 (37, 'fi', 'EXCEPTION_PAGE_TITLE', 'Virhe', NULL, '2016-03-05 20:00:00'),
-(38, 'se', 'EXCEPTION_PAGE_TITLE', 'Fel', NULL, '2016-03-05 20:00:00'),
 (39, 'en', 'EXCEPTION_PAGE_TITLE', 'Error', NULL, '2016-03-05 20:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
