@@ -60,6 +60,22 @@ class UITextStorage {
     
     
     /**
+     * Returns the UI text in current language, as paragraphs.
+     * 
+     * @param string $code The UI text code
+     * @return string[]
+     */
+    public function paragraphs($code) {
+        return $this->make_paragraphs($this->text($code));
+    }
+    
+    
+    private function make_paragraphs($text) {
+        return explode("\n\n", $text);
+    }
+    
+    
+    /**
      * Returns the current language ISO 3166-1 alpha-2 code.
      * 
      * @return string
@@ -71,6 +87,7 @@ class UITextStorage {
     
     private function load_texts($language) {
         $texts = &$this->_texts;
+        $texts = [];
         DBIF::get()->get_ui_texts($language, function(array $row) use(&$texts) {
             $texts[$row["code"]] = $row["content"];
         });

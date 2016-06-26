@@ -17,7 +17,7 @@ try {
             );
     $request["params"] = array_filter(explode("/", $request["params"]), "strlen"); // :<
     
-    $nlf = new \NavLinkFactory($request["action"], array("", "contact"), $request["language"]);
+    $nlf = new \NavLinkFactory($request["action"], array("", "about", "contact"), $request["language"]);
     
     UITextStorage::get()->try_change_language($request["language"]);
     Views\ViewFactory::get()->get_view($request["action"], $request["params"], $request["language"], $nlf)->render();

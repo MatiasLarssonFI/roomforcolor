@@ -2,6 +2,14 @@
 <div class="alert alert-danger">{{ errors.__csrf_token }}</div>
 {% endif %}
 
+<div class="row">
+    <div class="col-xs-12">
+        {% for p in body_paragraphs %}
+            <p>{{ p|nl2br }}</p>
+        {% endfor %}
+    </div>
+</div>
+<hr>
 <form method="post" action="{{ __base_uri }}/{{ lang }}/contact_submit" class="form-horizontal" id="contact-form">
     <input type="hidden" name="__csrf_token" value="{{ __csrf_token }}">
     <input type="hidden" id="is_ajax" name="is_ajax" value="0">
@@ -24,19 +32,19 @@
             {% endif %}
         </div>
     </div>
-    <div class="form-group {{ errors.subject is defined ? 'has-error': '' }}">
-        <label for="subject" class="col-sm-4">{{ strings.field_subject }}</label>
+    <div class="form-group {{ errors.phone is defined ? 'has-error': '' }}">
+        <label for="subject" class="col-sm-4">{{ strings.field_phone }}</label>
         <div class="col-sm-8">
-            <input type="text" id="subject" name="subject" class="form-control" value="{{ prefill.subject }}" required>
-            {% if errors.subject is defined %}
-                <span class="help-block">{{ errors.subject }}<span>
+            <input type="text" id="phone" name="phone" class="form-control" value="{{ prefill.phone }}">
+            {% if errors.phone is defined %}
+                <span class="help-block">{{ errors.phone }}<span>
             {% endif %}
         </div>
     </div>
     <div class="form-group {{ errors.message is defined ? 'has-error': '' }}">
         <label for="message" class="col-xs-12">{{ strings.field_message }}</label>
         <div class="col-xs-12">
-            <textarea id="message" name="message" class="form-control" rows="4" minlength="3" required>{{ prefill.message }}</textarea>
+            <textarea id="message" name="message" class="form-control" rows="4" minlength="3" required placeholder="{{ placeholder.message }}">{{ prefill.message }}</textarea>
             {% if errors.message is defined %}
                 <span class="help-block">{{ errors.message }}<span>
             {% endif %}
@@ -53,7 +61,7 @@
 <script>
     !function($) {
         $(document).ready(function() {
-            wp.contact.init();
+            rfc.contact.init();
         });
     }(jQuery);
 </script>

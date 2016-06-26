@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ strings.page_title }}{% endblock %}
+
+{% block content %}
+<main>
+    <div class="row">
+        <div class="col-xs-12">
+            {% for p in body_paragraphs %}
+                <p>{{ p|nl2br }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}
