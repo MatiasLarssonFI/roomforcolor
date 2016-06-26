@@ -49,7 +49,6 @@ class ContactSubmitView extends AbstractView {
             "placeholder" => array(
                 "message" => $text_storage->text("CONTACT_PLACEHOLDER_MESSAGE")
             ),
-            "body_paragraphs" => $text_storage->paragraphs("CONTACT_PAGE_TEXT"),
             "prefill" => $params,
             "errors" => $errors,
             "is_ajax" => (bool)$params["is_ajax"],
