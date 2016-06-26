@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 21, 2016 at 09:21 PM
+-- Generation Time: Jun 26, 2016 at 05:41 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -44,10 +44,10 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (4, 'fi', 'CONTACT_FIELD_EMAIL', 'Sähköpostiosoitteesi', NULL, '2016-04-02 21:00:00'),
 (5, 'fi', 'CONTACT_FIELD_SUBJECT', 'Aihe', NULL, '2016-04-02 21:00:00'),
 (6, 'fi', 'CONTACT_FIELD_MESSAGE', 'Viesti', NULL, '0000-00-00 00:00:00'),
-(7, 'en', 'CONTACT_FIELD_NAME', 'Your name', NULL, '2016-04-02 18:00:00'),
+(7, 'en', 'CONTACT_FIELD_NAME', 'Name', '2016-06-26 14:28:47', '2016-04-02 18:00:00'),
 (8, 'en', 'CONTACT_FIELD_EMAIL', 'Your e-mail address', NULL, '2016-04-02 18:00:00'),
 (9, 'en', 'CONTACT_FIELD_SUBJECT', 'Subject', NULL, '2016-04-02 18:00:00'),
-(10, 'en', 'CONTACT_FIELD_MESSAGE', 'Message', NULL, '0000-00-00 00:00:00'),
+(10, 'en', 'CONTACT_FIELD_MESSAGE', 'Question/comment', '2016-06-26 14:29:27', '0000-00-00 00:00:00'),
 (11, 'fi', 'CONTACT_SUBMIT', 'Lähetä viesti', NULL, '2016-04-02 21:00:00'),
 (12, 'en', 'CONTACT_SUBMIT', 'Send message', NULL, '2016-04-02 21:00:00'),
 (13, 'fi', 'CONTACT_SUBMIT_TEXT', 'Kiitos yhteydenotostasi. Olemme sinuun yhteydessä pian.', NULL, '2016-04-02 21:00:00'),
@@ -71,7 +71,35 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (34, 'fi', 'FRONT_PAGE_TITLE', 'Room for color', '2016-06-21 18:04:39', '2016-03-05 20:00:00'),
 (36, 'en', 'FRONT_PAGE_TITLE', 'Room for color', '2016-06-21 18:04:50', '2016-03-05 20:00:00'),
 (37, 'fi', 'EXCEPTION_PAGE_TITLE', 'Virhe', NULL, '2016-03-05 20:00:00'),
-(39, 'en', 'EXCEPTION_PAGE_TITLE', 'Error', NULL, '2016-03-05 20:00:00');
+(39, 'en', 'EXCEPTION_PAGE_TITLE', 'Error', NULL, '2016-03-05 20:00:00'),
+(40, 'nl', 'NAV_ABOUT', 'Wie en Wat', NULL, '0000-00-00 00:00:00'),
+(41, 'en', 'NAV_ABOUT', 'About me', NULL, '0000-00-00 00:00:00'),
+(42, 'fi', 'NAV_ABOUT', 'Tietoa minusta', NULL, '0000-00-00 00:00:00'),
+(43, 'nl', 'CONTACT_TITLE', 'Contact', NULL, '2016-03-11 20:00:00'),
+(44, 'nl', 'NAV_FRONT_PAGE', 'Home', '2016-06-21 18:14:54', '2016-03-11 20:00:00'),
+(45, 'nl', 'NAV_CONTACT', 'Contact', NULL, '2016-03-11 20:00:00'),
+(46, 'nl', 'FRONT_PAGE_TITLE', 'Room for color', '2016-06-21 18:04:50', '2016-03-05 20:00:00'),
+(47, 'nl', 'EXCEPTION_PAGE_TITLE', 'Fout', '2016-06-26 12:43:01', '2016-03-05 20:00:00'),
+(48, 'nl', 'FRONT_PAGE_PROMO', 'Home page', '2016-06-21 18:04:02', '2016-03-05 20:00:00'),
+(49, 'en', 'ABOUT_PAGE_TEXT', 'Welcome to my site Room for Color!\n\nHopefully you may find something or be inspired.\n\nMy name is Fiona Ansink and I am living since 2006 in Finland, land of my heart.\nI have been born in the Netherlands and after seeing several other countries I found my place in the land of over the thousand lakes.\n\nFrom the moment I discovered colour pencils and could hold them, I have been fascinated by colour and creating! \nBesides my love for drawing I am interested in everything that has to do with creating something: like building houses, creating and restoration of \nfurniture, designing, photography and painting. My passion for painting started out and has developed with painting of interior and exterior of houses.\nMy beloved father got my passion going since I was 12 years old.\n\nWhile working for Ruukinpaja in Karkkila, South-Finland, I got the opportunity to show my passion for renovating and decorative painting of furniture.\n\nYou can also visit me on my Facebook site.\n\n\nInformation of what I can do\n\nOn this site you can find a selection of my work I have been doing so far, this contains wall paintings, decorative painting of furniture: cupboards, \nbaby cribs, chairs, tables, chests, trays and doorplates, some of these I have made myself and/or designed.\n\nFurther more I make colour pencil and pencil drawings on request.\nMy passion and experience is of realistic showing of people, animals, landscapes and plants.\n\nWall paintings can be for children rooms, bedrooms, living rooms, hallways, kitchens, restaurant, café, hospital, daycare, health facility or any other company.', '2016-06-26 14:08:02', '0000-00-00 00:00:00'),
+(50, 'nl', 'ABOUT_PAGE_TEXT', 'Welkom op mijn site Room for Color!\n\nDat U hier iets mag vinden of geïnspireerd mag raken.\n\nMijn naam is Fiona Ansink en woon sinds 2006 in Finland, het land naar mijn hart.\nBen geboren in Nederland en na meerdere landen te hebben doorgetrokken heb ik mijn stekje gevonden in het land van de ruim duizend meren.\n\nVanaf het moment dat ik de kleurpotloden ontdekte en vast kon houden heeft kleur en creëren mij gefascineerd!\nNaast mijn liefde voor tekenen, interesseert alles met het creëren van iets mij, zoals het bouwen van huizen, maken en restaureren van meubels, \nontwerpen, fotografie en schilderen. De grootte passie voor schilderen is ontstaan met het beschilderen van interieurs en exterieurs van huizen, \nwelke mijn geliefde vader heeft meegegeven sinds ik 12 jaar was.\n\nBij Ruukinpaja in Karkkila, Zuid-Finland, kreeg ik de mogelijkheid om mijn passie te laten zien, zoals het renoveren van meubels en het decoratief \nbeschilderen van meubels.\n\nU kunt ook mijn Facebook site bezoek.\n\n\nInformatie over wat ik doe\n\nOp deze site kunt U een selectie vinden van de werken die ik tot nu toe heb gedaan, dit bevat muurschilderingen, decoratieve beschildering van \nmeubels: kasten, babybedjes, stoelen, tafels, kisten, dienbladen en naambordjes, waarvan ik sommige zelf heb gemaakt en ontworpen.\nDaarnaast maak ik ook kleurtekeningen en potloodtekeningen op verzoek.\nMijn passie en ervaring ligt in het realistisch weergeven van mensen, dieren, landschappen en planten.', '2016-06-26 14:08:10', '0000-00-00 00:00:00'),
+(51, 'en', 'ABOUT_PAGE_TITLE', 'About me', NULL, '0000-00-00 00:00:00'),
+(52, 'nl', 'ABOUT_PAGE_TITLE', 'Wie en Wat', NULL, '0000-00-00 00:00:00'),
+(53, 'fi', 'ABOUT_PAGE_TITLE', 'Tietoa minusta', NULL, '0000-00-00 00:00:00'),
+(54, 'en', 'CONTACT_PAGE_TEXT', 'Would You have questions and/or comments? Please fill in this form.\r\nI will get in contact with You as soon as possible.\r\n\r\nWould You rather call? You can use this following number: (+358) 0440610497', NULL, '0000-00-00 00:00:00'),
+(55, 'nl', 'CONTACT_PAGE_TEXT', 'Heeft U vragen en/of opmerkingen? Vul dan het onderstaand formulier in.\r\nIk neem dan zo spoedig mogelijk contact met U op.\r\n\r\nOf wilt U liever direct bellen? Bel dan: (+358) 0440610497', NULL, '0000-00-00 00:00:00'),
+(56, 'en', 'CONTACT_PLACEHOLDER_MESSAGE', 'Please try to give a complete description.', '2016-06-26 14:27:00', '0000-00-00 00:00:00'),
+(57, 'nl', 'CONTACT_PLACEHOLDER_MESSAGE', 'Geef a.u.b. een zo volledig mogelijke omschrijving.', NULL, '0000-00-00 00:00:00'),
+(58, 'en', 'CONTACT_FIELD_PHONE', 'Telephone number', NULL, '0000-00-00 00:00:00'),
+(59, 'nl', 'CONTACT_FIELD_PHONE', 'Telefoonnummer', NULL, '0000-00-00 00:00:00'),
+(60, 'nl', 'CONTACT_SUBMIT', 'Verzend gegevens', NULL, '2016-04-02 21:00:00'),
+(61, 'nl', 'CONTACT_FIELD_NAME', 'Naam', NULL, '2016-04-02 18:00:00'),
+(62, 'nl', 'CONTACT_FIELD_EMAIL', 'E-mail adres', NULL, '2016-04-02 21:00:00'),
+(63, 'nl', 'CONTACT_FIELD_MESSAGE', 'Vraag/opmerkingen', '2016-06-26 14:29:27', '0000-00-00 00:00:00'),
+(64, 'fi', 'CONTACT_FIELD_PHONE', 'Puhelinnumero', NULL, '0000-00-00 00:00:00'),
+(65, 'fi', 'CONTACT_PLACEHOLDER_MESSAGE', 'Ole hyvä ja anna mahdollisimman tarkka kuvaus.', '2016-06-26 14:27:00', '0000-00-00 00:00:00'),
+(66, 'nl', 'CONTACT_SUBMIT_TEXT', 'Dank je. We zullen binnenkort contact met u op.', '2016-04-03 16:28:03', '2016-04-02 21:00:00'),
+(67, 'fi', 'CONTACT_PAGE_TEXT', 'Yhteydenotto.', NULL, '0000-00-00 00:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
