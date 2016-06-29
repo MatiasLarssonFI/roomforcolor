@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2016 at 05:42 PM
+-- Generation Time: Jun 29, 2016 at 09:07 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `contact_inbox` (
   `name` varchar(200) COLLATE utf8_swedish_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
   `subject` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
   `message` text COLLATE utf8_swedish_ci NOT NULL,
   `time_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `time_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',

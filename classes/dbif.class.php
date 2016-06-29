@@ -234,16 +234,18 @@ class DBIF {
     
     
     public function insert_contact_message(IContactMessage $message) {
-        $stm = $this->_pdo->prepare("INSERT INTO `contact_inbox` (name, email, subject, message, time_created) VALUES(:name, :email, :subject, :message, now())");
+        $stm = $this->_pdo->prepare("INSERT INTO `contact_inbox` (name, email, subject, phone, message, time_created) VALUES(:name, :email, :subject, :phone, :message, now())");
         
         $name = $message->get_name();
         $email = $message->get_email();
         $subject = $message->get_subject();
+        $phone = $message->get_phone();
         $msg = $message->get_message();
         
         $stm->bindParam(":name", $name, PDO::PARAM_STR);
         $stm->bindParam(":email", $email, PDO::PARAM_STR);
         $stm->bindParam(":subject", $subject, PDO::PARAM_STR);
+        $stm->bindParam(":phone", $phone, PDO::PARAM_STR);
         $stm->bindParam(":message", $msg, PDO::PARAM_STR);
         $stm->execute();
     }

@@ -27,13 +27,13 @@ class ContactMessageFactory {
      * 
      * @param string $name
      * @param string $email
-     * @param string $subject
+     * @param string $phone
      * @param string $message
      * 
      * @return IContactMessage[]
      */
-    public function make_from_values($name, $email, $subject, $message) {
-        return new ContactMessage($name, $email, $subject, $message);
+    public function make_from_values($name, $email, $phone, $message) {
+        return new ContactMessage($name, $email, $phone, $message);
     }
     
     

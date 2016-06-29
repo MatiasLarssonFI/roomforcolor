@@ -1,6 +1,6 @@
 Nimi: {{ message.get_name }}
 ----------------------------------
-Aihe: {{ message.get_subject }}
+Puhelin: {{ message.get_phone }}
 ----------------------------------
 Sähköposti: {{ message.get_email }}
 ----------------------------------

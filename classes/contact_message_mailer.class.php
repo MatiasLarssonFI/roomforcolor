@@ -37,7 +37,7 @@ class ContactMessageMailer implements IMailer {
         $mail->isHTML(true);                             // Set email format to HTML
     
         $mail->CharSet = 'UTF-8';
-        $mail->Subject = "RFC_CONTACT: {$contactmsg->get_subject()}";
+        $mail->Subject = "RFC-CONTACT: {$contactmsg->get_subject()}";
         $mail->Body    = $twig->render("contact_email.html", array("message" => $contactmsg));
         $mail->AltBody = $twig->render("contact_email.txt", array("message" => $contactmsg));
 

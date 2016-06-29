@@ -10,13 +10,13 @@ class ContactMessage implements IContactMessage, IEmailMessage {
      * 
      * @param string $name
      * @param string $email
-     * @param string $subject
+     * @param string $phone
      * @param string $message
      */
-    public function __construct($name, $email, $subject, $message) {
+    public function __construct($name, $email, $phone, $message) {
         $this->_name = $name;
         $this->_email = $email;
-        $this->_subject = $subject;
+        $this->_phone = $phone;
         $this->_message = $message;
     }
     
@@ -32,7 +32,12 @@ class ContactMessage implements IContactMessage, IEmailMessage {
     
     
     public function get_subject() {
-        return $this->_subject;
+        return $this->_name; // name as subject
+    }
+    
+    
+    public function get_phone() {
+        return $this->_phone;
     }
     
     
