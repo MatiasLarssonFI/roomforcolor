@@ -4,11 +4,11 @@ namespace Views;
 
 require_once(dirname(__FILE__) . "/abstract_view.class.php");
 require_once(dirname(__FILE__) . "/../ui_text_storage.class.php");
-require_once(dirname(__FILE__) . "/../gallery_image_factory.class.php");
+require_once(dirname(__FILE__) . "/../gallery_factory.class.php");
 
 class GalleryView extends AbstractView {
     protected function get_required_params() {
-        return array();
+        return array("gallery_id");
     }
     
     
@@ -19,11 +19,13 @@ class GalleryView extends AbstractView {
     
     protected function get_view_data(array $params) {
         $text_storage = \UITextStorage::get();
+        $factory = GalleryFactory::get();
+        $gallery = $factory->get_gallery((int)$params["gallery_id"]);
         return array(
             "strings" => array(
-                "page_title" => $text_storage->text("GALLERY_TITLE")
+                "page_title" => $gallery->get_name()
             ),
-            "images" => \GalleryImageFactory::get()->get_gallery_images()
+            "images" => $factory->get_gallery_images($gallery->get_id())
         );
     }
 }

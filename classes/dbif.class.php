@@ -62,12 +62,45 @@ class DBIF {
     
     
     /**
-     * Get the gallery images.
+     * Get the gallery.
      * 
      * Calls cb_store_row on each row.
      */
-    public function get_gallery_images($cb_store_row) {
-        $stm = $this->_pdo->prepare("SELECT thumb_url, original_url, name, description, id FROM gallery_image where is_published");
+    public function get_gallery($id, $language) {
+        $stm = $this->_pdo->prepare(
+                    "SELECT gallery.id, gn.content as name
+                    from gallery
+                    inner join gallery_name gn
+                        on gn.gallery_id = gallery.id
+                        and gb.language = :lang
+                    where id = :id
+                    ");
+        $stm->bindParam(":id", $id, PDO::PARAM_INT);
+        $stm->bindParam(":lang", $language, PDO::PARAM_STR);
+        $stm->execute();
+        if ($stm->rowCount() > 0) {
+            return $stm->fetch();
+        }
+        
+        throw new InvalidArgumentException("No gallery for id '{$id}' and lang '{$language}'");
+    }
+    
+    
+    /**
+     * Get the gallery images.
+     * 
+     * Calls cb_store_row on each row
+     * 
+     * @param int $gallery_id
+     */
+    public function get_gallery_images($cb_store_row, $gallery_id) {
+        $stm = $this->_pdo->prepare(
+                            "SELECT image.thumb_uri, image.original_uri, image.id
+                            FROM gallery
+                            inner join gallery_image gi on gi.gallery_id = :g_id
+                            inner join image in gi.image_id = image.id
+                            where is_published");
+        $stm->bindParam(":g_id", $gallery_id, PDO::PARAM_INT);
         $stm->execute();
         
         while ($row = $stm->fetch()) {
@@ -82,8 +115,14 @@ class DBIF {
      * 
      * Calls cb_store_row on each row.
      */
-    public function get_img_bar_images($cb_store_row) {
-        $stm = $this->_pdo->prepare("SELECT thumb_url, name, id FROM gallery_image WHERE is_bar_img and is_published");
+    public function get_front_page_images($cb_store_row) {
+        $stm = $this->_pdo->prepare(
+                            "SELECT image.thumb_uri, image.id
+                            FROM gallery g
+                            inner join gallery_image gi on gi.gallery_id = g.id
+                            inner join image on image.id = gi.image_id
+                            
+                            WHERE g.action = ''");
         $stm->execute();
         
         while ($row = $stm->fetch()) {
@@ -98,7 +137,7 @@ class DBIF {
      * Calls cb_store_row on each row.
      */
     public function get_videos_page_videos_list($cb_store_row) {
-        $stm = $this->_pdo->prepare("SELECT thumb_url, name, description, id FROM videos_page_video where is_published");
+        $stm = $this->_pdo->prepare("SELECT thumb_uri, name, description, id FROM videos_page_video where is_published");
         $stm->execute();
         
         while ($row = $stm->fetch()) {
@@ -117,7 +156,7 @@ class DBIF {
     public function get_videos_page_video($id, $cb_store_row) {
         $stm = $this->_pdo->prepare(
                             "SELECT
-                                thumb_url,
+                                thumb_uri,
                                 name,
                                 description,
                                 vf.video_url as video_url,
@@ -133,20 +172,6 @@ class DBIF {
         }
     }
     
-    
-    /**
-     * Get the services.
-     * 
-     * Calls cb_store_row on each row.
-     */
-    public function get_services($cb_store_row) {
-        $stm = $this->_pdo->prepare("SELECT title, text, img_uri, gallery_img_id FROM service");
-        $stm->execute();
-        
-        while ($row = $stm->fetch()) {
-            $cb_store_row($row);
-        }
-    }
     
     
     /**
