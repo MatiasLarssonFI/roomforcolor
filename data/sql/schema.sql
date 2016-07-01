@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 29, 2016 at 09:07 PM
+-- Generation Time: Jul 01, 2016 at 08:05 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -56,20 +56,69 @@ CREATE TABLE IF NOT EXISTS `contact_inbox` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE IF NOT EXISTS `gallery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `time_created` datetime NOT NULL,
+  `time_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=2 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery_image`
+--
+
+CREATE TABLE IF NOT EXISTS `gallery_image` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_id` int(11) NOT NULL,
+  `gallery_id` int(11) NOT NULL,
+  `time_created` datetime NOT NULL,
+  `time_edited` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq` (`image_id`,`gallery_id`),
+  KEY `image_id` (`image_id`),
+  KEY `gallery_id` (`gallery_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=2 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery_name`
+--
+
+CREATE TABLE IF NOT EXISTS `gallery_name` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gallery_id` int(11) NOT NULL,
+  `language` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `content` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `time_created` datetime NOT NULL,
+  `time_edited` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq` (`gallery_id`,`language`),
+  KEY `gallery_id` (`gallery_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=2 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `image`
 --
 
 CREATE TABLE IF NOT EXISTS `image` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` text COLLATE utf8_swedish_ci NOT NULL,
-  `description` text COLLATE utf8_swedish_ci NOT NULL,
-  `thumb_url` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
-  `original_url` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `thumb_uri` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `original_uri` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
   `is_published` tinyint(1) NOT NULL DEFAULT '1',
   `time_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `time_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq` (`original_uri`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -87,6 +136,23 @@ CREATE TABLE IF NOT EXISTS `ui_text` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `lang_code_uniq` (`language`,`code`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=68 ;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `gallery_image`
+--
+ALTER TABLE `gallery_image`
+  ADD CONSTRAINT `gallery_image_ibfk_1` FOREIGN KEY (`image_id`) REFERENCES `image` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `gallery_image_ibfk_2` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `gallery_name`
+--
+ALTER TABLE `gallery_name`
+  ADD CONSTRAINT `gallery_name_ibfk_1` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
