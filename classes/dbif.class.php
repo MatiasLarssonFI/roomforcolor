@@ -113,7 +113,7 @@ class DBIF {
     
     
     /**
-     * Get the image bar images.
+     * Get the front page images.
      * 
      * Calls cb_store_row on each row.
      */
