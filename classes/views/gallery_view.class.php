@@ -19,7 +19,7 @@ class GalleryView extends AbstractView {
     
     protected function get_view_data(array $params) {
         $text_storage = \UITextStorage::get();
-        $factory = GalleryFactory::get();
+        $factory = \GalleryFactory::get();
         $gallery = $factory->get_gallery((int)$params["gallery_id"]);
         return array(
             "strings" => array(

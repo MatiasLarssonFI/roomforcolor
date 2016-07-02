@@ -74,8 +74,8 @@ class DBIF {
                     from gallery
                     inner join gallery_name gn
                         on gn.gallery_id = gallery.id
-                        and gb.language = :lang
-                    where id = :id
+                        and gn.language = :lang
+                    where gallery.id = :id
                     ");
         $stm->bindParam(":id", $id, PDO::PARAM_INT);
         $stm->bindParam(":lang", $language, PDO::PARAM_STR);
@@ -100,7 +100,7 @@ class DBIF {
                             "SELECT image.thumb_uri, image.original_uri, image.id
                             FROM gallery
                             inner join gallery_image gi on gi.gallery_id = :g_id
-                            inner join image in gi.image_id = image.id
+                            inner join image on gi.image_id = image.id
                             where is_published");
         $stm->bindParam(":g_id", $gallery_id, PDO::PARAM_INT);
         $stm->execute();
@@ -130,6 +130,47 @@ class DBIF {
         while ($row = $stm->fetch()) {
             $cb_store_row($row);
         }
+    }
+    
+    
+    /**
+     * Get the galleries for an action.
+     * 
+     * Calls cb_store_row on each row.
+     * 
+     * @param callable $cb_store_row
+     * @param string $action
+     * @param string $lang
+     */
+    public function get_action_galleries($cb_store_row, $action, $lang) {
+        $stm = $this->_pdo->prepare(
+                            "SELECT g.id, gn.content as name
+                            FROM gallery g
+                            inner join gallery_name gn
+                                on gn.gallery_id = g.id
+                                and gn.language = :lang
+                            WHERE g.action = :action");
+        $stm->bindParam(":action", $action, PDO::PARAM_STR);
+        $stm->bindParam(":lang", $lang, PDO::PARAM_STR);
+        $stm->execute();
+        
+        while ($row = $stm->fetch()) {
+            $cb_store_row($row);
+        }
+    }
+    
+    
+    public function get_gallery_actions() {
+        $ret = [];
+        
+        $stm = $this->_pdo->prepare("SELECT distinct action from gallery");
+        $stm->execute();
+        
+        while ($row = $stm->fetch()) {
+            $ret[] = $row["action"];
+        }
+        
+        return $ret;
     }
     
     

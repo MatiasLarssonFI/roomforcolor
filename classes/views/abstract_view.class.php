@@ -51,6 +51,7 @@ abstract class AbstractView implements IView {
         $data["__color_css_uri"] = $base_uri . \DBIF::get()->get_color_css_uri();
         $data["__lang"] = $language;
         $data["__nav_links"] = $this->_nlf->get_nav_links();
+        $data["__sub_nav_links"] = $this->_nlf->get_sub_nav_links();
         $data["__lang_links"] = $this->_nlf->get_lang_links();
         
         echo $twig->render($this->get_template_name(), $data);

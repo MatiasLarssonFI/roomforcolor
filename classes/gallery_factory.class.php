@@ -28,18 +28,19 @@ class GalleryFactory {
     /**
      * Returns the gallery images.
      * 
+     * @param int $id Gallery ID
      * @return IGalleryImage[]
      */
-    public function get_gallery_images() {
+    public function get_gallery_images($id) {
         $ret = array();
 
         DBIF::get()->get_gallery_images(function(array $row) use (&$ret) {
             $ret[] = new GalleryImage(
                 $row["id"],
-                $row["original_url"],
-                $row["thumb_url"]
+                $row["original_uri"],
+                $row["thumb_uri"]
             );
-        });
+        }, $id);
         
         
         return $ret;

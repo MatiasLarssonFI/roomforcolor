@@ -5,9 +5,11 @@ namespace Views;
 require_once(dirname(__FILE__) . "/front_page_view.class.php");
 require_once(dirname(__FILE__) . "/contact_view.class.php");
 require_once(dirname(__FILE__) . "/about_view.class.php");
+require_once(dirname(__FILE__) . "/gallery_view.class.php");
 require_once(dirname(__FILE__) . "/contact_submit_view.class.php");
 
 require_once(dirname(__FILE__) . "/../site_config_factory.class.php");
+require_once(dirname(__FILE__) . "/../dbif.class.php");
 
 
 /**
@@ -36,10 +38,11 @@ class ViewFactory {
      * @param string $action The action name
      * @param string[] $params The action parameters
      * @param string $language Current language
+     * @param string[] $gallery_actions
      * @param \NavLinkFactory $nlf
      * @return IView
      */
-    public function get_view($action, array $params, $language, \NavLinkFactory $nlf) {
+    public function get_view($action, array $params, $language, \NavLinkFactory $nlf, array $gallery_actions) {
         if ($action === "") {
             return new FrontPageView(array(), $nlf);
         } else if ($action === "about") {
@@ -48,6 +51,8 @@ class ViewFactory {
             return new ContactView(array(), $nlf);
         } else if ($action === "contact_submit") {
             return new ContactSubmitView($_POST, $nlf);
+        } else if (in_array($action, $gallery_actions)) {
+            return new GalleryView(["gallery_id" => $this->optional_element(0, null, $params)], $nlf);
         }
         
         // Bad request: redirect to front page
@@ -62,6 +67,7 @@ class ViewFactory {
     private function optional_element($key, $default, $storage) {
         return (isset($storage[$key]) ? $storage[$key] : $default);
     }
+
     
     
     protected function __construct() {}
