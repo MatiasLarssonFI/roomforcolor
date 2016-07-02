@@ -5,6 +5,8 @@ require_once(dirname(__FILE__) . "/icontact_message.class.php");
 
 /**
  * Singleton.
+ * 
+ * The database interface.
  */
 class DBIF {
     private $_pdo;
