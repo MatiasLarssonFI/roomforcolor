@@ -21,17 +21,23 @@ main {
 }
 
 
-.woodparts-nav > li > a,
-.woodparts-nav > li > a:hover,
-.woodparts-nav > li > a:visited {
+.r4c-nav > li > a,
+.r4c-nav > li > a:hover,
+.r4c-nav > li > a:visited,
+.r4c-sub-nav > li > a,
+.r4c-sub-nav > li > a:hover,
+.r4c-sub-nav > li > a:visited {
     color: #000080;
     font-family: monospace;
 }
 
 
-.woodparts-nav > li.active > a,
-.woodparts-nav > li.active > a:focus,
-.woodparts-nav > li.active > a:hover {
+.r4c-nav > li.active > a,
+.r4c-nav > li.active > a:focus,
+.r4c-nav > li.active > a:hover,
+.r4c-sub-nav > li.active > a,
+.r4c-sub-nav > li.active > a:focus,
+.r4c-sub-nav > li.active > a:hover {
     background-color: #fff;
     color: #000080;
     border-bottom: 1px solid #000080;

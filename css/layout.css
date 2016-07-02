@@ -13,7 +13,8 @@ main {
 }
 
 
-.woodparts-nav > li > a {
+.r4c-nav > li > a,
+.r4c-sub-nav > li > a {
     border-radius: 0px;
 }
 
