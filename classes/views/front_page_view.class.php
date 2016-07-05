@@ -5,6 +5,7 @@ namespace Views;
 require_once(dirname(__FILE__) . "/abstract_view.class.php");
 require_once(dirname(__FILE__) . "/../site_config_factory.class.php");
 require_once(dirname(__FILE__) . "/../ui_text_storage.class.php");
+require_once(dirname(__FILE__) . "/../gallery_factory.class.php");
 
 
 class FrontPageView extends AbstractView {
@@ -23,11 +24,12 @@ class FrontPageView extends AbstractView {
         return array(
             "strings" => array(
                 "page_title" => $text_storage->text("FRONT_PAGE_TITLE"),
-                "promo_text" => $text_storage->text("FRONT_PAGE_PROMO")
             ),
+            "body_paragraphs" => $text_storage->paragraphs("FRONT_PAGE_PROMO"),
             "logo_url" => \SiteConfigFactory::get()->get_site_config()->base_uri() . 
                             "/data/img/front-logo.png",
-            "lang" => $text_storage->get_language()
+            "lang" => $text_storage->get_language(),
+            "images" => \GalleryFactory::get()->get_front_page_images()
         );
     }
 }

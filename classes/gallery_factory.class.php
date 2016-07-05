@@ -48,6 +48,27 @@ class GalleryFactory {
     
     
     /**
+     * Returns the front page images.
+     * 
+     * @return IGalleryImage[]
+     */
+    public function get_front_page_images() {
+        $ret = array();
+
+        DBIF::get()->get_front_page_images(function(array $row) use (&$ret) {
+            $ret[] = new GalleryImage(
+                $row["id"],
+                $row["original_uri"],
+                $row["thumb_uri"]
+            );
+        });
+        
+        
+        return $ret;
+    }
+    
+    
+    /**
      * Returns the gallery.
      * 
      * @param int $id The gallery ID

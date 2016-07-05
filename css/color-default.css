@@ -3,9 +3,14 @@ main {
 }
 
 
-.img-bar-img, .gallery-img {
+.gallery-img {
     border: 2px solid #C0C0C0;
     box-shadow: 2px 0px 5px #C0C0C0;
+}
+
+
+.front-page-images {
+    background-color: #141517;
 }
 
 
@@ -21,14 +26,37 @@ main {
 }
 
 
+.r4c-nav,
+.r4c-sub-nav {
+    background-color: #2d3437;
+    color: #fff;
+    font-weight: bold;
+    border-top: 2px solid #f26c36;
+}
+
+
+.r4c-sub-nav {
+    border-bottom: 2px solid #f26c36;
+}
+
+
+.r4c-contact-info {
+    background-color: #2d3437;
+    color: #fff;
+    border-top: 2px solid #f26c36;
+    border-bottom: 2px solid #f26c36;
+}
+
+
 .r4c-nav > li > a,
 .r4c-nav > li > a:hover,
 .r4c-nav > li > a:visited,
 .r4c-sub-nav > li > a,
 .r4c-sub-nav > li > a:hover,
 .r4c-sub-nav > li > a:visited {
-    color: #000080;
+    color: #fff;
     font-family: monospace;
+    background-color: #2d3437;
 }
 
 
@@ -38,9 +66,8 @@ main {
 .r4c-sub-nav > li.active > a,
 .r4c-sub-nav > li.active > a:focus,
 .r4c-sub-nav > li.active > a:hover {
-    background-color: #fff;
-    color: #000080;
-    border-bottom: 1px solid #000080;
+    color: #ffdf31;
+    background-color: #2d3437;
 }
 
 

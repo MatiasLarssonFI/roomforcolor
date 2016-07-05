@@ -8,8 +8,19 @@ main {
 }
 
 
-.img-bar-img, .gallery-img {
+.gallery-img {
     margin-bottom: 1em;
+}
+
+
+.front-page-images a,
+.front-page-images img {
+    margin: 0 auto;
+}
+
+.front-page-images {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 

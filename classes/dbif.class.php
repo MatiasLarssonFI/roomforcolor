@@ -97,11 +97,12 @@ class DBIF {
      */
     public function get_gallery_images($cb_store_row, $gallery_id) {
         $stm = $this->_pdo->prepare(
-                            "SELECT image.thumb_uri, image.original_uri, image.id
+                            "SELECT image.id, image.thumb_uri, image.original_uri
                             FROM gallery
                             inner join gallery_image gi on gi.gallery_id = :g_id
                             inner join image on gi.image_id = image.id
-                            where is_published");
+                            where is_published
+                            group by image.id, image.thumb_uri, image.original_uri");
         $stm->bindParam(":g_id", $gallery_id, PDO::PARAM_INT);
         $stm->execute();
         
@@ -119,10 +120,12 @@ class DBIF {
      */
     public function get_front_page_images($cb_store_row) {
         $stm = $this->_pdo->prepare(
-                            "SELECT image.thumb_uri, image.id
+                            "SELECT image.thumb_uri, image.original_uri, image.id
                             FROM gallery g
                             inner join gallery_image gi on gi.gallery_id = g.id
-                            inner join image on image.id = gi.image_id
+                            inner join image
+                                on image.id = gi.image_id
+                                and image.is_published
                             
                             WHERE g.action = ''");
         $stm->execute();
@@ -160,10 +163,15 @@ class DBIF {
     }
     
     
+    /**
+     * Returns gallery actions excluding the empty action.
+     * 
+     * @return string[]
+     */
     public function get_gallery_actions() {
         $ret = [];
         
-        $stm = $this->_pdo->prepare("SELECT distinct action from gallery");
+        $stm = $this->_pdo->prepare("SELECT distinct action from gallery where action != ''");
         $stm->execute();
         
         while ($row = $stm->fetch()) {
