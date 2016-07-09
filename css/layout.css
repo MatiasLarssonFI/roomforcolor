@@ -8,8 +8,22 @@ main {
 }
 
 
-.gallery-img {
-    margin-bottom: 1em;
+
+.r4c-gallery-images-window {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+
+.r4c-gallery-images-container {
+    height: 250px;
+    overflow: visible;
+}
+
+
+.r4c-gallery-image {
+    display: inline-block;
+    margin: 1em;
 }
 
 

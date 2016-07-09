@@ -3,14 +3,18 @@
 
 {% block content %}
 <main>
-    <div id="f4c-gallery-images" class="row">
-    {% for image in images %}
-        <div class="col-xs-4 col-md-2">
-            <a href="{{ __base_uri }}{{ image.get_original_url }}" data-gallery data-img_id="{{ image.get_id }}">
-                <img class="img-responsive gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
-            </a>
+    <div class="r4c-gallery-images">
+        <div class="r4c-gallery-images-window">
+            <div class="r4c-gallery-images-container">
+                {% for image in images %}
+                    <div class="r4c-gallery-image">
+                        <a href="{{ __base_uri }}{{ image.get_original_url }}" data-gallery data-img_id="{{ image.get_id }}">
+                            <img class="img-responsive gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-    {% endfor %}
     </div>
 </main>
 

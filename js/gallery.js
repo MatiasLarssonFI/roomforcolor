@@ -6,9 +6,26 @@
         }
     };
     
+    var _update_container_width = function(images_container) {
+        var slides = images_container.find(".r4c-gallery-image");
+        images_container.width (
+			(function() {
+                var font_size = parseInt(images_container.css("font-size"));
+                var extra = 20;
+                var width = 0;
+                slides.each(function() {
+                    width += $(this).outerWidth() + font_size + extra;
+                });
+                return width;
+            }())
+		);
+    }; 
+    
     rfc.gallery = {
         update : function() {
-            _update_open_by_url($("#wp-gallery-images"));
+            var cont = $(".r4c-gallery-images-container");
+            _update_container_width(cont);
+            _update_open_by_url(cont);
         }
     };
 }(jQuery);
