@@ -1,19 +1,26 @@
 {% extends "base.html" %}
+{% block head_extra %}<link rel="stylesheet" href="{{ __base_uri }}/css/gallery.css">{% endblock %}
 {% block title %}{{ strings.page_title }}{% endblock %}
 
 {% block content %}
 <main>
-    <div class="r4c-gallery-images">
-        <div class="r4c-gallery-images-window">
+    <div class="r4c-gallery-images row">
+        <div class="col-xs-1 text-right gallery-nav">
+            <a href="#gallery-left" data-gallery-nav="left"><img src="{{ __base_uri }}/data/img/arrow-left.png" alt="&lt;"></a>
+        </div>
+        <div class="r4c-gallery-images-window col-xs-10">
             <div class="r4c-gallery-images-container">
                 {% for image in images %}
                     <div class="r4c-gallery-image">
                         <a href="{{ __base_uri }}{{ image.get_original_url }}" data-gallery data-img_id="{{ image.get_id }}">
-                            <img class="img-responsive gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
+                            <img class="gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
                         </a>
                     </div>
                 {% endfor %}
             </div>
+        </div>
+        <div class="col-xs-1 gallery-nav">
+            <a href="#gallery-right" data-gallery-nav="right"><img src="{{ __base_uri }}/data/img/arrow-right.png" alt="&gt;"></a>
         </div>
     </div>
 </main>
@@ -21,7 +28,7 @@
 <script src="{{ __base_uri }}/js/gallery.js"></script>
 <script>
     !function($) {
-        $(document).ready(function() {
+        $(window).load(function() {
             rfc.gallery.update();
         });
     }(jQuery);

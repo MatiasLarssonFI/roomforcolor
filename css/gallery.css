@@ -1,0 +1,38 @@
+.r4c-gallery-images-window {
+    overflow: hidden;
+    padding: 1em;
+}
+
+.r4c-gallery-images-container {
+    height: 150px;
+    overflow: visible;
+    position: relative;
+}
+
+
+.r4c-gallery-image {
+    display: inline-block;
+    height: 100%;
+    max-height: 100%;
+}
+
+
+.r4c-gallery-image img {
+    height: 100%;
+    max-height: 100%;
+}
+
+
+.r4c-gallery-image + .r4c-gallery-image {
+    margin-left: 1em;
+}
+
+
+.gallery-nav img {
+    width: 36px;
+}
+
+
+.gallery-nav {
+    padding-top: 75px;
+}

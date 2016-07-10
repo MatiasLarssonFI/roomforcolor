@@ -11,7 +11,7 @@
         images_container.width (
 			(function() {
                 var font_size = parseInt(images_container.css("font-size"));
-                var extra = 20;
+                var extra = 20; // don't know why we need this, or how we could otherwise get the required width
                 var width = 0;
                 slides.each(function() {
                     width += $(this).outerWidth() + font_size + extra;
