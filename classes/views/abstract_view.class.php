@@ -53,6 +53,7 @@ abstract class AbstractView implements IView {
         $data["__nav_links"] = $this->_nlf->get_nav_links();
         $data["__sub_nav_links"] = $this->_nlf->get_sub_nav_links();
         $data["__lang_links"] = $this->_nlf->get_lang_links();
+        $data["__js_texts"] = $this->get_js_texts();
         
         echo $twig->render($this->get_template_name(), $data);
     }
@@ -90,4 +91,14 @@ abstract class AbstractView implements IView {
      * @return mixed[] e. g. [ "var_name" => "var value", ... ]
      */
     abstract protected function get_view_data(array $params);
+    
+    
+    /** 
+     * Returns the UI texts for JavaScript.
+     * 
+     * @return string[] [ "text_key" => "text string", ... ]
+     */
+    protected function get_js_texts() {
+        return [];
+    }
 }

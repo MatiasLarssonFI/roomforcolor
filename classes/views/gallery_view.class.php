@@ -18,7 +18,6 @@ class GalleryView extends AbstractView {
     
     
     protected function get_view_data(array $params) {
-        $text_storage = \UITextStorage::get();
         $factory = \GalleryFactory::get();
         $gallery = $factory->get_gallery((int)$params["gallery_id"]);
         return array(
@@ -27,5 +26,13 @@ class GalleryView extends AbstractView {
             ),
             "images" => $factory->get_gallery_images($gallery->get_id())
         );
+    }
+    
+    
+    protected function get_js_texts() {
+        $text_storage = \UITextStorage::get();
+        return [
+            "no_more_images" => $text_storage->text("GALLERY_NO_MORE_IMAGES")
+        ];
     }
 }

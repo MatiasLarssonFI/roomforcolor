@@ -8,6 +8,7 @@
             <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
             <script src="{{ __base_uri }}/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
             <script src="{{ __base_uri }}/js/rfc.js"></script>
+            <script src="{{ __base_uri }}/js/txt.js"></script>
             
             {% block head_extra %}{% endblock %}
             
@@ -21,6 +22,10 @@
                 $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
                     options.async = true;
                 });
+                
+                {% for key, text in __js_texts %}
+                    rfc.txt["{{ key }}"] = "{{ text }}";
+                {% endfor %}
             </script>
         {% endblock %}
     </head>
