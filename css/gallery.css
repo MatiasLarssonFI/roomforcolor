@@ -1,6 +1,6 @@
 .r4c-gallery-images-window {
     overflow: hidden;
-    padding: 1em;
+    padding: 1em 0 1em 0;
 }
 
 .r4c-gallery-images-container {
@@ -23,7 +23,7 @@
 }
 
 
-.r4c-gallery-image + .r4c-gallery-image {
+.r4c-gallery-image {
     margin-left: 1em;
 }
 
@@ -35,4 +35,10 @@
 
 .gallery-nav {
     padding-top: 75px;
+}
+
+
+.gallery-nav a.disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
 }

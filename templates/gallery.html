@@ -6,7 +6,7 @@
 <main>
     <div class="r4c-gallery-images row">
         <div class="col-xs-1 text-right gallery-nav">
-            <a href="#gallery-left" data-gallery-nav="left"><img src="{{ __base_uri }}/data/img/arrow-left.png" alt="&lt;"></a>
+            <a href="#gallery_move" data-gallery_nav="left"><img src="{{ __base_uri }}/data/img/arrow-left.png" alt="&lt;"></a>
         </div>
         <div class="r4c-gallery-images-window col-xs-10">
             <div class="r4c-gallery-images-container">
@@ -20,17 +20,10 @@
             </div>
         </div>
         <div class="col-xs-1 gallery-nav">
-            <a href="#gallery-right" data-gallery-nav="right"><img src="{{ __base_uri }}/data/img/arrow-right.png" alt="&gt;"></a>
+            <a href="#gallery_move" data-gallery_nav="right"><img src="{{ __base_uri }}/data/img/arrow-right.png" alt="&gt;"></a>
         </div>
     </div>
 </main>
 
 <script src="{{ __base_uri }}/js/gallery.js"></script>
-<script>
-    !function($) {
-        $(window).load(function() {
-            rfc.gallery.update();
-        });
-    }(jQuery);
-</script>
 {% endblock %}
