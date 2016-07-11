@@ -1,5 +1,5 @@
 !function($) {
-    var IMG_OVERFLOW_EPSILON = 0.1;
+    var IMG_OVERFLOW_EPSILON = 0.5;
     
     var _move = function(images_container, new_left_px) {
         images_container.animate({
@@ -13,8 +13,9 @@
     };
     
     
-    var _move_right = function(images_container) {
-        var img_window_right_edge = _get_right_edge(images_container.parent(), false); // parent() is a .r4c-gallery-images-window
+    var _move_right = function(nodes) {
+        var images_container = nodes.container;
+        var img_window_right_edge = _get_right_edge(nodes.images_window, false); // parent() is a .r4c-gallery-images-window
         
         // find how many pixels the first overflowing image is actually overflowing
         var image_overflow_px = (function(){
@@ -37,12 +38,14 @@
         return null;
     };
     
-    var _move_left = function(images_container) {
+    var _move_left = function(nodes) {
         var _get_left_edge = function(node, include_margin) {
             return node.offset().left - (include_margin ? parseFloat(node.css("margin-left")) : 0);
         };
+        
+        var images_container = nodes.container;
 
-        var img_window_left_edge = _get_left_edge(images_container.parent(), false); // parent() is a .r4c-gallery-images-window
+        var img_window_left_edge = _get_left_edge(nodes.images_window, false); // parent() is a .r4c-gallery-images-window
         
         // find how many pixels the first overflowing image is actually overflowing
         var image_overflow_px = (function(){
@@ -65,11 +68,12 @@
         return null;
     };
     
-    var _update_open_by_url = function(images_container) {
+    var _update_open_by_url = function(nodes) {
         var hash = window.location.hash;
+        var images_container = nodes.container;
         if (hash.length > 0 && hash !== "#") {
             var img_id = hash.replace("#", "");
-            if (!isNaN(parseInt(img_id))) { // if img_id is an integer
+            if (!isNaN(parseInt(img_id))) { // if img_id is an integer, i. e. an image ID
                 var img_a = images_container.find("a[data-img_id='" + img_id + "']");
                 img_a.click(); // open image
                 
@@ -92,11 +96,14 @@
         }
     };
     
-    var _update_container_width = function(images_container) {
+    // updates the container and containment width and positions
+    var _update_container_width = function(nodes) {
+        var images_container = nodes.container;
         var slides = images_container.find(".r4c-gallery-image");
+        var slide_margin_l = parseFloat(images_container.css("font-size")); // 1em
         images_container.width (
 			(function() {
-                var font_size = parseFloat(images_container.css("font-size")); // margin
+                var font_size = slide_margin_l; // margin
                 var width = 0;
                 slides.each(function() {
                     width += $(this).outerWidth(true) + font_size;
@@ -104,17 +111,40 @@
                 return width;
             }())
 		);
+        
+        var container_w = images_container.width();
+        var containment = nodes.move_containment;
+        
+        // containment shall cover the area where the container may be dragged in around
+        containment.width((container_w * 2) - nodes.images_window.width());
+        
+        // this makes the container to be centered within the containment,
+        // which allows movement for the container to both left and right
+        containment.css("left", (((container_w * -1) / 2) + slide_margin_l) + "px");
+        
+        images_container.offset(function(i, coords) {
+            return {
+                top: coords.top,
+                left: nodes.images_window.offset().left
+            };
+        });
     };
     
     
     rfc.gallery = {
-        container : null,
+        nodes : {
+            container : null,
+            images_window : null,
+            move_containment : null
+        },
         update : function() {
-            if (this.container === null) {
-                this.container = $(".r4c-gallery-images-container");
+            if (this.nodes.container === null) {
+                this.nodes.container = $(".r4c-gallery-images-container");
+                this.nodes.images_window = this.nodes.container.parents(".r4c-gallery-images-window");
+                this.nodes.move_containment = this.nodes.container.parents(".r4c-gallery-images-container-containment");
             }
-            _update_container_width(this.container);
-            _update_open_by_url(this.container);
+            _update_container_width(this.nodes);
+            _update_open_by_url(this.nodes);
         }
     };
     
@@ -135,7 +165,7 @@
         
         nav_btns.click(function(e) { // move left or right
             var btn = $(this);
-            var new_left_px = (btn.data("gallery_nav") == "right" ? _move_right : _move_left)(rfc.gallery.container);
+            var new_left_px = (btn.data("gallery_nav") == "right" ? _move_right : _move_left)(rfc.gallery.nodes);
             e.preventDefault();
             if (new_left_px !== null) {
                 window.location.hash = "#gallery_move_" + new_left_px.toPrecision(2);
@@ -144,6 +174,8 @@
                 _disable_btn(btn);
             }
         });
+        
+        rfc.gallery.nodes.container.draggable({axis : "x", cursor: "move", containment: rfc.gallery.nodes.move_containment});
     };
     
     $(window).load(_gallery_init);

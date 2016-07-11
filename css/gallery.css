@@ -3,7 +3,9 @@
     padding: 1em 0 1em 0;
 }
 
-.r4c-gallery-images-container {
+
+.r4c-gallery-images-container,
+.r4c-gallery-images-container-containment {
     height: 150px;
     overflow: visible;
     position: relative;
