@@ -5,10 +5,10 @@
 {% block content %}
 <main>
     <div class="r4c-gallery-images row">
-        <div class="col-xs-1 text-right gallery-nav">
+        <div class="col-md-1 hidden-sm hidden-xs text-right gallery-nav">
             <a href="#gallery_move" data-gallery_nav="left"><img src="{{ __base_uri }}/data/img/arrow-left.png" alt="&lt;"></a>
         </div>
-        <div class="r4c-gallery-images-window col-xs-10">
+        <div class="r4c-gallery-images-window col-sm-10 col-xs-11">
             <div class="r4c-gallery-images-container">
                 {% for image in images %}
                     <div class="r4c-gallery-image">
@@ -19,7 +19,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-xs-1 gallery-nav">
+        <div class="col-md-1 hidden-sm hidden-xs gallery-nav">
             <a href="#gallery_move" data-gallery_nav="right"><img src="{{ __base_uri }}/data/img/arrow-right.png" alt="&gt;"></a>
         </div>
     </div>
