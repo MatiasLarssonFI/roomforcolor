@@ -4,6 +4,24 @@
 
 {% block content %}
 <main>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-11">
+            <div class="row r4c-gallery-stage">
+                <div class="col-xs-12">
+                    <img class="img-responsive" src="{{ default_stage_image_url }}" alt="Missing image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <strong>{{ strings.previous }}</strong>
+                </div>
+                
+                <div class="col-xs-6 text-right">
+                    <strong>{{ strings.next }}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="r4c-gallery-images row">
         <div class="col-md-1 hidden-sm hidden-xs text-right gallery-nav">
             <a href="#gallery_move" data-gallery_nav="left"><img src="{{ __base_uri }}/data/img/arrow-left.png" alt="&lt;"></a>

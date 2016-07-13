@@ -4,6 +4,18 @@
 }
 
 
+.r4c-gallery-stage {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+
+.r4c-gallery-stage img {
+    height: 20em;
+    margin: auto;
+}
+
+
 .r4c-gallery-images-container,
 .r4c-gallery-images-container-containment {
     height: 150px;
@@ -16,6 +28,11 @@
     display: inline-block;
     height: 100%;
     max-height: 100%;
+}
+
+
+.r4c-gallery-images {
+    margin-top: .5em;
 }
 
 
