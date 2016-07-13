@@ -72,9 +72,14 @@ class NavLinkFactory {
     
     public function get_lang_links() {
         $action = $this->_action;
+        $action_params_str = "";
+        if (strlen($action) > 0) {
+            $params_str = implode("/", $this->_params);
+            $action_params_str = "{$action}/{$params_str}";
+        }
         $lang = $this->_lang;
-        return array_map(function($lang) use ($action) {
-            return new LangLink($lang, strtoupper($lang), $action);
+        return array_map(function($lang) use ($action_params_str) {
+            return new LangLink($lang, strtoupper($lang), $action_params_str);
         }, array_filter(DBIF::get()->get_language_codes(), function($code) use ($lang) {
             return $code !== $lang;
         }));
