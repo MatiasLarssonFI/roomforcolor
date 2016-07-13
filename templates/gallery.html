@@ -31,7 +31,7 @@
                 <div class="r4c-gallery-images-container">
                     {% for image in images %}
                         <div class="r4c-gallery-image">
-                            <a href="{{ __base_uri }}{{ image.get_original_url }}" data-gallery data-img_id="{{ image.get_id }}">
+                            <a href="{{ __base_uri }}{{ image.get_original_url }}" data-img_url="{{ __base_uri }}{{ image.get_original_url }}" data-img_id="{{ image.get_id }}">
                                 <img class="gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
                             </a>
                         </div>

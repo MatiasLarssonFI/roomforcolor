@@ -83,14 +83,7 @@
                 
                 var image_overflow_px = slide_right_edge - img_window_right_edge;
                 if (image_overflow_px > IMG_OVERFLOW_EPSILON) {
-                    var old_left_px = parseFloat(images_container.css("left"));
-                    _move(images_container, old_left_px - image_overflow_px);
-                }
-            } else if (hash.startsWith("#gallery_move_")) { // if hash is a move command
-                var new_left_px = hash.split("_")[2];
-                var new_left_px_float = parseFloat(new_left_px);
-                if (!isNaN(new_left_px_float)) {
-                    _move(images_container, new_left_px_float);
+                    _move(images_container, parseFloat(images_container.css("left")) - image_overflow_px);
                 }
             }
         }
@@ -135,14 +128,24 @@
         nodes : {
             container : null,
             images_window : null,
-            move_containment : null
+            move_containment : null,
+            stage_img : null
         },
         update : function() {
             if (this.nodes.container === null) {
                 this.nodes.container = $(".r4c-gallery-images-container");
                 this.nodes.images_window = this.nodes.container.parents(".r4c-gallery-images-window");
                 this.nodes.move_containment = this.nodes.container.parents(".r4c-gallery-images-container-containment");
+                this.nodes.stage_img = $(".r4c-gallery-stage img");
             }
+            // bind image click
+            rfc.gallery.nodes.container.find(".r4c-gallery-image a").click(function(e) {
+                e.preventDefault();
+                var a_node = $(this);
+                rfc.gallery.nodes.stage_img.attr("src", a_node.data("img_url"));
+                window.location.hash = "#" + a_node.data("img_id");
+            });
+            
             _update_container_width(this.nodes);
             _update_open_by_url(this.nodes);
         }
@@ -168,7 +171,6 @@
             var new_left_px = (btn.data("gallery_nav") == "right" ? _move_right : _move_left)(rfc.gallery.nodes);
             e.preventDefault();
             if (new_left_px !== null) {
-                window.location.hash = "#gallery_move_" + new_left_px.toPrecision(2);
                 _enable_btns(nav_btns);
             } else {
                 _disable_btn(btn);
