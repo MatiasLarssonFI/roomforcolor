@@ -309,6 +309,23 @@ class DBIF {
     }
     
     
+    /**
+     * Returns the resource configuration values.
+     * 
+     * @return string[], keys are js_src_mode, js_src_version and css_src_version
+     */
+    public function get_resource_configuration() {
+        $stm = $this->_pdo->prepare("SELECT `key`, `value` from config where `key` in ('js_src_mode', 'js_src_version', 'css_src_version')");
+        $stm->execute();
+        $ret = array();
+        while ($row = $stm->fetch()) {
+            $ret[$row["key"]] = $row["value"];
+        }
+        
+        return $ret;
+    }
+    
+    
     public function insert_contact_message(IContactMessage $message) {
         $stm = $this->_pdo->prepare("INSERT INTO `contact_inbox` (name, email, subject, phone, message, time_created) VALUES(:name, :email, :subject, :phone, :message, now())");
         

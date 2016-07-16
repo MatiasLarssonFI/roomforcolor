@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 16, 2016 at 02:04 PM
+-- Generation Time: Jul 16, 2016 at 02:18 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -31,7 +31,10 @@ INSERT INTO `config` (`id`, `key`, `value`, `time_edited`, `time_created`) VALUE
 (4, 'contact_email', 'matias@matias-laptop', '2016-04-02 15:37:11', '2016-04-01 18:00:00'),
 (5, 'mail_server', 'localhost', '2016-04-13 16:20:29', '2016-04-12 18:00:00'),
 (6, 'mail_user', '', NULL, '2016-04-12 18:00:00'),
-(7, 'mail_password', '', NULL, '2016-04-12 18:00:00');
+(7, 'mail_password', '', NULL, '2016-04-12 18:00:00'),
+(8, 'js_src_mode', 'debug', NULL, '2016-07-15 21:00:00'),
+(9, 'js_src_version', '20160716', NULL, '2016-07-15 21:00:00'),
+(10, 'css_src_version', '20160716', NULL, '2016-07-15 21:00:00');
 
 --
 -- Dumping data for table `ui_text`

@@ -7,13 +7,13 @@
             
             <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
             <script src="{{ __base_uri }}/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-            <script src="{{ __base_uri }}/js/rfc.js"></script>
-            <script src="{{ __base_uri }}/js/txt.js"></script>
+            <script src="{{ __base_uri }}/js/rfc.js?v={{ __js_src_version }}"></script>
+            <script src="{{ __base_uri }}/js/txt.js?v={{ __js_src_version }}"></script>
             
             {% block head_extra %}{% endblock %}
             
-            <link rel="stylesheet" href="{{ __base_uri }}/css/layout.css">
-            <link rel="stylesheet" href="{{ __color_css_uri }}">
+            <link rel="stylesheet" href="{{ __base_uri }}/css/layout.css?v={{ __css_src_version }}">
+            <link rel="stylesheet" href="{{ __color_css_uri }}?v={{ __css_src_version }}">
             
             <title>{% block title %}{% endblock %} - Room for color</title>
             
