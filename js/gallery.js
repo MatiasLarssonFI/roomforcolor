@@ -78,7 +78,7 @@
                 img_a.click(); // open image
                 
                 // move to image
-                var img_window_right_edge = _get_right_edge(images_container.parent(), false); // parent() is a .r4c-gallery-images-window
+                var img_window_right_edge = _get_right_edge(nodes.images_window, false);
                 var slide_right_edge = _get_right_edge(img_a.parent(), true); // parent() is a .r4c-gallery-image
                 
                 var image_overflow_px = slide_right_edge - img_window_right_edge;
