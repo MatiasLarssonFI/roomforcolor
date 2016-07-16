@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 05, 2016 at 10:41 PM
+-- Generation Time: Jul 16, 2016 at 02:04 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -102,7 +102,16 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (67, 'fi', 'CONTACT_PAGE_TEXT', 'Yhteydenotto.', NULL, '0000-00-00 00:00:00'),
 (68, 'en', 'NAV_WALLPAINTINGS', 'Wallpaintings', '2016-07-02 11:33:21', '2016-07-01 21:00:00'),
 (69, 'nl', 'NAV_WALLPAINTINGS', 'Muurschilderingen', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
-(70, 'fi', 'NAV_WALLPAINTINGS', 'Seinämaalaukset', '2016-07-02 11:33:24', '2016-07-01 21:00:00');
+(70, 'fi', 'NAV_WALLPAINTINGS', 'Seinämaalaukset', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
+(71, 'fi', 'GALLERY_NO_MORE_IMAGES', 'Ei enempää kuvia.', NULL, '2016-07-09 21:00:00'),
+(72, 'en', 'GALLERY_NO_MORE_IMAGES', 'No more images.', NULL, '2016-07-09 21:00:00'),
+(73, 'nl', 'GALLERY_NO_MORE_IMAGES', 'Geen afbeeldingen.', NULL, '2016-07-09 21:00:00'),
+(74, 'fi', 'GALLERY_NEXT', 'Seuraava', '2016-07-13 18:02:00', '2016-07-12 21:00:00'),
+(75, 'en', 'GALLERY_NEXT', 'Next', '2016-07-13 18:01:57', '2016-07-12 21:00:00'),
+(76, 'nl', 'GALLERY_NEXT', 'Volgende', '2016-07-13 18:01:54', '2016-07-12 21:00:00'),
+(77, 'nl', 'GALLERY_PREVIOUS', 'Vorige', '2016-07-13 15:01:54', '2016-07-12 18:00:00'),
+(78, 'en', 'GALLERY_PREVIOUS', 'Previous', '2016-07-13 15:01:57', '2016-07-12 18:00:00'),
+(79, 'fi', 'GALLERY_PREVIOUS', 'Edellinen', '2016-07-13 15:02:00', '2016-07-12 18:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
