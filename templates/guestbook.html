@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ strings.page_title }}{% endblock %}
+
+{% block content %}
+<main>
+    <div class="row">
+        <div class="col-md-5 col-md-offset-3" id="page-content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>{{ strings.page_title }}</p>
+                    {% for p in body_paragraphs %}
+                        <p>{{ p|nl2br }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="feedback">
+                &nbsp;
+            </div>
+            <button id="formShowBtn" class="btn btn-link" data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">{{ strings.show_form }}</button>
+            <div id="collapseForm" class="collapse">
+                {% include "guestbook_form.html" %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

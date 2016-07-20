@@ -30,6 +30,7 @@ function main() { // C! :D
             $gallery_actions[] = $action; // the ViewFactory wants these
         }
         $actions[] = "contact";
+        $actions[] = "guestbook";
         
         // initialize the nav link factory
         $sub_nlfs = array(

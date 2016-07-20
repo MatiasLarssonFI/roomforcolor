@@ -15,7 +15,7 @@
     
     var _move_right = function(nodes) {
         var images_container = nodes.container;
-        var img_window_right_edge = _get_right_edge(nodes.images_window, false); // parent() is a .r4c-gallery-images-window
+        var img_window_right_edge = _get_right_edge(nodes.images_window, false);
         
         // find how many pixels the first overflowing image is actually overflowing
         var image_overflow_px = (function(){
@@ -45,7 +45,7 @@
         
         var images_container = nodes.container;
 
-        var img_window_left_edge = _get_left_edge(nodes.images_window, false); // parent() is a .r4c-gallery-images-window
+        var img_window_left_edge = _get_left_edge(nodes.images_window, false);
         
         // find how many pixels the first overflowing image is actually overflowing
         var image_overflow_px = (function(){
@@ -93,13 +93,12 @@
     var _update_container_width = function(nodes) {
         var images_container = nodes.container;
         var slides = images_container.find(".r4c-gallery-image");
-        var slide_margin_l = parseFloat(images_container.css("font-size")); // 1em
+        var slide_margin_l = parseFloat(slides.css("margin-left"));
         images_container.width (
 			(function() {
-                var font_size = slide_margin_l; // margin
                 var width = 0;
                 slides.each(function() {
-                    width += $(this).outerWidth(true) + font_size;
+                    width += $(this).outerWidth(true) + slide_margin_l;
                 });
                 return width;
             }())

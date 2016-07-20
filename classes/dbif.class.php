@@ -344,6 +344,19 @@ class DBIF {
     }
     
     
+    
+    public function insert_guestbook_message(IGuestbookMessage $message) {
+        $stm = $this->_pdo->prepare("INSERT INTO `guestbook` (name, message, time_created) VALUES(:name, :message, now())");
+        
+        $name = $message->get_name();
+        $msg = $message->get_message();
+        
+        $stm->bindParam(":name", $name, PDO::PARAM_STR);
+        $stm->bindParam(":message", $msg, PDO::PARAM_STR);
+        $stm->execute();
+    }
+    
+    
     protected function __construct() {
         $db_login = SiteConfigFactory::get()->get_site_config()->db_login_params();
         try {

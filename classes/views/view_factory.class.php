@@ -4,9 +4,11 @@ namespace Views;
 
 require_once(dirname(__FILE__) . "/front_page_view.class.php");
 require_once(dirname(__FILE__) . "/contact_view.class.php");
+require_once(dirname(__FILE__) . "/guestbook_view.class.php");
 require_once(dirname(__FILE__) . "/about_view.class.php");
 require_once(dirname(__FILE__) . "/gallery_view.class.php");
 require_once(dirname(__FILE__) . "/contact_submit_view.class.php");
+require_once(dirname(__FILE__) . "/guestbook_submit_view.class.php");
 
 require_once(dirname(__FILE__) . "/../site_config_factory.class.php");
 require_once(dirname(__FILE__) . "/../dbif.class.php");
@@ -51,6 +53,10 @@ class ViewFactory {
             return new ContactView(array(), $nlf);
         } else if ($action === "contact_submit") {
             return new ContactSubmitView($_POST, $nlf);
+        } else if ($action === "guestbook") {
+            return new GuestbookView(array(), $nlf);
+        } else if ($action === "guestbook_submit") {
+            return new GuestbookSubmitView($_POST, $nlf);
         } else if (in_array($action, $gallery_actions)) {
             return new GalleryView(["gallery_id" => $this->optional_element(0, null, $params)], $nlf);
         }
