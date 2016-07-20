@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 16, 2016 at 02:18 PM
+-- Generation Time: Jul 20, 2016 at 11:04 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -114,7 +114,49 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (76, 'nl', 'GALLERY_NEXT', 'Volgende', '2016-07-13 18:01:54', '2016-07-12 21:00:00'),
 (77, 'nl', 'GALLERY_PREVIOUS', 'Vorige', '2016-07-13 15:01:54', '2016-07-12 18:00:00'),
 (78, 'en', 'GALLERY_PREVIOUS', 'Previous', '2016-07-13 15:01:57', '2016-07-12 18:00:00'),
-(79, 'fi', 'GALLERY_PREVIOUS', 'Edellinen', '2016-07-13 15:02:00', '2016-07-12 18:00:00');
+(79, 'fi', 'GALLERY_PREVIOUS', 'Edellinen', '2016-07-13 15:02:00', '2016-07-12 18:00:00'),
+(80, 'en', 'NAV_GUESTBOOK', 'Guestbook', NULL, '2016-07-19 21:00:00'),
+(81, 'nl', 'NAV_GUESTBOOK', 'Gastenboek', NULL, '2016-07-19 21:00:00'),
+(82, 'fi', 'NAV_GUESTBOOK', 'Vieraskirja', NULL, '2016-07-19 21:00:00'),
+(83, 'en', 'GUESTBOOK_PAGE_TEXT', 'On this page You can find customers comments of their wallpainting, furniture decoration or drawing, \r\nwhich they let be made by Room for Color.\r\n\r\nYou can also leave here your experience.', '2016-07-20 19:00:01', '2016-07-19 21:00:00'),
+(84, 'nl', 'GUESTBOOK_PAGE_TEXT', 'Op deze pagina kunt U ervaringen van mensen lezen die een muurschildering, meubel decoratie of een tekening\r\nhebben laten maken door Room for Color.\r\n\r\nOok kunt U hier uw ervaring delen.', '2016-07-20 19:00:03', '2016-07-19 21:00:00'),
+(85, 'fi', 'GUESTBOOK_PAGE_TEXT', '(fi)On this page You can find customers comments of their wallpainting, furniture decoration or drawing, \r\nwhich they let be made by Room for Color.\r\n\r\nYou can also leave here your experience.', '2016-07-20 19:00:05', '2016-07-19 21:00:00'),
+(86, 'en', 'GUESTBOOK_PLACEHOLDER_MESSAGE', '', NULL, '2016-07-19 21:00:00'),
+(87, 'nl', 'GUESTBOOK_PLACEHOLDER_MESSAGE', '', NULL, '2016-07-19 21:00:00'),
+(88, 'fi', 'GUESTBOOK_PLACEHOLDER_MESSAGE', '', NULL, '2016-07-19 21:00:00'),
+(89, 'nl', 'CONTACT_FIELD_ERROR___CSRF_TOKEN', 'Het spijt ons, maar de vorm is verlopen. Probeer het opnieuw.', '2016-04-15 19:58:48', '2016-04-13 21:00:00'),
+(90, 'nl', 'CONTACT_FIELD_ERROR_EMAIL', 'Uw e-mailadres moet een echte e-mailadres.', NULL, '2016-04-02 15:00:00'),
+(91, 'nl', 'CONTACT_FIELD_ERROR_MESSAGE', 'De boodschap moet langer zijn dan drie karakters.', NULL, '0000-00-00 00:00:00'),
+(92, 'nl', 'CONTACT_FIELD_ERROR_NAME', 'Voer uw naam in.', NULL, '2016-04-02 15:00:00'),
+(93, 'nl', 'CONTACT_FIELD_ERROR_SUBJECT', 'Vul een onderwerp.', NULL, '2016-04-02 15:00:00'),
+(94, 'nl', 'CONTACT_FIELD_SUBJECT', 'Onderwerpen', NULL, '2016-04-02 18:00:00'),
+(95, 'fi', 'GUESTBOOK_FIELD_ERROR___CSRF_TOKEN', 'Pahoittelumme, mutta lomake on vanhentunut. Ole hyvä ja yritä uudelleen.', '2016-07-20 19:17:57', '2016-04-13 18:00:00'),
+(96, 'en', 'GUESTBOOK_FIELD_ERROR___CSRF_TOKEN', 'We''re sorry but the form has expired. Please try again.', '2016-07-20 19:17:57', '2016-04-13 18:00:00'),
+(97, 'nl', 'GUESTBOOK_FIELD_ERROR___CSRF_TOKEN', 'Het spijt ons, maar de vorm is verlopen. Probeer het opnieuw.', '2016-07-20 19:17:57', '2016-04-13 18:00:00'),
+(98, 'fi', 'GUESTBOOK_FIELD_ERROR_MESSAGE', 'Viestissä on oltava enemmän kuin kolme merkkiä.', '2016-07-20 19:17:57', '0000-00-00 00:00:00'),
+(99, 'en', 'GUESTBOOK_FIELD_ERROR_MESSAGE', 'The message must be longer than three characters.', '2016-07-20 19:17:57', '0000-00-00 00:00:00'),
+(100, 'nl', 'GUESTBOOK_FIELD_ERROR_MESSAGE', 'De boodschap moet langer zijn dan drie karakters.', '2016-07-20 19:17:57', '0000-00-00 00:00:00'),
+(101, 'fi', 'GUESTBOOK_FIELD_ERROR_NAME', 'Nimi ei voi olla tyhjä.', '2016-07-20 19:17:57', '2016-04-02 15:00:00'),
+(102, 'en', 'GUESTBOOK_FIELD_ERROR_NAME', 'Your name can´t be empty.', '2016-07-20 19:17:57', '2016-04-02 12:00:00'),
+(103, 'nl', 'GUESTBOOK_FIELD_ERROR_NAME', 'Voer uw naam in.', '2016-07-20 19:17:57', '2016-04-02 12:00:00'),
+(104, 'fi', 'GUESTBOOK_FIELD_MESSAGE', 'Viesti', '2016-07-20 19:17:57', '0000-00-00 00:00:00'),
+(105, 'en', 'GUESTBOOK_FIELD_MESSAGE', 'Message', '2016-07-20 19:17:57', '0000-00-00 00:00:00'),
+(106, 'nl', 'GUESTBOOK_FIELD_MESSAGE', 'Vraag', '2016-07-20 19:17:57', '0000-00-00 00:00:00'),
+(107, 'fi', 'GUESTBOOK_FIELD_NAME', 'Nimesi', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(108, 'en', 'GUESTBOOK_FIELD_NAME', 'Name', '2016-07-20 19:17:57', '2016-04-02 15:00:00'),
+(109, 'nl', 'GUESTBOOK_FIELD_NAME', 'Naam', '2016-07-20 19:17:57', '2016-04-02 15:00:00'),
+(110, 'fi', 'GUESTBOOK_SUBMIT', 'Lähetä viesti', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(111, 'en', 'GUESTBOOK_SUBMIT', 'Send message', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(112, 'nl', 'GUESTBOOK_SUBMIT', 'Verzend gegevens', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(113, 'fi', 'GUESTBOOK_SUBMIT_TEXT', 'Kiitos yhteydenotostasi. Olemme sinuun yhteydessä pian.', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(114, 'en', 'GUESTBOOK_SUBMIT_TEXT', 'Thank you. We''ll be in touch with you soon.', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(115, 'nl', 'GUESTBOOK_SUBMIT_TEXT', 'Dank je. We zullen binnenkort contact met u op.', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(116, 'en', 'GUESTBOOK_SHOW_FORM', 'Add recommendation', NULL, '2016-07-19 21:00:00'),
+(117, 'nl', 'GUESTBOOK_SHOW_FORM', 'Voeg referentie toe', NULL, '2016-07-19 21:00:00'),
+(118, 'fi', 'GUESTBOOK_SHOW_FORM', 'Kirjoita suositus', NULL, '2016-07-19 21:00:00'),
+(119, 'en', 'GUESTBOOK_TITLE', 'Guestbook', NULL, '0000-00-00 00:00:00'),
+(120, 'nl', 'GUESTBOOK_TITLE', 'Gastenboek', NULL, '2016-07-19 21:00:00'),
+(121, 'fi', 'GUESTBOOK_TITLE', 'Vieraskirja', NULL, '2016-07-19 21:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
