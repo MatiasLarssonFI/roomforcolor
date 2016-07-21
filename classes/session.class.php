@@ -42,11 +42,11 @@ class Session {
      * Also ensures that the token is accessible from this->_request_storage.
      */
     private function try_generate_csrf_token() {
-        if (!array_key_exists("WP_csrf", $_COOKIE)) {
-            $this->_request_storage["csrf_token"] = hash("sha256", bin2hex(openssl_random_pseudo_bytes(4)) . "Houston, we have woodparts.");
-            setcookie("WP_csrf", $this->_request_storage["csrf_token"]);
+        if (!array_key_exists("R4C_csrf", $_COOKIE)) {
+            $this->_request_storage["csrf_token"] = hash("sha256", bin2hex(openssl_random_pseudo_bytes(4)) . "Houston, we have room for color.");
+            setcookie("R4C_csrf", $this->_request_storage["csrf_token"]);
         } else if (!array_key_exists("csrf_token", $this->_request_storage)) {
-            $this->_request_storage["csrf_token"] = $_COOKIE["WP_csrf"];
+            $this->_request_storage["csrf_token"] = $_COOKIE["R4C_csrf"];
         }
     }
     
@@ -57,7 +57,7 @@ class Session {
      * @return boolean
      */
     public function validate_csrf_token($token) {
-        return $token === $_COOKIE["WP_csrf"];
+        return $token === $_COOKIE["R4C_csrf"];
     }
     
     
