@@ -8,7 +8,7 @@ require_once(dirname(__FILE__) . "/../gallery_factory.class.php");
 
 class GalleryView extends AbstractView {
     protected function get_required_params() {
-        return array("gallery_id");
+        return array("gallery_id", "action");
     }
     
     
@@ -20,7 +20,14 @@ class GalleryView extends AbstractView {
     protected function get_view_data(array $params) {
         $factory = \GalleryFactory::get();
         $text_storage = \UITextStorage::get();
-        $gallery = $factory->get_gallery((int)$params["gallery_id"]);
+        $gallery_id = (int)$params["gallery_id"];
+        if ($gallery_id > 0) { // gallery is selected by user
+            $gallery = $factory->get_gallery($gallery_id);
+        } else {
+            // this happens when the user clicks on the gallery action
+            // nav (gallery not selected, only the action is)
+            $gallery = $factory->get_default_gallery($params["action"]);
+        }
         $images = $factory->get_gallery_images($gallery->get_id());
         return array(
             "strings" => array(

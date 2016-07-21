@@ -58,7 +58,13 @@ class ViewFactory {
         } else if ($action === "guestbook_submit") {
             return new GuestbookSubmitView($_POST, $nlf);
         } else if (in_array($action, $gallery_actions)) {
-            return new GalleryView(["gallery_id" => $this->optional_element(0, null, $params)], $nlf);
+            return new GalleryView(
+                            [
+                                "gallery_id" => $this->optional_element(0, null, $params),
+                                "action" => $action
+                            ],
+                            $nlf
+                        );
         }
         
         // Bad request: redirect to front page

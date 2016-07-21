@@ -4,11 +4,12 @@ require_once(dirname(__FILE__) . "/nav_link.class.php");
 require_once(dirname(__FILE__) . "/dbif.class.php");
 require_once(dirname(__FILE__) . "/isub_nav_link_factory.class.php");
 require_once(dirname(__FILE__) . "/ui_text_storage.class.php");
+require_once(dirname(__FILE__) . "/gallery_factory.class.php");
 
 
 class GallerySubNavLinkFactory implements ISubNavLinkFactory {
     public function get_sub_nav_links($action, array $params) {
-        $current_gallery_id = $this->get_current_gallery_id($params);
+        $current_gallery_id = $this->get_current_gallery_id($action, $params);
         $lang = UITextStorage::get()->get_language();
         $ret = [];
         
@@ -24,12 +25,17 @@ class GallerySubNavLinkFactory implements ISubNavLinkFactory {
     }
     
     
-    private function get_current_gallery_id(array $params) {
-        if (!empty($params)) {
+    private function get_current_gallery_id($action, array $params) {
+        if (!empty($params)) { // gallery is selected
             return (int)$params[0];
         }
         
-        return null;
+        try {
+            // gallery is not selected by user, so the current one is the default one
+            return \GalleryFactory::get()->get_default_gallery($action)->get_id();
+        } catch (InvalidArgumentException $e) {
+            return null; // there were no galleries for $action
+        }
     }
     
     

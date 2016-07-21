@@ -79,4 +79,17 @@ class GalleryFactory {
         $row = DBIF::get()->get_gallery($id, $lang);
         return new Gallery((int)$row["id"], $row["name"]);
     }
+    
+    
+    /**
+     * Returns the default gallery for given action.
+     * 
+     * @param string $action
+     * @return IGallery[]
+     */
+    public function get_default_gallery($action) {
+        $lang = UITextStorage::get()->get_language();
+        $row = DBIF::get()->get_first_gallery($action, $lang);
+        return new Gallery((int)$row["id"], $row["name"]);
+    }
 }

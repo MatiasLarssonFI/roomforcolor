@@ -10,6 +10,7 @@ require_once(dirname(__FILE__) . "/icontact_message.class.php");
  */
 class DBIF {
     private $_pdo;
+    private $_result_cache;
     
     private static $_inst = null;
     
@@ -69,16 +70,8 @@ class DBIF {
      * Calls cb_store_row on each row.
      */
     public function get_gallery($id, $language) {
-        $stm = $this->_pdo->prepare(
-                    "SELECT gallery.id, gn.content as name
-                    from gallery
-                    inner join gallery_name gn
-                        on gn.gallery_id = gallery.id
-                        and gn.language = :lang
-                    where gallery.id = :id
-                    ");
+        $stm = $this->get_gallery_stm($language, "where gallery.id = :id");
         $stm->bindParam(":id", $id, PDO::PARAM_INT);
-        $stm->bindParam(":lang", $language, PDO::PARAM_STR);
         $stm->execute();
         if ($stm->rowCount() > 0) {
             return $stm->fetch();
@@ -86,6 +79,33 @@ class DBIF {
         
         throw new InvalidArgumentException("No gallery for id '{$id}' and lang '{$language}'");
     }
+    
+    
+    /**
+     * Get the first gallery by action.
+     * 
+     * The result is cached so it is fine to call this method subsequently.
+     * 
+     * Calls cb_store_row on each row.
+     */
+    public function get_first_gallery($action, $language) {
+        $cache_id = __METHOD__ . md5(implode("", func_get_args()));
+        if ($gallery_data = $this->get_from_cache($cache_id)) {
+            return $gallery_data;
+        } else {
+            $stm = $this->get_gallery_stm($language, "where gallery.action = :action order by id asc limit 1");
+            $stm->bindParam(":action", $action, PDO::PARAM_STR);
+            $stm->execute();
+            if ($stm->rowCount() > 0) {
+                $gallery_data = $stm->fetch();
+                $this->insert_to_cache($gallery_data, $cache_id);
+                return $gallery_data;
+            }
+            
+            throw new InvalidArgumentException("No gallery for action '{$action}' and lang '{$language}'");
+        }
+    }
+    
     
     
     /**
@@ -146,20 +166,35 @@ class DBIF {
      * @param string $lang
      */
     public function get_action_galleries($cb_store_row, $action, $lang) {
-        $stm = $this->_pdo->prepare(
-                            "SELECT g.id, gn.content as name
-                            FROM gallery g
-                            inner join gallery_name gn
-                                on gn.gallery_id = g.id
-                                and gn.language = :lang
-                            WHERE g.action = :action");
+        $stm = $this->get_gallery_stm($lang, "where gallery.action = :action");
         $stm->bindParam(":action", $action, PDO::PARAM_STR);
-        $stm->bindParam(":lang", $lang, PDO::PARAM_STR);
         $stm->execute();
         
         while ($row = $stm->fetch()) {
             $cb_store_row($row);
         }
+    }
+    
+    
+    /**
+     * Returns a PDOStatement to fetch a gallery.
+     * 
+     * @param string $language
+     * @param string $appended_sql SQL to append to the query string right after the joins.
+     * 
+     * @return PDOStatement
+     */
+    private function get_gallery_stm($language, $appended_sql) {
+        $stm = $this->_pdo->prepare(
+                    "SELECT gallery.id, gn.content as name
+                    from gallery
+                    inner join gallery_name gn
+                        on gn.gallery_id = gallery.id
+                        and gn.language = :lang
+                    {$appended_sql}
+            ");
+        $stm->bindParam(":lang", $language, PDO::PARAM_STR);
+        return $stm;
     }
     
     
@@ -357,6 +392,32 @@ class DBIF {
     }
     
     
+    /**
+     * Write data to cache.
+     * 
+     * @param mixed $data
+     * @param string $cache_id
+     */
+    private function insert_to_cache($data, $cache_id) {
+        $this->_result_cache[$cache_id] = $data;
+    }
+    
+    
+    
+    /**
+     * Read data from cache.
+     * 
+     * @param string $cache_id
+     */
+    private function get_from_cache($cache_id) {
+        if (array_key_exists($cache_id, $this->_result_cache)) {
+            return $this->_result_cache[$cache_id];
+        }
+        
+        return null;
+    }
+    
+    
     protected function __construct() {
         $db_login = SiteConfigFactory::get()->get_site_config()->db_login_params();
         try {
@@ -368,5 +429,7 @@ class DBIF {
         $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->_pdo->exec("SET NAMES utf8");
         ini_set("default_charset", "utf-8");
+        
+        $this->_result_cache = array();
     }
 }
