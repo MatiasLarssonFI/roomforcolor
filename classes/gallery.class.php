@@ -1,6 +1,9 @@
 <?php
 
-class Gallery {
+require_once(__DIR__ . "/igallery.class.php");
+
+
+class Gallery implements IGallery {
     private $_name;
     private $_id;
     

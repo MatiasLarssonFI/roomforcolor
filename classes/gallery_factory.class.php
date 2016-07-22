@@ -1,6 +1,5 @@
 <?php
 
-require_once(dirname(__FILE__) . "/igallery_image.class.php");
 require_once(dirname(__FILE__) . "/gallery.class.php");
 require_once(dirname(__FILE__) . "/gallery_image.class.php");
 require_once(dirname(__FILE__) . "/ui_text_storage.class.php");
