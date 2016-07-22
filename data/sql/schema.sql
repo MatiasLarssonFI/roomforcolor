@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 20, 2016 at 11:02 PM
+-- Generation Time: Jul 22, 2016 at 07:05 PM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -133,7 +133,58 @@ CREATE TABLE IF NOT EXISTS `image` (
   `time_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq` (`original_uri`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=31 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `process_page`
+--
+
+CREATE TABLE IF NOT EXISTS `process_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `time_created` datetime NOT NULL,
+  `time_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `process_text`
+--
+
+CREATE TABLE IF NOT EXISTS `process_text` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `process_page_id` int(11) NOT NULL,
+  `language` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `content` text COLLATE utf8_swedish_ci NOT NULL,
+  `order` int(11) NOT NULL,
+  `time_created` datetime NOT NULL,
+  `time_edited` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `gallery_id` (`process_page_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `process_translation`
+--
+
+CREATE TABLE IF NOT EXISTS `process_translation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `process_page_id` int(11) NOT NULL,
+  `language` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `intro` text COLLATE utf8_swedish_ci NOT NULL,
+  `time_created` datetime NOT NULL,
+  `time_edited` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq` (`process_page_id`,`language`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -150,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `ui_text` (
   `time_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   UNIQUE KEY `lang_code_uniq` (`language`,`code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=122 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=125 ;
 
 --
 -- Constraints for dumped tables
@@ -168,6 +219,18 @@ ALTER TABLE `gallery_image`
 --
 ALTER TABLE `gallery_name`
   ADD CONSTRAINT `gallery_name_ibfk_1` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `process_text`
+--
+ALTER TABLE `process_text`
+  ADD CONSTRAINT `process_text_ibfk_1` FOREIGN KEY (`process_page_id`) REFERENCES `process_page` (`id`);
+
+--
+-- Constraints for table `process_translation`
+--
+ALTER TABLE `process_translation`
+  ADD CONSTRAINT `process_translation_ibfk_1` FOREIGN KEY (`process_page_id`) REFERENCES `process_page` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

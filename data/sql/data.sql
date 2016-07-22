@@ -156,7 +156,10 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (118, 'fi', 'GUESTBOOK_SHOW_FORM', 'Kirjoita suositus', NULL, '2016-07-19 21:00:00'),
 (119, 'en', 'GUESTBOOK_TITLE', 'Guestbook', NULL, '0000-00-00 00:00:00'),
 (120, 'nl', 'GUESTBOOK_TITLE', 'Gastenboek', NULL, '2016-07-19 21:00:00'),
-(121, 'fi', 'GUESTBOOK_TITLE', 'Vieraskirja', NULL, '2016-07-19 21:00:00');
+(121, 'fi', 'GUESTBOOK_TITLE', 'Vieraskirja', NULL, '2016-07-19 21:00:00'),
+(122, 'en', 'NAV_PROCESS', 'Process', '2016-07-22 15:56:54', '2016-07-21 21:00:00'),
+(123, 'nl', 'NAV_PROCESS', 'Werkwijze', '2016-07-22 15:56:56', '2016-07-21 21:00:00'),
+(124, 'fi', 'NAV_PROCESS', 'Prosessi', '2016-07-22 15:56:56', '2016-07-21 21:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
