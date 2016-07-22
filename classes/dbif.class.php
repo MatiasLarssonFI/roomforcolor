@@ -107,6 +107,48 @@ class DBIF {
     }
     
     
+    /**
+     * Get the process.
+     * 
+     * Calls cb_store_row on each row.
+     */
+    public function get_process($id, $language) {
+        $stm = $this->get_process_stm($language, "where process_page.id = :id");
+        $stm->bindParam(":id", $id, PDO::PARAM_INT);
+        $stm->execute();
+        if ($stm->rowCount() > 0) {
+            return $stm->fetch();
+        }
+        
+        throw new InvalidArgumentException("No process for id '{$id}' and lang '{$language}'");
+    }
+    
+    
+    /**
+     * Get the first gallery by action.
+     * 
+     * The result is cached so it is fine to call this method subsequently.
+     * 
+     * Calls cb_store_row on each row.
+     */
+    public function get_first_process($action, $language) {
+        $cache_id = __METHOD__ . md5(implode("", func_get_args()));
+        if ($process_data = $this->get_from_cache($cache_id)) {
+            return $process_data;
+        } else {
+            $stm = $this->get_process_stm($language, "where process_page.action = :action order by id asc limit 1");
+            $stm->bindParam(":action", $action, PDO::PARAM_STR);
+            $stm->execute();
+            if ($stm->rowCount() > 0) {
+                $process_data = $stm->fetch();
+                $this->insert_to_cache($process_data, $cache_id);
+                return $process_data;
+            }
+            
+            throw new InvalidArgumentException("No process for action '{$action}' and lang '{$language}'");
+        }
+    }
+    
     
     /**
      * Get the gallery images.
@@ -177,6 +219,26 @@ class DBIF {
     
     
     /**
+     * Get the processes for an action.
+     * 
+     * Calls cb_store_row on each row.
+     * 
+     * @param callable $cb_store_row
+     * @param string $action
+     * @param string $lang
+     */
+    public function get_action_processes($cb_store_row, $action, $lang) {
+        $stm = $this->get_process_stm($lang, "where process_page.action = :action");
+        $stm->bindParam(":action", $action, PDO::PARAM_STR);
+        $stm->execute();
+        
+        while ($row = $stm->fetch()) {
+            $cb_store_row($row);
+        }
+    }
+    
+    
+    /**
      * Returns a PDOStatement to fetch a gallery.
      * 
      * @param string $language
@@ -199,7 +261,53 @@ class DBIF {
     
     
     /**
-     * Returns gallery actions excluding the empty action.
+     * Returns a PDOStatement to fetch a process.
+     * 
+     * @param string $language
+     * @param string $appended_sql SQL to append to the query string right after the joins.
+     * 
+     * @return PDOStatement
+     */
+    private function get_process_stm($language, $appended_sql) {
+        $stm = $this->_pdo->prepare(
+                    "SELECT process_page.id, pt.intro, pt.title
+                    from process_page
+                    inner join process_translation pt
+                        on pt.process_page_id = process_page.id
+                        and pt.language = :lang
+                    {$appended_sql}
+            ");
+        $stm->bindParam(":lang", $language, PDO::PARAM_STR);
+        return $stm;
+    }
+    
+    
+    /**
+     * Get the process texts.
+     * 
+     * Calls cb_store_row on each row
+     * 
+     * @param int $process_id
+     */
+    public function get_process_texts($cb_store_row, $process_id, $language) {
+        $stm = $this->_pdo->prepare(
+                            "SELECT pt.id, pt.title, pt.content
+                            FROM process_text pt
+                            where process_page_id = :p_id
+                            and language = :lang
+                            ");
+        $stm->bindParam(":p_id", $process_id, PDO::PARAM_INT);
+        $stm->bindParam(":lang", $language, PDO::PARAM_STR);
+        $stm->execute();
+        
+        while ($row = $stm->fetch()) {
+            $cb_store_row($row);
+        }
+    }
+    
+    
+    /**
+     * Returns the gallery actions excluding the empty action.
      * 
      * @return string[]
      */
@@ -207,6 +315,26 @@ class DBIF {
         $ret = [];
         
         $stm = $this->_pdo->prepare("SELECT distinct action from gallery where action != ''");
+        $stm->execute();
+        
+        while ($row = $stm->fetch()) {
+            $ret[] = $row["action"];
+        }
+        
+        return $ret;
+    }
+    
+    
+    
+    /**
+     * Returns the process actions.
+     * 
+     * @return string[]
+     */
+    public function get_process_actions() {
+        $ret = [];
+        
+        $stm = $this->_pdo->prepare("SELECT distinct action from process_page");
         $stm->execute();
         
         while ($row = $stm->fetch()) {
