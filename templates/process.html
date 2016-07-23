@@ -7,7 +7,7 @@
 <p>{{ strings.intro }}</p>
 {% for text in texts %}
     {% if text.get_title|length %}
-        <h3>{{ text.get_title }}</h3>
+        <strong>{{ text.get_title }}</strong>
     {% endif %}
     <p>{{ text.get_content }}</p>
 {% endfor %}
