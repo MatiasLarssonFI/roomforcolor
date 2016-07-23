@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 22, 2016 at 07:07 PM
--- Server version: 5.5.49-0ubuntu0.14.04.1
+-- Generation Time: Jul 23, 2016 at 03:08 PM
+-- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -35,6 +35,94 @@ INSERT INTO `config` (`id`, `key`, `value`, `time_edited`, `time_created`) VALUE
 (8, 'js_src_mode', 'debug', NULL, '2016-07-15 21:00:00'),
 (9, 'js_src_version', '20160716', NULL, '2016-07-15 21:00:00'),
 (10, 'css_src_version', '20160716', NULL, '2016-07-15 21:00:00');
+
+--
+-- Dumping data for table `process_page`
+--
+
+INSERT INTO `process_page` (`id`, `action`, `time_created`, `time_edited`) VALUES
+(1, 'process', '2016-07-22 00:00:00', NULL),
+(2, 'process', '2016-07-22 00:00:00', NULL),
+(3, 'process', '2016-07-22 00:00:00', NULL),
+(4, 'process', '2016-07-22 00:00:00', NULL),
+(5, 'process', '2016-07-22 00:00:00', NULL);
+
+--
+-- Dumping data for table `process_text`
+--
+
+INSERT INTO `process_text` (`id`, `process_page_id`, `language`, `title`, `content`, `order`, `time_created`, `time_edited`) VALUES
+(1, 1, 'en', '', 'Would you like to have a wall painting? A nice wall painting will be a wonderful eye catcher!\nIt is an original and trendy way to decorate your company entrance, one of the company rooms or private home. Wall paintings give a happy, warm \nand personal atmosphere and can be made for you personal taste.', 1, '2016-07-22 00:00:00', '2016-07-23 09:44:42'),
+(2, 2, 'en', '', 'After a first contact through e-mail or by phone, it might be clear of what is desired. I will make a cost calculation and a date on which I will have the \npainting ready can be set.', 1, '2016-07-22 00:00:00', '2016-07-22 14:39:59'),
+(3, 1, 'en', 'Material', 'The paint I will be using will be on water base and will not give a lot of odeur. Also the paint will dry fast and water-resistant. It will be possible to \r\nclean the painting with a little bit of wet towel. I will take all of my own material with me, inclusive floor coverup.', 4, '2016-07-23 00:00:00', '2016-07-23 09:43:55'),
+(5, 1, 'en', 'The wall', 'I prefer to work on a smooth wall which has already been painted. When the wall has a dark coat, just let me know, than I can make a better estimation.\r\nIf the wall has a rougher structure it will be possible to paint, but it will cost more because it will take longer to decorate. \r\nWhen a wall is very rough it might be good to consider a panel, this can be colored in the wall colour and mounted where ever.', 5, '2016-07-23 00:00:00', '2016-07-23 09:43:51'),
+(7, 1, 'en', 'The picture', 'I would like to receive a picture of the existing wall and te room where the painting will be. \r\nI can make a design and there is also the option of sending your own picture (this can be a photograph, cart, drawing, own made sketch or anything else) \r\nso I can put it in the design.', 6, '2016-07-23 00:00:00', '2016-07-23 09:43:49'),
+(9, 1, 'en', 'Cost calculations', 'I prefer to set a set cost, so there will be no surprises for you. This I will base on the hours I think I need, material and kilometers.', 7, '2016-07-23 00:00:00', '2016-07-23 09:43:46'),
+(10, 1, 'en', '', 'In some occasions it is required for me to make first a drawing of the figures and/or background, name etc. This drawing and the cost calculation will\r\nbe sent by e-mail.', 3, '2016-07-23 00:00:00', '2016-07-23 09:51:51'),
+(11, 1, 'en', '', 'How a wall painting comes to live?\r\nAfter a first contact through e-mail or by phone, it might be clear of what is desired. I will make a cost calculation and a date on which I will come and \r\npaint the wall painting can be set.', 2, '2016-07-23 00:00:00', '2016-07-23 09:45:09'),
+(12, 1, 'en', '', 'Most of the wall paintings will be ready in 1 or 2 days time, depends on the amount of figures and size. For more extensive wallpaintings with a lot \r\nof figures or animals we can communicate the amount of days that are needed and plan these.', 8, '2016-07-23 00:00:00', '2016-07-23 09:43:46'),
+(13, 1, 'en', '', 'You can always ask a optional cost calculation and planned dates can be canceled without cost to up the day before.', 9, '2016-07-23 00:00:00', '2016-07-23 09:43:46'),
+(14, 1, 'en', '', 'I am working in the region of South-Finland and have no waiting list. I am prepared to come and work out site this region, we can always talk about it.', 10, '2016-07-23 00:00:00', '2016-07-23 09:43:46'),
+(15, 1, 'nl', '', 'Muurschildering laten maken? Een mooie muurschildering is een echte eye catcher!\r\nOp zoek naar een originele en trendy manier om uw kamer of lokaal te decoreren? Muurschilderingen geven een vrolijke, warme en persoonlijke \r\nsfeer en kunnen helemaal op maat naar uw wensen worden gemaakt.', 1, '2016-07-22 00:00:00', '2016-07-23 09:44:42'),
+(16, 1, 'nl', '', 'Hoe komt een muurschildering tot stand?\r\nNa het eerste contact via mail of telefonisch, is het in sommige gevallen al meteen duidelijk hoe de muurschildering eruit komt te zien. In dat geval \r\nwordt er een prijsopgave gemaakt en kan er een indien gewenst een datum gepland worden om de muurschildering te realiseren.\r\nIn andere gevallen is het wenselijk om van te voren eerst een tekening te maken met alle gewenste figuurtjes en/of achtergrond, naam etc. \r\nDeze tekening wordt dan samen met de prijsopgave per mail verstuurd.', 2, '2016-07-23 00:00:00', '2016-07-23 09:45:09'),
+(17, 1, 'nl', 'Materiaal', 'Ik schilder met acrylverf, dit is verf op waterbasis, kindvriendelijk en niet schadelijk voor de gezondheid. Als deze verf opdroogt is het watervast en \r\nkun je, als het nodig is, de muurschildering gewoon afnemen met een vochtig doekje. Ik neem alle materialen zelf mee, incl. afdekmateriaal.', 3, '2016-07-23 00:00:00', '2016-07-23 09:51:51'),
+(18, 1, 'nl', 'De afbeelding', 'Ik ontvang graag een foto van de muur en de kamer waar de schildering moet komen.\r\nHet is mogelijk om zelf één of meerdere afbeeldingen aan mij door te sturen (dit kunnen foto’s, ansichtkaarten, tekeningen, eigen schetsjes en \r\ndergelijke zijn) zodat ik ze in het ontwerp kan verwerken.', 5, '2016-07-23 00:00:00', '2016-07-23 10:52:05'),
+(20, 1, 'nl', 'Tarieven muurschilderingen', 'Ik communiceer altijd vooraf een vaste prijs zodat je nooit voor verrassingen komt te staan. Dit doe ik op basis van de ingeschatte uren, materiaal \r\nen kilometers.', 6, '2016-07-23 00:00:00', '2016-07-23 10:52:02'),
+(21, 1, 'nl', '', 'Mijn uitgangspunt is: \r\n32,50 x aantal uren + 15,- materiaalkosten + 0,20 per km=  + 24% BTW Most of the wall paintings will be ready in 1 or 2 days time, depends on the amount of figures and size. For more extensive wallpaintings with a lot \r\nof figures or animals we can communicate the amount of days that are needed and plan these.', 7, '2016-07-23 00:00:00', '2016-07-23 10:51:58'),
+(22, 1, 'nl', '', 'De meeste muurschilderingen zijn binnen 1 á 2 dagen klaar, meestal afhankelijk van het aantal figuurtjes. Voor uitgebreidere muurschilderingen met \r\nveel figuren of dieren bv. worden in overleg  meerdere dagen ingepland.', 8, '2016-07-23 00:00:00', '2016-07-23 10:51:56'),
+(23, 1, 'nl', '', 'Het aanvragen van een prijsopgave is uiteraard vrijblijvend en geplande schilderdata kunnen tot een dag van te voren kosteloos worden geannuleerd.', 9, '2016-07-23 00:00:00', '2016-07-23 10:51:54'),
+(24, 1, 'nl', '', 'Ik werk in Zuid-Finland en heb geen lange wachttijden. Ik ben bereid om te overwegen om buiten deze regio te werken. Dit kunnen we altijd overleggen.', 10, '2016-07-23 00:00:00', '2016-07-23 10:51:38'),
+(25, 1, 'nl', 'De muur', 'De muur\r\nIk werk het liefst op een gladde muur die al een keer gesaust is. Mocht de muur een donkere ondergrond hebben, laat het mij dan even weten, dan \r\nkan ik een goede tijdsinschatting maken. Als de muur wat grover is kan het ook, maar dan kost het wat meer tijd.\r\nMocht de muur erg grof van structuur zijn is het misschien een goed idee om met panelen te werken. Deze kunnen in de kleur van de bestaande \r\nmuur worden beschilderd en daarop de schildering.', 4, '2016-07-23 00:00:00', '2016-07-23 10:52:09'),
+(26, 2, 'en', '', 'There is the option to sent me one or several pictures. Several pictures can be combined to make one painting. I can also provide a design.', 2, '0000-00-00 00:00:00', '2016-07-23 10:59:44'),
+(27, 2, 'en', '', 'There is the possibility to bring the parts to be decorated to me or that I will come and pick them up. I also can come to you and paint on location. In this case I will bring all the necessaries to make the decoration.', 3, '0000-00-00 00:00:00', '2016-07-23 10:59:53'),
+(28, 2, 'nl', '', 'Na het eerste contact via mail of telefonisch, is het in sommige gevallen al meteen duidelijk hoe de afbeelding eruit komt te zien. In dat geval wordt \r\ner een prijsopgave gemaakt en kan er een indien gewenst een datum gepland worden om de afbeelding klaar te hebben.', 1, '2016-07-22 00:00:00', '2016-07-22 14:39:59'),
+(29, 2, 'nl', '', 'Het is mogelijk om zelf één of meerdere afbeeldingen of foto’s aan mij door te sturen zodat ik ze in het ontwerp kan verwerken. Of ik kan een \r\nontwerp voor u maken.', 2, '0000-00-00 00:00:00', '2016-07-23 10:59:44'),
+(30, 2, 'nl', '', 'De mogelijkheid is om de beschilderde onderdelen naar mij toe te brengen of dat ik die kom ophalen. Ook kan ik bij U komen en het ter plaatse te \r\nbeschilderen. Ik neem alle benodigdheden om de afbeelding te verwerkelijken zelf mee.', 3, '0000-00-00 00:00:00', '2016-07-23 10:59:53'),
+(31, 3, 'en', '', 'After a first contact true e-mail or by phone, it might be clear of what is desired. I will make a cost calculation and a date on which I will have the \r\ndrawing ready can be set.', 1, '2016-07-23 00:00:00', '2016-07-23 11:30:35'),
+(32, 3, 'en', '', 'There is the option to sent me one or several pictures. Several pictures can be combined to make one drawing.\r\nThe drawing can be made on any size of paper, any kind of paper and any paper colour.', 2, '2016-07-23 00:00:00', '2016-07-23 11:30:51'),
+(33, 3, 'nl', '', 'Na het eerste contact via mail of telefonisch, is het in sommige gevallen al meteen duidelijk hoe de tekening eruit komt te zien. In dat geval wordt er\r\neen prijsopgave gemaakt en kan er een indien gewenst een datum gepland worden om de tekening klaar te hebben.', 1, '2016-07-23 00:00:00', '2016-07-23 11:30:35'),
+(34, 3, 'nl', '', 'Het is mogelijk om zelf één of meerdere afbeeldingen of foto’s aan mij door te sturen zodat ik ze in het ontwerp kan verwerken. Dit kan verwerkt \r\nworden op verschillende formaten, papier en papierkleuren.', 2, '2016-07-23 00:00:00', '2016-07-23 11:30:51'),
+(35, 4, 'en', '', 'After a first contact true e-mail or by phone, it might be clear of what is desired. I will make a cost calculation and a date on which I will have the \r\npanel ready can be set.', 1, '2016-07-23 00:00:00', '2016-07-23 11:43:43'),
+(36, 4, 'en', '', 'There is the option to sent me one or several pictures. Several pictures can be combined to make one panel. These panels can be made in different sizes. \r\nThe background can be the same as the wall, where the panel will be, or any other colour. Just consider where it will come and how to attach it.', 2, '2016-07-23 00:00:00', '2016-07-23 11:43:43'),
+(37, 4, 'nl', '', 'Na het eerste contact via mail of telefonisch, is het in sommige gevallen al meteen duidelijk hoe het paneel eruit komt te zien. In dat geval wordt er \r\neen prijsopgave gemaakt en kan er een indien gewenst een datum gepland worden om paneel klaar te hebben.', 1, '2016-07-23 00:00:00', '2016-07-23 11:44:37'),
+(38, 4, 'nl', '', 'Het is mogelijk om zelf één of meerdere afbeeldingen of foto’s aan mij door te sturen zodat ik ze in het ontwerp kan verwerken. Dit kan verwerkt \r\nworden op verschillende formaten. De ondergrond kan dezelfde kleur als de bestaande muur krijgen of geschilderd worden in elke andere kleur.\r\nHoud hier rekening mee waar het geplaatst wordt. En hoe het bevestigt moet worden.', 2, '2016-07-23 00:00:00', '2016-07-23 11:44:37'),
+(39, 5, 'en', '', 'Would you like a wallpainting but have no idea what? Or have no idea what to choose?\nThan I have some tips which can help you to make a decision.', 1, '2016-07-23 00:00:00', '2016-07-23 12:00:41'),
+(40, 5, 'en', '', 'Before you let me make a wallpainting it is good to consider the following things:', 2, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(41, 5, 'en', '', 'Would you like a wallpainting to coverup a whole wall or just a part, for example above a baby crib or changing place? Is it a big or small room? When the room is small many times it looks better when a wall is partly covert.', 3, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(42, 5, 'en', '', 'On which of the existing wall or walls the painting should be? Think about the furniture where it will be placed. Sometimes it is good to consider \r\nfuture use of the room.', 4, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(43, 5, 'en', '', 'Would you like to have a wall painting specific for gender or rather neutral? It is possible with some accent colors to make it more gender specific. This can later be adjusted for the opposite gender.\r\nA teenager might have there own wishes, these can be taking into the design.', 5, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(44, 5, 'en', '', 'Which will be the background colour? It is not a necessity to have a white background to make a wall painting. A different background colour might \r\ngive a wonderful effect.', 6, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(45, 5, 'en', '', 'Personal elements like a holiday picture, a name, a stuffed animal or pet, can make it very unique!', 7, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(46, 5, 'en', '', 'It is also very important to remember which budget you will have. It is possible to make a wall painting according to a budget.', 8, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(47, 5, 'nl', '', 'Wil je graag een muurschildering laten maken maar weet je nog niet precies wat? Of weet je door de vele voorbeelden niet meer wat je moet kiezen?\r\nHieronder volgen een aantal tips die je kunnen helpen bij het kiezen of samenstellen van een muurschildering.', 1, '2016-07-23 00:00:00', '2016-07-23 12:00:41'),
+(48, 5, 'nl', '', 'Voordat je een muurschildering laat maken, is het handig om al eens over de volgende dingen na te denken:', 2, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(49, 5, 'nl', '', 'Wil je een muurschildering die de hele wand in beslag neemt of alleen een gedeelte, bv. boven het bedje of commode? Is het een groot of juist een \r\nheel klein kamertje? Bij een heel klein kamertje is het vaak mooier om een gedeelte van de wand te beschilderen.', 3, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(50, 5, 'nl', '', 'Op welke wand of wanden moet de muurschildering komen? Denk hierbij ook aan de indeling van de meubels. Vaak kan bij de schildering ook alvast \r\nrekening worden gehouden met een eventuele toekomstige verandering van indeling, als bijvoorbeeld de commode wegvalt en er een “groot” bed in \r\nkomt. Zo blijft de schildering ook langer “bruikbaar”.', 4, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(51, 5, 'nl', '', 'Moet de schildering worden afgestemd op het geslacht van jullie kindje of moeten de kleuren en/of het thema neutraal blijven? Vaak kan met enkele \r\nkleuraccenten al een jongens– of meisjessfeer gemaakt worden. Deze accenten zijn ook weer makkelijk aan te passen aan een eventueel volgend kindje.\r\nEen wat ouder kind heeft zelf vaak al specifieke wensen, deze kunnen in de schildering verwerkt worden.', 5, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(52, 5, 'nl', '', 'Welke kleur krijgt de ondergrond? Het is niet zo dat de muur per sé wit moet zijn om er een muurschildering op te maken. Soms geeft een andere \r\nondergrond kleur juist een heel mooi effect.', 6, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(53, 5, 'nl', '', 'Persoonlijke elementen zoals een vakantie foto, een naam, een knuffel of huisdier, zorgen voor een unieke schildering!', 7, '2016-07-23 00:00:00', '2016-07-23 12:00:50'),
+(54, 5, 'nl', '', 'Ook zeker niet onbelangrijk: Welk budget heb je te besteden? Het is ook mogelijk om aan de hand van een bepaald budget een schildering te laten maken.', 8, '2016-07-23 00:00:00', '2016-07-23 12:00:50');
+
+--
+-- Dumping data for table `process_translation`
+--
+
+INSERT INTO `process_translation` (`id`, `process_page_id`, `language`, `title`, `intro`, `time_created`, `time_edited`) VALUES
+(1, 1, 'en', 'Wallpaintings', 'Process for a wall painting', '2016-07-22 00:00:00', '2016-07-22 14:35:05'),
+(4, 2, 'en', 'Furniture', 'Process for furniture', '2016-07-22 00:00:00', '2016-07-22 14:38:37'),
+(5, 1, 'nl', 'Muurschilderingen', 'Werkwijze voor muurschildering', '2016-07-22 00:00:00', '2016-07-22 14:35:05'),
+(6, 1, 'fi', 'Seinämaalaukset', 'Prosessi seinämaalauksille', '2016-07-22 00:00:00', '2016-07-22 14:35:05'),
+(7, 2, 'nl', 'Meubels', 'Werkwijze voor Meubels', '2016-07-22 00:00:00', '2016-07-22 16:01:28'),
+(8, 2, 'fi', 'Kalusteet', 'Prosessi kalusteille', '2016-07-22 00:00:00', '2016-07-22 16:01:28'),
+(9, 3, 'en', 'Drawings', 'Process for drawings', '2016-07-23 00:00:00', '2016-07-23 11:28:53'),
+(10, 3, 'nl', 'Tekeningen', 'Process for drawings', '2016-07-23 00:00:00', '2016-07-23 11:28:53'),
+(11, 3, 'fi', 'Piirrokset', 'Prosessi piirroksille', '2016-07-23 00:00:00', '2016-07-23 11:38:12'),
+(12, 4, 'en', 'Panels', 'Process for panels', '2016-07-23 00:00:00', '2016-07-23 11:41:47'),
+(13, 4, 'nl', 'Panelen', 'Werkwijze voor panelen', '2016-07-23 00:00:00', '2016-07-23 11:41:58'),
+(14, 4, 'fi', 'Paneelit', 'Prosessi paneeleille', '2016-07-23 00:00:00', '2016-07-23 11:41:58'),
+(15, 5, 'en', 'Inspiration', 'Inspiration needed?', '2016-07-23 00:00:00', '2016-07-23 11:47:07'),
+(16, 5, 'nl', 'Inspiratie', 'Inspiratie nodig?', '2016-07-23 00:00:00', '2016-07-23 11:47:07'),
+(19, 5, 'fi', 'Inspiraatio', 'Inspiraation tarpeessa?', '2016-07-23 00:00:00', '2016-07-23 11:47:07');
 
 --
 -- Dumping data for table `ui_text`
@@ -106,7 +194,7 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (68, 'en', 'NAV_WALLPAINTINGS', 'Wallpaintings', '2016-07-02 11:33:21', '2016-07-01 21:00:00'),
 (69, 'nl', 'NAV_WALLPAINTINGS', 'Muurschilderingen', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
 (70, 'fi', 'NAV_WALLPAINTINGS', 'Seinämaalaukset', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
-(71, 'fi', 'GALLERY_NO_MORE_IMAGES', 'Ei enempää kuvia.', NULL, '2016-07-09 21:00:00'),
+(71, 'fi', 'GALLERY_NO_MORE_IMAGES', 'Ei enempää kuvia.', '2016-07-23 10:36:44', '2016-07-09 21:00:00'),
 (72, 'en', 'GALLERY_NO_MORE_IMAGES', 'No more images.', NULL, '2016-07-09 21:00:00'),
 (73, 'nl', 'GALLERY_NO_MORE_IMAGES', 'Geen afbeeldingen.', NULL, '2016-07-09 21:00:00'),
 (74, 'fi', 'GALLERY_NEXT', 'Seuraava', '2016-07-13 18:02:00', '2016-07-12 21:00:00'),

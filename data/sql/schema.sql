@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 22, 2016 at 07:05 PM
--- Server version: 5.5.49-0ubuntu0.14.04.1
+-- Generation Time: Jul 23, 2016 at 03:11 PM
+-- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `process_page` (
   `time_created` datetime NOT NULL,
   `time_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -165,8 +165,9 @@ CREATE TABLE IF NOT EXISTS `process_text` (
   `time_created` datetime NOT NULL,
   `time_edited` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq` (`process_page_id`,`language`,`order`) COMMENT 'Essentially prevents duplicate order values.',
   KEY `gallery_id` (`process_page_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=55 ;
 
 -- --------------------------------------------------------
 
@@ -184,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `process_translation` (
   `time_edited` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq` (`process_page_id`,`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=20 ;
 
 -- --------------------------------------------------------
 
