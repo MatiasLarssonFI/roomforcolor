@@ -295,6 +295,7 @@ class DBIF {
                             FROM process_text pt
                             where process_page_id = :p_id
                             and language = :lang
+                            order by `order` asc
                             ");
         $stm->bindParam(":p_id", $process_id, PDO::PARAM_INT);
         $stm->bindParam(":lang", $language, PDO::PARAM_STR);
