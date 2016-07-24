@@ -530,7 +530,7 @@ class DBIF {
      * @param callable $cb_store_row
      */
     public function get_guestbook_messages($cb_store_row, $offset) {
-        $stm = $this->_pdo->prepare("SELECT name, message, time_created from guestbook order by time_created desc limit " . (int)$offset . ", 1");
+        $stm = $this->_pdo->prepare("SELECT name, message, time_created from guestbook order by time_created desc limit " . (int)$offset . ", 10");
         $stm->execute();
 
         while ($row = $stm->fetch()) {
