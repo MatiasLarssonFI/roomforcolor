@@ -522,6 +522,37 @@ class DBIF {
     
     
     /**
+     * Get the guestbook messages.
+     * 
+     * Calls cb_store_row on each row.
+     * 
+     * @param int $offset
+     * @param callable $cb_store_row
+     */
+    public function get_guestbook_messages($cb_store_row, $offset) {
+        $stm = $this->_pdo->prepare("SELECT name, message, time_created from guestbook order by time_created desc limit " . (int)$offset . ", 1");
+        $stm->execute();
+
+        while ($row = $stm->fetch()) {
+            $cb_store_row($row);
+        }
+    }
+    
+    
+    /**
+     * Returns number of rows in a table.
+     * 
+     * @param string $tablename SQL-safe table name
+     * @return int
+     */
+    public function row_count($tablename) {
+        $stm = $this->_pdo->prepare("SELECT count(*) from `{$tablename}`");
+        $stm->execute();
+        return (int)$stm->fetchColumn();
+    }
+    
+    
+    /**
      * Write data to cache.
      * 
      * @param mixed $data

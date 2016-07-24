@@ -26,6 +26,9 @@ class GuestbookView extends AbstractView {
                 "field_message" => $text_storage->text("GUESTBOOK_FIELD_MESSAGE"),
                 "show_form" => $text_storage->text("GUESTBOOK_SHOW_FORM"),
                 "submit" => $text_storage->text("GUESTBOOK_SUBMIT"),
+                "load_messages" => $text_storage->text("GUESTBOOK_LOAD_MESSAGES"),
+                "no_more_messages" => $text_storage->text("GUESTBOOK_NO_MORE_MESSAGES"),
+                "recommendations" => $text_storage->text("GUESTBOOK_LIST_TITLE"),
             ),
             "body_paragraphs" => $text_storage->paragraphs("GUESTBOOK_PAGE_TEXT"),
             "placeholder" => array(
@@ -35,8 +38,7 @@ class GuestbookView extends AbstractView {
                 "name" => "",
                 "message" => "",
                 "url" => "", // hidden captcha
-            ),
-            "lang" => $text_storage->get_language()
+            )
         );
     }
 }

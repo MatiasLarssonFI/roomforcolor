@@ -9,6 +9,7 @@ require_once(dirname(__FILE__) . "/about_view.class.php");
 require_once(dirname(__FILE__) . "/gallery_view.class.php");
 require_once(dirname(__FILE__) . "/contact_submit_view.class.php");
 require_once(dirname(__FILE__) . "/guestbook_submit_view.class.php");
+require_once(dirname(__FILE__) . "/guestbook_messages_ajax_view.class.php");
 require_once(dirname(__FILE__) . "/process_view.class.php");
 
 require_once(dirname(__FILE__) . "/../site_config_factory.class.php");
@@ -75,6 +76,11 @@ class ViewFactory {
                             ],
                             $nlf
                         );
+        } else if ($action === "guestbook_messages") {
+            return new GuestbookMessagesAjaxView(
+                        [ "offset" => $this->required_element(0, $params) ],
+                        $nlf
+                    );
         }
         
         // Bad request: redirect to front page
@@ -89,7 +95,15 @@ class ViewFactory {
     private function optional_element($key, $default, $storage) {
         return (isset($storage[$key]) ? $storage[$key] : $default);
     }
-
+    
+    
+    private function required_element($key, $storage) {
+        if (array_key_exists(0, $storage)) {
+            return $storage[0];
+        }
+        
+        throw new \InvalidArgumentException("Missing required element {$key}");
+    }
     
     
     protected function __construct() {}

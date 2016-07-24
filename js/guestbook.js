@@ -1,37 +1,43 @@
 !function($) {
     rfc.guestbook = {
-        init : function() {
-            $("#guestbook-form").unbind("submit").submit(function(e) {
-                e.preventDefault();
-                
-                var form = $(this);
-                var submit_btn = form.find("button[type='submit']");
-                var spinner = form.find("#ajax-spinner");
-                
-                form.find("#is_ajax").val(1);
-                $.ajax({
-                    type: "post",
-                    url : form.attr("action"),
-                    data : form.serialize(),
-                    beforeSend : function() {
-                        submit_btn.prop("disabled", true);
-                        spinner.animate({opacity : 1});
-                    },
-                    success : function(html) {
-                        form.slideUp(600, function() {
-                            $("#page-content #feedback").css("opacity", 0).html(html).animate({opacity : 1});
-                        });
-                        $("#formShowBtn").hide();
-                    },
-                    error : function() {
-                        alert("We're sorry, but an error has occured. Please try again later.");
-                        submit_btn.prop("disabled", false);
-                    },
-                    complete : function() {
-                        spinner.animate({opacity : 0});
+        _msg_load_offset : 0,
+        _nodes : {
+            msg_cont : null,
+            trigger : null,
+            msgs_end : null
+        },
+        
+        /**
+         * cfg is an object containing the following properties:
+         *  - base_url
+         */
+        init : function(cfg) {
+            var load_messages_data = function(offset, dest_node, cb) {
+                dest_node.load(cfg.base_url + "/guestbook_messages/" + offset, "", cb);
+            };
+            
+            var self = this;
+            self._nodes.msg_cont = $("#submissions");
+            self._nodes.trigger = $("#loadTrigger");
+            self._nodes.msgs_end = $("#guestbookMessagesEnd");
+            
+            var load_messages = function() {
+                var old_offset = self._msg_load_offset;
+                // create a new div to which insert loaded html,
+                // append that div to the messages container
+                self._nodes.msg_cont.append("<div data-loaded_set=\"" + old_offset + "\"></div>");
+                var dest_node = self._nodes.msg_cont.children("[data-loaded_set=\"" + old_offset + "\"]").first();
+                load_messages_data(old_offset, dest_node, function() {
+                    self._msg_load_offset = self._nodes.msg_cont.find("[data-guestbook_message]").length; // update offset
+                    if (old_offset === self._msg_load_offset) { // if no messages were received
+                        self._nodes.trigger.hide();
+                        self._nodes.msgs_end.removeClass("hidden");
                     }
                 });
-            });
+            };
+            
+            self._nodes.trigger.click(load_messages);
+            load_messages();
         }
     };
 }(jQuery);

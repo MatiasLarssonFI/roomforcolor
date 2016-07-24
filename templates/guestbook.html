@@ -4,7 +4,7 @@
 {% block content %}
 <main>
     <div class="row">
-        <div class="col-md-5 col-md-offset-3" id="page-content">
+        <div class="col-xs-12" id="page-content">
             <div class="row">
                 <div class="col-xs-12">
                     <p>{{ strings.page_title }}</p>
@@ -17,10 +17,40 @@
                 &nbsp;
             </div>
             <button id="formShowBtn" class="btn btn-link" data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">{{ strings.show_form }}</button>
-            <div id="collapseForm" class="collapse">
-                {% include "guestbook_form.html" %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="collapseForm" class="collapse">
+                        {% include "guestbook_form.html" %}
+                    </div>
+                </div>
+            </div>
+            <h3>{{ strings.recommendations }}</h3>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="well well-sm" id="submissions"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button id="loadTrigger" class="btn btn-link">{{ strings.load_messages }}</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 hidden" id="guestbookMessagesEnd">
+                    {{ strings.no_more_messages }}
+                </div>
             </div>
         </div>
     </div>
 </main>
+<script src="{{ __base_uri }}/js/guestbook.js"></script>
+<script>
+    !function($) {
+        $(document).ready(function() {
+            rfc.guestbook.init({
+                base_url : "{{ __base_uri }}/{{ __lang }}"
+            });
+        });
+    }(jQuery);
+</script>
 {% endblock %}
