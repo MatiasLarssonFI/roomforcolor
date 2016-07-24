@@ -247,7 +247,16 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (121, 'fi', 'GUESTBOOK_TITLE', 'Vieraskirja', NULL, '2016-07-19 21:00:00'),
 (122, 'en', 'NAV_PROCESS', 'Process', '2016-07-22 15:56:54', '2016-07-21 21:00:00'),
 (123, 'nl', 'NAV_PROCESS', 'Werkwijze', '2016-07-22 15:56:56', '2016-07-21 21:00:00'),
-(124, 'fi', 'NAV_PROCESS', 'Prosessi', '2016-07-22 15:56:56', '2016-07-21 21:00:00');
+(124, 'fi', 'NAV_PROCESS', 'Prosessi', '2016-07-22 15:56:56', '2016-07-21 21:00:00'),
+(125, 'fi', 'GUESTBOOK_LOAD_MESSAGES', 'Näytä lisää suosituksia', NULL, '2016-07-23 21:00:00'),
+(126, 'en', 'GUESTBOOK_LOAD_MESSAGES', 'Show more recommendations', NULL, '2016-07-23 21:00:00'),
+(127, 'nl', 'GUESTBOOK_LOAD_MESSAGES', 'Toon meer aanbevelingen', NULL, '2016-07-23 21:00:00'),
+(128, 'fi', 'GUESTBOOK_NO_MORE_MESSAGES', 'Kaikki suositukset näytetty.', NULL, '2016-07-23 21:00:00'),
+(130, 'en', 'GUESTBOOK_NO_MORE_MESSAGES', 'All recommendations visible.', NULL, '2016-07-23 21:00:00'),
+(131, 'nl', 'GUESTBOOK_NO_MORE_MESSAGES', 'Alle aanbevelingen zichtbaar.', NULL, '2016-07-23 21:00:00'),
+(132, 'fi', 'GUESTBOOK_LIST_TITLE', 'Suositukset', NULL, '2016-07-23 21:00:00'),
+(133, 'en', 'GUESTBOOK_LIST_TITLE', 'Recommendations', NULL, '2016-07-23 21:00:00'),
+(134, 'nl', 'GUESTBOOK_LIST_TITLE', 'Aanbevelingen', NULL, '2016-07-23 21:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
