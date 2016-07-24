@@ -30,7 +30,7 @@ class ContactMessageFactory {
      * @param string $phone
      * @param string $message
      * 
-     * @return IContactMessage[]
+     * @return IContactMessage
      */
     public function make_from_values($name, $email, $phone, $message) {
         return new ContactMessage($name, $email, $phone, $message);
