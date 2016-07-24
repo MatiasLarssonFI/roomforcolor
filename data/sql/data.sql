@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2016 at 03:08 PM
+-- Generation Time: Jul 24, 2016 at 06:37 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -233,12 +233,12 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (107, 'fi', 'GUESTBOOK_FIELD_NAME', 'Nimesi', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
 (108, 'en', 'GUESTBOOK_FIELD_NAME', 'Name', '2016-07-20 19:17:57', '2016-04-02 15:00:00'),
 (109, 'nl', 'GUESTBOOK_FIELD_NAME', 'Naam', '2016-07-20 19:17:57', '2016-04-02 15:00:00'),
-(110, 'fi', 'GUESTBOOK_SUBMIT', 'Lähetä viesti', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
-(111, 'en', 'GUESTBOOK_SUBMIT', 'Send message', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
-(112, 'nl', 'GUESTBOOK_SUBMIT', 'Verzend gegevens', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
-(113, 'fi', 'GUESTBOOK_SUBMIT_TEXT', 'Kiitos yhteydenotostasi. Olemme sinuun yhteydessä pian.', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
-(114, 'en', 'GUESTBOOK_SUBMIT_TEXT', 'Thank you. We''ll be in touch with you soon.', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
-(115, 'nl', 'GUESTBOOK_SUBMIT_TEXT', 'Dank je. We zullen binnenkort contact met u op.', '2016-07-20 19:17:57', '2016-04-02 18:00:00'),
+(110, 'fi', 'GUESTBOOK_SUBMIT', 'Lähetä suositus', '2016-07-24 15:13:24', '2016-04-02 18:00:00'),
+(111, 'en', 'GUESTBOOK_SUBMIT', 'Send recommendation', '2016-07-24 15:13:31', '2016-04-02 18:00:00'),
+(112, 'nl', 'GUESTBOOK_SUBMIT', 'Aanbeveling verzenden', '2016-07-24 15:13:59', '2016-04-02 18:00:00'),
+(113, 'fi', 'GUESTBOOK_SUBMIT_TEXT', 'Kiitos palautteestasi,', '2016-07-24 14:25:38', '2016-04-02 18:00:00'),
+(114, 'en', 'GUESTBOOK_SUBMIT_TEXT', 'Thank you for your feedback.', '2016-07-24 14:25:49', '2016-04-02 18:00:00'),
+(115, 'nl', 'GUESTBOOK_SUBMIT_TEXT', '\nHartelijk dank voor uw feedback.', '2016-07-24 14:26:16', '2016-04-02 18:00:00'),
 (116, 'en', 'GUESTBOOK_SHOW_FORM', 'Add recommendation', NULL, '2016-07-19 21:00:00'),
 (117, 'nl', 'GUESTBOOK_SHOW_FORM', 'Voeg referentie toe', NULL, '2016-07-19 21:00:00'),
 (118, 'fi', 'GUESTBOOK_SHOW_FORM', 'Kirjoita suositus', NULL, '2016-07-19 21:00:00'),
