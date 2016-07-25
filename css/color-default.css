@@ -1,5 +1,9 @@
-main {
-    border-top: 1px solid #C0C0C0;
+#header {
+    background-color: #fff;
+}
+
+.header-promo {
+    color: #f26c36;
 }
 
 
@@ -15,14 +19,14 @@ main {
 
 
 .lang a {
-    border: 1px solid #dfdfdf;
-    color: #000080;
-    background-color: #eee;
+    background: #fff;
+    color: #2b2b2a;
 }
 
 
 .lang li > a:hover {
-    border-color: #000080;
+    text-decoration: underline;
+    background: #fff;
 }
 
 

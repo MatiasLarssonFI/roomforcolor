@@ -1,10 +1,19 @@
-#header > img, #footer > img {
-    width: 100%;
+main {
+    padding: 2em 0 0 1em;
 }
 
 
-main {
-    padding: 2em 0 0 1em;
+#header .logo {
+    padding: 1em;
+}
+
+#header .slogan {
+    padding-top: 3em;
+}
+
+
+#header .promo {
+    padding-top: 2em;
 }
 
 
@@ -16,6 +25,24 @@ main {
 .front-page-images {
     padding-top: 1em;
     padding-bottom: 1em;
+}
+
+@media (min-width: 800px) {
+    .r4c-nav {
+        text-align: center;
+    }
+
+
+    .r4c-nav > li {
+        float: none;
+        display: inline-block;
+    }
+
+
+    .r4c-nav > li > a,
+    .r4c-sub-nav > li > a {
+        padding: .2em .7em;
+    }
 }
 
 

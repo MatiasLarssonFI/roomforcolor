@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 24, 2016 at 06:37 PM
+-- Generation Time: Jul 25, 2016 at 11:13 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 
 INSERT INTO `config` (`id`, `key`, `value`, `time_edited`, `time_created`) VALUES
 (1, 'color_css_uri', '/css/color-default.css', NULL, '2016-03-13 20:00:00'),
-(2, 'footer_img_uri', '/data/img/footer.png', '2016-06-16 17:30:04', '2016-03-16 20:00:00'),
-(3, 'header_img_uri', '/data/img/header.png', '2016-03-26 15:34:29', '2016-03-25 20:00:00'),
+(2, 'slogan_img_uri', '/data/img/slogan.jpg', '2016-07-25 19:34:15', '2016-03-16 20:00:00'),
+(3, 'header_logo_uri', '/data/img/logo.png', '2016-07-25 19:16:58', '2016-03-25 20:00:00'),
 (4, 'contact_email', 'matias@matias-laptop', '2016-04-02 15:37:11', '2016-04-01 18:00:00'),
 (5, 'mail_server', 'localhost', '2016-04-13 16:20:29', '2016-04-12 18:00:00'),
 (6, 'mail_user', '', NULL, '2016-04-12 18:00:00'),
@@ -256,7 +256,10 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (131, 'nl', 'GUESTBOOK_NO_MORE_MESSAGES', 'Alle aanbevelingen zichtbaar.', NULL, '2016-07-23 21:00:00'),
 (132, 'fi', 'GUESTBOOK_LIST_TITLE', 'Suositukset', NULL, '2016-07-23 21:00:00'),
 (133, 'en', 'GUESTBOOK_LIST_TITLE', 'Recommendations', NULL, '2016-07-23 21:00:00'),
-(134, 'nl', 'GUESTBOOK_LIST_TITLE', 'Aanbevelingen', NULL, '2016-07-23 21:00:00');
+(134, 'nl', 'GUESTBOOK_LIST_TITLE', 'Aanbevelingen', NULL, '2016-07-23 21:00:00'),
+(135, 'nl', 'HEADER_PROMO', 'Muurschilderingen, Meubel decoratie en Tekenigen', NULL, '2016-07-24 21:00:00'),
+(136, 'en', 'HEADER_PROMO', 'Wallpaintings, furniture decoration and Drawings', NULL, '2016-07-24 21:00:00'),
+(137, 'fi', 'HEADER_PROMO', 'Seinämaalauksia, huonekalukoristeluja ja piirroksia', NULL, '2016-07-24 21:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

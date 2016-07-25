@@ -402,24 +402,24 @@ class DBIF {
     
     
     /**
-     * Returns URI of the footer image.
+     * Returns URI of the header logo image.
      * 
      * @return string
      */
-    public function get_footer_img_uri() {
-        $stm = $this->_pdo->prepare("SELECT `value` from config where `key` = 'footer_img_uri'");
+    public function get_header_logo_uri() {
+        $stm = $this->_pdo->prepare("SELECT `value` from config where `key` = 'header_logo_uri'");
         $stm->execute();
         return $stm->fetchColumn();
     }
     
     
     /**
-     * Returns URI of the header image.
+     * Returns URI of the slogan image.
      * 
      * @return string
      */
-    public function get_header_img_uri() {
-        $stm = $this->_pdo->prepare("SELECT `value` from config where `key` = 'header_img_uri'");
+    public function get_slogan_uri() {
+        $stm = $this->_pdo->prepare("SELECT `value` from config where `key` = 'slogan_img_uri'");
         $stm->execute();
         return $stm->fetchColumn();
     }
