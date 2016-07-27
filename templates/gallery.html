@@ -5,10 +5,12 @@
 {% block content %}
 <main>
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 col-xs-11">
-            <div class="row r4c-gallery-stage">
-                <div class="col-xs-12">
-                    <img class="img-responsive" src="{{ default_stage_image_url }}" alt="Missing image">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="r4c-gallery-stage">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="img-responsive" src="{{ default_stage_image_url }}" alt="Missing image">
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -26,16 +28,18 @@
         <div class="col-md-1 hidden-sm hidden-xs text-right gallery-nav">
             <a href="#gallery_move" data-gallery_nav="left"><img src="{{ __base_uri }}/data/img/arrow-left.png" alt="&lt;"></a>
         </div>
-        <div class="r4c-gallery-images-window col-sm-10 col-xs-11">
-            <div class="r4c-gallery-images-container-containment">
-                <div class="r4c-gallery-images-container">
-                    {% for image in images %}
-                        <div class="r4c-gallery-image">
-                            <a href="{{ __base_uri }}{{ image.get_original_url }}" data-img_url="{{ __base_uri }}{{ image.get_original_url }}" data-img_id="{{ image.get_id }}">
-                                <img class="gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
-                            </a>
-                        </div>
-                    {% endfor %}
+        <div class="col-md-10">
+            <div class="r4c-gallery-images-window">
+                <div class="r4c-gallery-images-container-containment">
+                    <div class="r4c-gallery-images-container">
+                        {% for image in images %}
+                            <div class="r4c-gallery-image">
+                                <a href="{{ __base_uri }}{{ image.get_original_url }}" data-img_url="{{ __base_uri }}{{ image.get_original_url }}" data-img_id="{{ image.get_id }}">
+                                    <img class="gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
