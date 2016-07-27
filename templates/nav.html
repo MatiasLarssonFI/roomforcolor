@@ -1,4 +1,4 @@
-<div class='hidden-xs hidden-sm row'>
+<div class='row'>
     <div class='col-xs-12'>
         <nav>
             <ul class='nav nav-pills r4c-nav'>
@@ -9,7 +9,7 @@
         </nav>
     </div>
 </div>
-<div class='hidden-xs hidden-sm row'>
+<div class='row'>
     <div class='col-xs-12'>
         <nav>
             <ul class='nav nav-pills r4c-sub-nav'>
@@ -20,21 +20,4 @@
             </ul>
         </nav>
     </div>
-</div>
-<div class='hidden-md hidden-lg'>
-    <nav>
-        <ul class='nav nav-pills nav-stacked r4c-nav'>
-            {% for link in __nav_links %}
-                <li {{ link.is_active ? "class='active'" : "" }}><a href='{{ __base_uri }}/{{ __lang }}/{{ link.get_action }}' title="{{ link.get_text }}">{{ link.get_text }}</a></li>
-            {% endfor %}
-        </ul>
-    </nav>
-    <nav>
-        <ul class='nav nav-pills nav-stacked r4c-sub-nav'>
-            <li><a href="#">&nbsp;</a></li>
-            {% for link in __sub_nav_links %}
-                <li {{ link.is_active ? "class='active'" : "" }}><a href='{{ __base_uri }}/{{ __lang }}/{{ link.get_action }}' title="{{ link.get_text }}">{{ link.get_text }}</a></li>
-            {% endfor %}
-        </ul>
-    </nav>
 </div>

@@ -4,12 +4,16 @@
 
 {% block content %}
 <main>
-<p>{{ strings.intro }}</p>
-{% for text in texts %}
-    {% if text.get_title|length %}
-        <strong>{{ text.get_title }}</strong>
-    {% endif %}
-    <p>{{ text.get_content }}</p>
-{% endfor %}
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <p>{{ strings.intro }}</p>
+            {% for text in texts %}
+                {% if text.get_title|length %}
+                    <strong>{{ text.get_title }}</strong>
+                {% endif %}
+                <p>{{ text.get_content }}</p>
+            {% endfor %}
+        </div>
+    </div>
 </main>
 {% endblock %}

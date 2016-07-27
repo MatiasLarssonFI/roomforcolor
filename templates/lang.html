@@ -1,4 +1,4 @@
-<ul class="nav nav-pills lang downsize">
+<ul class="nav nav-pills lang downsize pull-right">
     {% for link in __lang_links %}
         <li><a href='{{ __base_uri }}/{{ link.get_language }}/{{ link.get_action }}'><strong>{{ link.get_text }}</strong></a></li>
     {% endfor %}

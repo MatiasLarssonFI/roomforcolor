@@ -3,6 +3,7 @@
     <head>
         {% block head %}
             <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+            <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet"> 
             <link rel="stylesheet" href="{{ __base_uri }}/lib/bootstrap-3.3.6/css/bootstrap.min.css">
             
             <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
@@ -30,36 +31,38 @@
         {% endblock %}
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="pageContainer">
             <div class="row" id="header">
-                <div class="col-xs-2 logo">
+                <div class="col-xs-4 visible-xs-inline-block"></div>
+                <div class="col-xs-4 col-sm-3 col-md-2 logo">
                    <a href="{{ __base_uri }}/{{ __lang }}"><img class="img-responsive" alt='Room for color' src="{{ __header_logo_uri }}"></a>
                 </div>
-                <div class="col-xs-10">
+                <div class="col-xs-4 visible-xs-inline-block"></div>
+                <div class="col-xs-12 col-sm-9 col-md-10">
                     <div class="row">
                         <div class="col-xs-12 slogan">
                             <img class="img-responsive" alt='Where imagination becomes my creation' src="{{ __header_slogan_uri }}">
                         </div>
                     </div>
                     <div class="row text-center promo">
-                        <div class="col-xs-10">
+                        <div class="col-xs-12 col-sm-9 col-md-10">
                             <span class="header-promo">{{ __header_promo_text }}</span>
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-sm-3 col-md-2">
                             {% include "lang.html" %}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-               <div class="col-xs-4 col-md-12">
+               <div class="col-xs-12">
                    <div class="row">
                        <div class="col-xs-12">
                            {% include "nav.html" %}
                        </div>
                    </div>
                </div>
-               <div class="col-xs-8 col-md-12">
+               <div class="col-xs-12">
                 {% block content %}{% endblock %}
                </div>
             </div>

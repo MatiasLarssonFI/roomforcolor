@@ -3,14 +3,16 @@
 
 {% block content %}
 <main>
-    <div class="row front-page-images">
-        {% for image in images %}
-            <div class="col-sm-4">
-                <a class="img-responsive" href="{{ __base_uri }}{{ image.get_original_url }}">
-                    <img class="img-responsive" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="">
-                </a>
-            </div>
-        {% endfor %}
+    <div class="front-page-images">
+        <div class="row">
+            {% for image in images %}
+                <div class="col-xs-4">
+                    <a class="img-responsive" href="{{ __base_uri }}{{ image.get_original_url }}">
+                        <img class="img-responsive" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-12">
