@@ -1,36 +1,37 @@
 {% extends "base.html" %}
-{% block head_extra %}<link rel="stylesheet" href="{{ __base_uri }}/css/gallery.css">{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" type="text/css" href="{{ __base_uri }}/lib/slick/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="{{ __base_uri }}/lib/slick/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="{{ __base_uri }}/css/gallery.css">
+{% endblock %}
 {% block title %}{{ strings.page_title }}{% endblock %}
 
 {% block content %}
 <main>
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-            <div class="r4c-gallery-stage">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <img class="img-responsive" src="{{ default_stage_image_url }}" alt="Missing image">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="r4c-gallery-stage">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <img class="img-responsive" src="{{ default_stage_image_url }}" alt="Loading image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <strong>{{ strings.previous }}</strong>
+                        </div>
+                        
+                        <div class="col-xs-6 text-right">
+                            <strong>{{ strings.next }}</strong>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-6">
-                    <strong>{{ strings.previous }}</strong>
-                </div>
-                
-                <div class="col-xs-6 text-right">
-                    <strong>{{ strings.next }}</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="r4c-gallery-images row">
-        <div class="col-md-1 hidden-sm hidden-xs text-right gallery-nav">
-            <a href="#gallery_move" data-gallery_nav="left"><img src="{{ __base_uri }}/data/img/arrow-left.png" alt="&lt;"></a>
-        </div>
-        <div class="col-md-10">
-            <div class="r4c-gallery-images-window">
-                <div class="r4c-gallery-images-container-containment">
+            <div class="r4c-gallery-images row">
+                <div class="col-xs-12 r4c-gallery-images-list">
                     <div class="r4c-gallery-images-container">
                         {% for image in images %}
                             <div class="r4c-gallery-image">
@@ -43,12 +44,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-1 hidden-sm hidden-xs gallery-nav">
-            <a href="#gallery_move" data-gallery_nav="right"><img src="{{ __base_uri }}/data/img/arrow-right.png" alt="&gt;"></a>
-        </div>
     </div>
 </main>
+{% endblock %}
 
-<script src="{{ __base_uri }}/lib/jquery-ui-1.12.0.draggable/jquery-ui.min.js"></script>
-<script src="{{ __base_uri }}/js/gallery.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
+{% block js_link %}
+    <script type="text/javascript" src="{{ __base_uri }}/lib/slick/slick/slick.min.js"></script>
+    <script src="{{ __base_uri }}/js/gallery.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
 {% endblock %}

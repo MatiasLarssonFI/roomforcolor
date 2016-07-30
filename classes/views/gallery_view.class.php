@@ -41,13 +41,6 @@ class GalleryView extends AbstractView {
     }
     
     
-    protected function get_js_texts() {
-        $text_storage = \UITextStorage::get();
-        return [
-            "no_more_images" => $text_storage->text("GALLERY_NO_MORE_IMAGES")
-        ];
-    }
-    
     
     private function get_stage_image_url(array $images) {
         return (isset($images[0]) ? $images[0]->get_original_url() : "");
