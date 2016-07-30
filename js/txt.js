@@ -1,3 +1,3 @@
-!function($) {
+!function() {
     rfc.txt = {};
-}(jQuery);
+}();
