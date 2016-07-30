@@ -19,7 +19,7 @@
                     },
                     success : function(html) {
                         form.slideUp(600, function() {
-                            $("#page-content #feedback").css("opacity", 0).html(html).animate({opacity : 1});
+                            $("#feedback").css("opacity", 0).html(html).animate({opacity : 1});
                         });
                         $("#formShowBtn").hide();
                     },
@@ -34,4 +34,10 @@
             });
         }
     };
+}(jQuery);
+
+!function($) {
+    $(document).ready(function() {
+        rfc.guestbook_form.init();
+    });
 }(jQuery);

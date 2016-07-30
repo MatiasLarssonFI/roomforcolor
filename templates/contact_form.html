@@ -49,11 +49,8 @@
         </div>
     </div>
 </form>
-<script src="{{ __base_uri }}/js/contact.js"></script>
 <script>
-    !function($) {
-        $(document).ready(function() {
-            rfc.contact.init();
-        });
-    }(jQuery);
+    if (typeof rfc !== "undefined" && typeof rfc.contact !== "undefined") {
+        rfc.contact.init();
+    }
 </script>

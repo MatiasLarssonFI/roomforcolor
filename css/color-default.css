@@ -78,3 +78,13 @@ body {
     color: #ffdf31;
     background-color: #2d3437;
 }
+
+
+p.first-bold:first-letter {
+    font-weight: bold;
+}
+
+
+p.first-large:first-letter {
+    font-size: 125%;
+}

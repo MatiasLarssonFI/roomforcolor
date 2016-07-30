@@ -7,6 +7,7 @@
         <div class="col-sm-8 col-md-6 col-sm-offset-1" id="page-content">
             <div class="row">
                 <div class="col-xs-12">
+                    <p class="first-bold first-large">{{ strings.page_title }}</p>
                     {% for p in body_paragraphs %}
                         <p>{{ p|nl2br }}</p>
                     {% endfor %}
@@ -19,4 +20,14 @@
         </div>
     </div>
 </main>
+{% endblock %}
+{% block js_link %}
+<script src="{{ __base_uri }}/js/contact.js"></script>
+<script>
+    !function($) {
+        $(document).ready(function() {
+            rfc.contact.init();
+        });
+    }(jQuery);
+</script>
 {% endblock %}

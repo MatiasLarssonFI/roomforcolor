@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-xs-12">
             {% for p in body_paragraphs %}
-                <p class="text-center">{{ p|nl2br }}</p>
+                <p class="text-center {{ loop.first ? 'first-bold first-large' : '' }}">{{ p|nl2br }}</p>
             {% endfor %}
         </div>
     </div>

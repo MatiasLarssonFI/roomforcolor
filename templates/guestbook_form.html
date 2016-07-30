@@ -31,11 +31,8 @@
         </div>
     </div>
 </form>
-<script src="{{ __base_uri }}/js/guestbook_form.js"></script>
 <script>
-    !function($) {
-        $(document).ready(function() {
-            rfc.guestbook_form.init();
-        });
-    }(jQuery);
+    if (typeof rfc !== "undefined" && typeof rfc.guestbook_form !== "undefined") {
+        rfc.guestbook_form.init();
+    }
 </script>
