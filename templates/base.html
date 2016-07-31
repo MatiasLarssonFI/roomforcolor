@@ -16,6 +16,9 @@
     </head>
     <body>
         <div class="container" id="pageContainer">
+            <div class="bg-top">
+                <img alt="" src="{{ __base_uri }}/data/img/bg-top.jpg">
+            </div>
             <div class="row" id="header">
                 <div class="col-xs-4 visible-xs-inline-block"></div>
                 <div class="col-xs-4 col-sm-3 col-md-2 logo">
@@ -51,10 +54,11 @@
                 {% block content %}{% endblock %}
                </div>
             </div>
-            <div class="row hidden-xs hidden-sm">
-                <div class="col-xs-12">
-                    {% include "contact_info.html" %}
-                </div>
+            <div class="contact-info-bottom-container hidden-xs hidden-sm">
+                {% include "contact_info_bottom.html" %}
+            </div>
+            <div class="bg-bottom">
+                <img alt="" src="{{ __base_uri }}/data/img/bg-bottom.jpg">
             </div>
         </div>
         <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>

@@ -1,7 +1,37 @@
 main {
-    padding-top: 1em;
+    padding-top: 12em;
+    margin-bottom: 220px;
 }
 
+#pageContainer {
+    position: relative;
+}
+
+
+.bg-top {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+}
+
+.bg-bottom {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.bg-top img,
+.bg-bottom img {
+    width: 100%;
+}
+
+
+#header {
+    margin-top: 1em;
+}
 
 #header .logo {
     padding-bottom: 1em; /* NB! overridden in media qry below */
@@ -43,6 +73,11 @@ img.fb-link {
 }
 
 
+.padding-top-1 {
+    padding-top: 1em !important;
+}
+
+
 @media (min-width: 768px) {
     .r4c-nav > li > a,
     .r4c-sub-nav > li > a {
@@ -50,11 +85,13 @@ img.fb-link {
     }
     
     #header .logo {
-        padding: 1em;
+        padding: 2em;
+        margin-bottom: -1em;
+        margin-top: -1em;
     }
 
     #header .slogan {
-        padding-top: 3em;
+        padding-top: 2.5em;
     }
 }
 
@@ -103,30 +140,10 @@ img.fb-link {
 }
 
 
-.videos-list-container h3 {
-    padding: 0 0 .5em 0;
-    margin-bottom: 1em;
-    margin-top: 0;
-}
-
-
-.videos-list-container {
-    padding: 1em;
-}
-
-
-.videos-list-container .row-video {
-    margin-bottom: 1em;
-}
-
-
-.video-container {
-    margin-bottom: 2em;
-}
-
-
-.video-container h2 {
-    font-size: 24px;
+.contact-info-bottom-container {
+    position: absolute;
+    bottom: 28px;
+    width: 100%;
 }
 
 
