@@ -1,5 +1,5 @@
 main {
-    padding-top: 12em;
+    padding-top: 1em;
     margin-bottom: 220px;
 }
 
@@ -92,6 +92,10 @@ img.fb-link {
 
     #header .slogan {
         padding-top: 2.5em;
+    }
+    
+    main {
+        padding-top: 12em;
     }
 }
 
