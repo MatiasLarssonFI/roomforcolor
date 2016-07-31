@@ -7,7 +7,7 @@
         <div class="row">
             {% for image in images %}
                 <div class="col-xs-4">
-                    <a class="img-responsive" href="{{ __base_uri }}{{ image.get_original_url }}">
+                    <a href="{{ __base_uri }}{{ image.get_original_url }}">
                         <img class="img-responsive" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="">
                     </a>
                 </div>

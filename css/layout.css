@@ -12,8 +12,11 @@ main {
     padding-top: 2em;
 }
 
+.header-promo {
+    font-size: 112%;
+}
 
-.front-page-images a,
+
 .front-page-images img {
     margin: 0 auto;
 }
