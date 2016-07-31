@@ -26,6 +26,23 @@ main {
     margin-bottom: 1em;
 }
 
+
+img.fb-link {
+    width: 30px;
+    margin-top: 1.5em;
+}
+
+
+.margin-top-none {
+    margin-top: 0 !important;
+}
+
+
+.margin-bottom-none {
+    margin-bottom: 0 !important;
+}
+
+
 @media (min-width: 768px) {
     .r4c-nav > li > a,
     .r4c-sub-nav > li > a {

@@ -100,3 +100,11 @@ p.first-bold:first-letter {
 p.first-large:first-letter {
     font-size: 125%;
 }
+
+
+@media (max-width: 768px) {
+    .front-page-images img {
+        padding: .5em .25em .5em .25em;
+        outline: .3em solid #4d4c4e;
+    }
+}

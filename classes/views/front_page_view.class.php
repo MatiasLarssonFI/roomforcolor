@@ -29,7 +29,8 @@ class FrontPageView extends AbstractView {
             "logo_url" => \SiteConfigFactory::get()->get_site_config()->base_uri() . 
                             "/data/img/front-logo.png",
             "lang" => $text_storage->get_language(),
-            "images" => \GalleryFactory::get()->get_front_page_images()
+            "images" => \GalleryFactory::get()->get_front_page_images(),
+            "facebook_page_url" => \DBIF::get()->get_facebook_page_url(),
         );
     }
 }

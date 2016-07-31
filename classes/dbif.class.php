@@ -474,6 +474,18 @@ class DBIF {
     
     
     /**
+     * Returns the facebook page url.
+     * 
+     * @return string
+     */
+    public function get_facebook_page_url() {
+        $stm = $this->_pdo->prepare("SELECT `value` from config where `key` = 'facebook_page_url'");
+        $stm->execute();
+        return $stm->fetchColumn();
+    }
+    
+    
+    /**
      * Returns the resource configuration values.
      * 
      * @return string[], keys are js_src_mode, js_src_version and css_src_version

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 31, 2016 at 04:31 PM
+-- Generation Time: Jul 31, 2016 at 07:20 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -34,7 +34,8 @@ INSERT INTO `config` (`id`, `key`, `value`, `time_edited`, `time_created`) VALUE
 (7, 'mail_password', '', NULL, '2016-04-12 18:00:00'),
 (8, 'js_src_mode', 'debug', NULL, '2016-07-15 21:00:00'),
 (9, 'js_src_version', '20160716', NULL, '2016-07-15 21:00:00'),
-(10, 'css_src_version', '20160716', NULL, '2016-07-15 21:00:00');
+(10, 'css_src_version', '20160716', NULL, '2016-07-15 21:00:00'),
+(11, 'facebook_page_url', 'https://www.facebook.com/matias.larssonFIN', NULL, '2016-07-30 21:00:00');
 
 --
 -- Dumping data for table `gallery`
