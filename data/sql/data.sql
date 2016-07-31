@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 25, 2016 at 11:13 PM
+-- Generation Time: Jul 31, 2016 at 04:31 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -35,6 +35,71 @@ INSERT INTO `config` (`id`, `key`, `value`, `time_edited`, `time_created`) VALUE
 (8, 'js_src_mode', 'debug', NULL, '2016-07-15 21:00:00'),
 (9, 'js_src_version', '20160716', NULL, '2016-07-15 21:00:00'),
 (10, 'css_src_version', '20160716', NULL, '2016-07-15 21:00:00');
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES
+(1, 'wallpaintings', '2016-07-01 00:00:00', '2016-07-01 16:24:05'),
+(2, '', '2016-07-05 00:00:00', NULL),
+(3, 'wallpaintings', '2016-07-21 00:00:00', NULL),
+(4, 'wallpaintings', '2016-07-21 00:00:00', NULL),
+(5, 'furniture', '2016-07-31 00:00:00', NULL),
+(6, 'drawings', '2016-07-31 00:00:00', NULL),
+(7, 'furniture', '2016-07-31 00:00:00', NULL),
+(8, 'furniture', '2016-07-31 00:00:00', NULL),
+(9, 'furniture', '2016-07-31 00:00:00', NULL),
+(10, 'furniture', '2016-07-31 00:00:00', NULL),
+(11, 'furniture', '2016-07-31 00:00:00', NULL),
+(12, 'drawings', '2016-07-31 00:00:00', NULL),
+(13, 'drawings', '2016-07-31 00:00:00', NULL),
+(14, 'drawings', '2016-07-31 00:00:00', NULL);
+
+--
+-- Dumping data for table `gallery_name`
+--
+
+INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_created`, `time_edited`) VALUES
+(1, 1, 'en', 'Kids rooms', '2016-07-01 00:00:00', NULL),
+(2, 1, 'nl', 'Kinderkamer', '2016-07-01 00:00:00', NULL),
+(3, 1, 'fi', 'Lastenhuoneet', '2016-07-01 00:00:00', NULL),
+(4, 3, 'en', 'Panels', '2016-07-21 00:00:00', '2016-07-21 18:11:52'),
+(5, 3, 'nl', 'Panelen', '2016-07-21 00:00:00', '2016-07-21 18:11:52'),
+(6, 3, 'fi', 'Paneelit', '2016-07-21 00:00:00', '2016-07-21 18:12:13'),
+(10, 4, 'en', 'Additional', '2016-07-21 00:00:00', '2016-07-21 15:11:52'),
+(11, 4, 'nl', 'Overig', '2016-07-21 00:00:00', '2016-07-21 15:11:52'),
+(12, 4, 'fi', 'Muut', '2016-07-21 00:00:00', '2016-07-21 15:12:13'),
+(13, 5, 'nl', 'Kinderkamer', '2016-07-31 00:00:00', '2016-07-31 13:07:34'),
+(14, 6, 'en', 'Portraits', '2016-07-31 00:00:00', '2016-07-31 13:23:32'),
+(15, 6, 'nl', 'Portretten', '2016-07-31 00:00:00', '2016-07-31 13:23:42'),
+(16, 5, 'fi', 'Lastenhuoneet', '2016-07-31 00:00:00', '2016-07-31 13:08:48'),
+(17, 6, 'fi', 'Muotokuvat', '2016-07-31 00:00:00', '2016-07-31 13:23:56'),
+(18, 5, 'en', 'Kids rooms', '2016-07-31 00:00:00', '2016-07-31 12:59:35'),
+(19, 7, 'en', 'Cupboards', '2016-07-31 00:00:00', '2016-07-31 13:00:12'),
+(21, 7, 'nl', 'Kasten', '2016-07-31 00:00:00', '2016-07-31 13:08:04'),
+(22, 7, 'fi', 'Kaapit', '2016-07-31 00:00:00', '2016-07-31 13:10:16'),
+(23, 8, 'en', 'Trays', '2016-07-31 00:00:00', '2016-07-31 13:12:40'),
+(24, 8, 'nl', 'Dienbladen', '2016-07-31 00:00:00', '2016-07-31 13:13:20'),
+(25, 8, 'fi', 'Tarjottimet', '2016-07-31 00:00:00', '2016-07-31 13:14:46'),
+(26, 9, 'en', 'Chests', '2016-07-31 00:00:00', '2016-07-31 13:15:32'),
+(27, 9, 'nl', 'Kist', '2016-07-31 00:00:00', '2016-07-31 13:15:32'),
+(28, 9, 'fi', 'Kirstut', '2016-07-31 00:00:00', '2016-07-31 13:16:26'),
+(29, 10, 'en', 'Nameplates', '2016-07-31 00:00:00', '2016-07-31 13:17:24'),
+(30, 10, 'nl', 'Huisbordje', '2016-07-31 00:00:00', '2016-07-31 13:17:24'),
+(31, 10, 'fi', 'Nimikyltit', '2016-07-31 00:00:00', '2016-07-31 13:17:49'),
+(32, 11, 'en', 'Additional', '2016-07-31 00:00:00', '2016-07-31 13:21:34'),
+(33, 11, 'nl', 'Overig', '2016-07-31 00:00:00', '2016-07-31 13:21:34'),
+(34, 11, 'fi', 'Muut', '2016-07-31 00:00:00', '2016-07-31 13:21:47'),
+(35, 12, 'en', 'Animals', '2016-07-31 00:00:00', '2016-07-31 13:25:25'),
+(36, 12, 'nl', 'Dieren', '2016-07-31 00:00:00', '2016-07-31 13:25:45'),
+(37, 12, 'fi', 'Eläimet', '2016-07-31 16:30:00', '2016-07-31 13:26:27'),
+(38, 13, 'en', 'Landscapes', '2016-07-31 00:00:00', '2016-07-31 13:27:17'),
+(39, 13, 'nl', 'Landschap', '2016-07-31 00:00:00', '2016-07-31 13:27:17'),
+(40, 13, 'fi', 'Maisemat', '2016-07-31 00:00:00', '2016-07-31 13:27:30'),
+(41, 14, 'en', 'Additional', '2016-07-31 00:00:00', '2016-07-31 13:28:49'),
+(42, 14, 'nl', 'Overig', '2016-07-31 00:00:00', '2016-07-31 13:28:49'),
+(43, 14, 'fi', 'Muut', '2016-07-31 00:00:00', '2016-07-31 13:28:58');
 
 --
 -- Dumping data for table `process_page`
@@ -259,7 +324,13 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (134, 'nl', 'GUESTBOOK_LIST_TITLE', 'Aanbevelingen', NULL, '2016-07-23 21:00:00'),
 (135, 'nl', 'HEADER_PROMO', 'Muurschilderingen, Meubel decoratie en Tekenigen', NULL, '2016-07-24 21:00:00'),
 (136, 'en', 'HEADER_PROMO', 'Wallpaintings, furniture decoration and Drawings', NULL, '2016-07-24 21:00:00'),
-(137, 'fi', 'HEADER_PROMO', 'Seinämaalauksia, huonekalukoristeluja ja piirroksia', NULL, '2016-07-24 21:00:00');
+(137, 'fi', 'HEADER_PROMO', 'Seinämaalauksia, huonekalukoristeluja ja piirroksia', NULL, '2016-07-24 21:00:00'),
+(138, 'en', 'NAV_FURNITURE', 'Furniture', NULL, '2016-07-30 21:00:00'),
+(139, 'en', 'NAV_DRAWINGS', 'Drawings', '2016-07-31 12:55:16', '2016-07-30 21:00:00'),
+(140, 'nl', 'NAV_FURNITURE', 'Meubels', NULL, '2016-07-30 21:00:00'),
+(141, 'nl', 'NAV_DRAWINGS', 'Tekeningen', '2016-07-31 12:55:16', '2016-07-30 21:00:00'),
+(142, 'fi', 'NAV_DRAWINGS', 'Piirrokset', '2016-07-31 12:55:16', '2016-07-30 21:00:00'),
+(143, 'fi', 'NAV_FURNITURE', 'Huonekalut', NULL, '2016-07-30 21:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
