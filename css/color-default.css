@@ -57,6 +57,11 @@ body {
 }
 
 
+.contact-notopb .r4c-contact-info {
+    border-top: none;
+}
+
+
 .r4c-nav > li > a,
 .r4c-nav > li > a:hover,
 .r4c-nav > li > a:visited,
