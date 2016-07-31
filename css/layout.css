@@ -39,12 +39,14 @@ main {
 }
 
 
-.r4c-nav {
+.r4c-nav,
+.r4c-sub-nav {
     text-align: center;
 }
 
 
-.r4c-nav > li {
+.r4c-nav > li,
+.r4c-sub-nav > li {
     float: none;
     display: inline-block;
 }
