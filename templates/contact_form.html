@@ -21,7 +21,7 @@
         {% endif %}
     </div>
     <div class="form-group {{ errors.phone is defined ? 'has-error': '' }}">
-        <label for="subject">{{ strings.field_phone }}</label>
+        <label for="phone">{{ strings.field_phone }}</label>
         <input type="text" id="phone" name="phone" class="form-control" value="{{ prefill.phone }}">
         {% if errors.phone is defined %}
             <span class="help-block">{{ errors.phone }}<span>
