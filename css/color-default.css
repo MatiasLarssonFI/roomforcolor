@@ -101,6 +101,20 @@ p.first-large:first-letter {
     font-size: 125%;
 }
 
+.btn.btn-link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.well {
+    background-color: inherit;
+    border: 1px solid rgb(51, 51, 51);
+}
+
+hr {
+    border-color: rgb(151, 151, 151);
+}
+
 
 @media (max-width: 768px) {
     .front-page-images img {
