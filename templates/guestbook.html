@@ -24,30 +24,32 @@
                     </div>
                 </div>
             </div>
-            <h3>{{ strings.recommendations }}</h3>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="well well-sm" id="submissions"></div>
+            {% if has_recommendations %}
+                <h3>{{ strings.recommendations }}</h3>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="well well-sm" id="submissions"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <button id="loadTrigger" class="btn btn-link">{{ strings.load_messages }}</button>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button id="loadTrigger" class="btn btn-link">{{ strings.load_messages }}</button>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 hidden" id="guestbookMessagesEnd">
-                    {{ strings.no_more_messages }}
+                <div class="row">
+                    <div class="col-xs-12 hidden" id="guestbookMessagesEnd">
+                        {{ strings.no_more_messages }}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 </main>
 {% endblock %}
 
 {% block js_link %}
-<script src="{{ __base_uri }}/js/guestbook_form.js"></script>
-<script src="{{ __base_uri }}/js/guestbook.js"></script>
+<script src="{{ __base_uri }}/js/guestbook_form.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
+<script src="{{ __base_uri }}/js/guestbook.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
 <script>
     !function($) {
         $(document).ready(function() {

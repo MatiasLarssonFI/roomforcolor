@@ -34,6 +34,7 @@ class GuestbookView extends AbstractView {
             "placeholder" => array(
                 "message" => $text_storage->text("GUESTBOOK_PLACEHOLDER_MESSAGE")
             ),
+            "has_recommendations" => (bool)\DBIF::get()->row_count("guestbook"),
             "prefill" => array(
                 "name" => "",
                 "message" => "",

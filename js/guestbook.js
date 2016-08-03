@@ -36,8 +36,15 @@
                 });
             };
             
+            var reset_messages = function() {
+                self._msg_load_offset = 0;
+                self._nodes.msg_cont.html("");
+                load_messages();
+            };
+            
             self._nodes.trigger.click(load_messages);
             load_messages();
+            $("#guestbook-form").submit(reset_messages); //reset on submit
         }
     };
 }(jQuery);
