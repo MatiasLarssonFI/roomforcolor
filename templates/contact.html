@@ -25,7 +25,7 @@
 </main>
 {% endblock %}
 {% block js_link %}
-<script src="{{ __base_uri }}/js/contact.js"></script>
+<script src="{{ __base_uri }}/js/contact.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
 <script>
     !function($) {
         $(document).ready(function() {
