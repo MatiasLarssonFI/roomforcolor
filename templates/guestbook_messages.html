@@ -1,6 +1,6 @@
 {% for message in messages %}
-    <div class="row" data-guestbook_message="">
-        <div class="col-xs-12">
+    <div class="row guestbook-message" data-guestbook_message="">
+        <div class="col-xs-12 guestbook-message-col">
             <div class="row">
                 <div class="col-xs-12">
                     <small>{{ message.get_time_created|date("d.m.Y") }}</small>
@@ -18,5 +18,4 @@
             </div>
         </div>
     </div>
-    <hr>
 {% endfor %}

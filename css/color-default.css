@@ -108,11 +108,18 @@ p.first-large:first-letter {
 
 .well {
     background-color: inherit;
-    border: 1px solid rgb(51, 51, 51);
+    border: none
 }
 
-hr {
-    border-color: rgb(151, 151, 151);
+
+.guestbook-message > .guestbook-message-col {
+    border-bottom: 1px solid rgb(181, 181, 181);
+    padding-top: .7em;
+    padding-bottom: .7em;
+}
+
+.guestbook-message:last-child > .guestbook-message-col {
+    border-bottom: none;
 }
 
 
