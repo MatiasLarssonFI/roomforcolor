@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 31, 2016 at 07:20 PM
+-- Generation Time: Aug 07, 2016 at 08:24 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.17
+-- PHP Version: 5.5.9-1ubuntu4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -302,7 +302,7 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (110, 'fi', 'GUESTBOOK_SUBMIT', 'Lähetä suositus', '2016-07-24 15:13:24', '2016-04-02 18:00:00'),
 (111, 'en', 'GUESTBOOK_SUBMIT', 'Send recommendation', '2016-07-24 15:13:31', '2016-04-02 18:00:00'),
 (112, 'nl', 'GUESTBOOK_SUBMIT', 'Aanbeveling verzenden', '2016-07-24 15:13:59', '2016-04-02 18:00:00'),
-(113, 'fi', 'GUESTBOOK_SUBMIT_TEXT', 'Kiitos palautteestasi,', '2016-07-24 14:25:38', '2016-04-02 18:00:00'),
+(113, 'fi', 'GUESTBOOK_SUBMIT_TEXT', 'Kiitos palautteestasi.', '2016-08-03 16:03:53', '2016-04-02 18:00:00'),
 (114, 'en', 'GUESTBOOK_SUBMIT_TEXT', 'Thank you for your feedback.', '2016-07-24 14:25:49', '2016-04-02 18:00:00'),
 (115, 'nl', 'GUESTBOOK_SUBMIT_TEXT', '\nHartelijk dank voor uw feedback.', '2016-07-24 14:26:16', '2016-04-02 18:00:00'),
 (116, 'en', 'GUESTBOOK_SHOW_FORM', 'Add recommendation', NULL, '2016-07-19 21:00:00'),
@@ -331,7 +331,28 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (140, 'nl', 'NAV_FURNITURE', 'Meubels', NULL, '2016-07-30 21:00:00'),
 (141, 'nl', 'NAV_DRAWINGS', 'Tekeningen', '2016-07-31 12:55:16', '2016-07-30 21:00:00'),
 (142, 'fi', 'NAV_DRAWINGS', 'Piirrokset', '2016-07-31 12:55:16', '2016-07-30 21:00:00'),
-(143, 'fi', 'NAV_FURNITURE', 'Huonekalut', NULL, '2016-07-30 21:00:00');
+(143, 'fi', 'NAV_FURNITURE', 'Huonekalut', NULL, '2016-07-30 21:00:00'),
+(144, 'en', 'UP', 'Top', NULL, '2016-08-02 21:00:00'),
+(145, 'nl', 'UP', 'Terug', NULL, '2016-08-02 21:00:00'),
+(146, 'fi', 'UP', 'Ylös', NULL, '2016-08-02 21:00:00'),
+(147, 'fi', 'CONTACT_TEXT_NAME', 'Fiona Ansink', NULL, '2016-08-07 12:37:37'),
+(148, 'fi', 'CONTACT_TEXT_STREET_ADDRESS', 'Valtatie 10', NULL, '2016-08-07 12:37:37'),
+(149, 'fi', 'CONTACT_TEXT_POSTAL_CODE', '03600', NULL, '2016-08-07 12:37:37'),
+(150, 'fi', 'CONTACT_TEXT_CITY', 'Karkkila,', '2016-08-07 16:01:35', '2016-08-07 12:37:37'),
+(151, 'fi', 'CONTACT_TEXT_PHONE', '(00358) 0440610497', NULL, '2016-08-07 12:37:37'),
+(152, 'fi', 'CONTACT_TEXT_BUSINESS_ID', 'Y-tunnus: 2755838-9', NULL, '2016-08-07 12:37:37'),
+(153, 'nl', 'CONTACT_TEXT_NAME', 'Fiona Ansink', NULL, '2016-08-07 12:37:37'),
+(154, 'nl', 'CONTACT_TEXT_STREET_ADDRESS', 'Valtatie 10', NULL, '2016-08-07 12:37:37'),
+(155, 'nl', 'CONTACT_TEXT_POSTAL_CODE', '03600', NULL, '2016-08-07 12:37:37'),
+(156, 'nl', 'CONTACT_TEXT_CITY', 'Karkkila,', '2016-08-07 16:01:41', '2016-08-07 12:37:37'),
+(157, 'nl', 'CONTACT_TEXT_PHONE', '(00358) 0440610497', NULL, '2016-08-07 12:37:37'),
+(158, 'nl', 'CONTACT_TEXT_BUSINESS_ID', 'Zakelijke ID: 2755838-9', NULL, '2016-08-07 12:37:37'),
+(159, 'en', 'CONTACT_TEXT_NAME', 'Fiona Ansink', NULL, '2016-08-07 12:37:37'),
+(160, 'en', 'CONTACT_TEXT_STREET_ADDRESS', 'Valtatie 10', NULL, '2016-08-07 12:37:37'),
+(161, 'en', 'CONTACT_TEXT_POSTAL_CODE', '03600', NULL, '2016-08-07 12:37:37'),
+(162, 'en', 'CONTACT_TEXT_CITY', 'Karkkila,', '2016-08-07 16:01:44', '2016-08-07 12:37:37'),
+(163, 'en', 'CONTACT_TEXT_PHONE', '(00358) 0440610497', NULL, '2016-08-07 12:37:37'),
+(164, 'en', 'CONTACT_TEXT_BUSINESS_ID', 'Business ID: 2755838-9', NULL, '2016-08-07 12:37:37');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
