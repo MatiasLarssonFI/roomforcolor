@@ -22,6 +22,7 @@
                             $("#feedback").css("opacity", 0).html(html).animate({opacity : 1});
                         });
                         $("#formShowBtn").hide();
+                        rfc.guestbook.reset_messages();
                     },
                     error : function() {
                         alert("We're sorry, but an error has occured. Please try again later.");
