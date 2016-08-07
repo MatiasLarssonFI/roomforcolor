@@ -219,4 +219,8 @@ img.fb-link {
     .front-page-images img {
         padding: .5em .25em .5em .25em;
     }
+    
+    p, form {
+        margin-left: 1em;
+    }
 }
