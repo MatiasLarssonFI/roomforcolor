@@ -78,9 +78,13 @@ img.fb-link {
 }
 
 
-.r4c-nav,
-.r4c-sub-nav {
+.r4c-nav {
     text-align: center;
+    font-size: 112%;
+}
+
+
+.r4c-sub-nav {
     font-size: 112%;
 }
 

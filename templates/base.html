@@ -67,7 +67,7 @@
         </div>
         <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
         <script src="{{ __base_uri }}/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-        <script src="{{ __base_uri }}/js/rfc.js?v={{ __js_src_version }}"></script>
+        <script src="{{ __base_uri }}/js/rfc.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
         <script src="{{ __base_uri }}/js/txt.js?v={{ __js_src_version }}"></script>
         <script>
             // all AJAX shall actually be asynchronous (duh!)
@@ -78,21 +78,6 @@
             {% for key, text in __js_texts %}
                 rfc.txt["{{ key }}"] = "{{ text }}";
             {% endfor %}
-            
-            $(document).ready(function() {
-                // top-link
-                var top_link = $(".top-link");
-                if (top_link.length) {
-                    var node = $(window);
-                    node.scroll(function() {
-                        if (node.scrollTop() > 300) {
-                            top_link.removeClass("hidden");
-                        } else if (node.scrollTop() < 200) {
-                            top_link.addClass("hidden");
-                        }
-                    });
-                }
-            });
         </script>
         {% block js_link %}{% endblock %}
     </body>
