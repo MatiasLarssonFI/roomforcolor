@@ -17,8 +17,10 @@
     </head>
     <body>
         <div class="container" id="pageContainer">
-            <div class="bg-top">
-                <img alt="" src="{{ __base_uri }}/data/img/bg-top.jpg">
+            <div class="row bg-top">
+                <div class="col-xs-12">
+                    <img alt="" src="{{ __base_uri }}/data/img/bg-top.jpg">
+                </div>
             </div>
             <div class="row" id="header">
                 <div class="col-xs-4 visible-xs-inline-block"></div>
@@ -56,11 +58,12 @@
                </div>
             </div>
             <div class="contact-info-bottom-container hidden-xs hidden-sm">
-                {% include "contact_info_bottom.html" %}
+                {% include "contact_info.html" %}
             </div>
-            <div class="bg-bottom">
+            <div class="row bg-bottom">
                 <img alt="" src="{{ __base_uri }}/data/img/bg-bottom.jpg">
             </div>
+            <div class="row top-link-container"><a class="top-link hidden" href="#top">{{ __str_up }} <img src="{{ base_uri }}/data/img/arrow-up.png"></a></div>
         </div>
         <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
         <script src="{{ __base_uri }}/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
@@ -75,6 +78,21 @@
             {% for key, text in __js_texts %}
                 rfc.txt["{{ key }}"] = "{{ text }}";
             {% endfor %}
+            
+            $(document).ready(function() {
+                // top-link
+                var top_link = $(".top-link");
+                if (top_link.length) {
+                    var node = $(window);
+                    node.scroll(function() {
+                        if (node.scrollTop() > 300) {
+                            top_link.removeClass("hidden");
+                        } else if (node.scrollTop() < 200) {
+                            top_link.addClass("hidden");
+                        }
+                    });
+                }
+            });
         </script>
         {% block js_link %}{% endblock %}
     </body>
