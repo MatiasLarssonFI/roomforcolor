@@ -170,8 +170,6 @@ img.fb-link {
 .top-link-container *,
 .top-link-container *:hover,
 .top-link-container *:focus {
-    color: #fff;
-    font-weight: bold;
     text-decoration: none;
     font-size: 110%;
 }
