@@ -22,7 +22,8 @@
 {% endblock %}
 {% block js_link %}
 <script>
-    !function($) { // Replace some text with links
+    !function($) {
+        // Replace some text with links, and bold some too
         $(document).ready(function() {
             var source = $("#aboutContent");
             var replacements = [
@@ -33,6 +34,10 @@
                 {
                     text : "Facebook",
                     html : $("[data-link=\"facebook\"]")[0].outerHTML
+                },
+                {
+                    text : "Room for Color",
+                    html : "<b>Room for Color</b>"
                 }
             ];
             source.find("p:not([data-no_replace])").each(function() {
