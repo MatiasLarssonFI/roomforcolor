@@ -24,7 +24,7 @@ class AboutView extends AbstractView {
             "strings" => array(
                 "page_title" => $text_storage->text("ABOUT_PAGE_TITLE"),
             ),
-            "body_paragraphs" => $text_storage->paragraphs("ABOUT_PAGE_TEXT"),
+            "paragraph_groups" => $text_storage->page_paragraph_groups("ABOUT"),
             "lang" => $text_storage->get_language(),
             "facebook_page_url" => \DBIF::get()->get_facebook_page_url(),
         );

@@ -34,11 +34,31 @@ class DBIF {
      * 
      * Calls cb_store_row on each row.
      */
-    public function get_ui_texts($language, $cb_store_row) {
+    public function get_ui_texts($cb_store_row, $language) {
         $stm = $this->_pdo->prepare("SELECT code, content FROM ui_text where language = :lang");
         $stm->bindParam(":lang", $language, PDO::PARAM_STR);
         $stm->execute();
 
+        while ($row = $stm->fetch()) {
+            $cb_store_row($row);
+        }
+    }
+    
+    
+    /**
+     * Get the page UI text.
+     * 
+     * Calls cb_store_row on each row.
+     * 
+     * @param string $language
+     * @param string $code
+     * @param callable $code
+     */
+    public function get_page_texts($cb_store_row, $code, $language) {
+        $stm = $this->_pdo->prepare("SELECT content from `page_text` where page_code = :code and language = :lang order by `order` asc");
+        $stm->bindParam(":lang", $language, PDO::PARAM_STR);
+        $stm->bindParam(":code", $code, PDO::PARAM_STR);
+        $stm->execute();
         while ($row = $stm->fetch()) {
             $cb_store_row($row);
         }

@@ -5,26 +5,42 @@
 <main>
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1" id="aboutContent">
-            {% for p in body_paragraphs %}
-                <p class="first-bold {{ loop.first ? 'first-large' : '' }}">{{ p|nl2br }}</p>
+            {% for pg in paragraph_groups %}
+                {{ loop.first ? "" : "<br>" }}
+                {% for p in pg %}
+                    <p class="first-bold {{ loop.first ? 'first-large' : '' }}">{{ p|nl2br }}</p>
+                {% endfor %}
             {% endfor %}
-            <p><a href="{{ facebook_page_url }}"><img class="fb-link margin-top-none" src="{{ __base_uri }}/data/img/facebook.png" alt="Facebook"></a></p>
+            <p data-no_replace="1"><a href="{{ facebook_page_url }}"><img class="fb-link margin-top-none" src="{{ __base_uri }}/data/img/facebook.png" alt="Facebook"></a></p>
         </div>
     </div>
     <div class="hidden"><!-- This is for crawlers and script below, not to be rendered -->
         <a data-link="ruukinpaja" title="Ruukinpaja" href="http://www.karkkila.fi/default.asp?kieli=246&id_sivu=427&alasivu=427">Ruukinpaja</a>
+        <a data-link="facebook" title="Facebook" href="{{ facebook_page_url }}">Facebook</a>
     </div>
 </main>
 {% endblock %}
 {% block js_link %}
 <script>
-    !function($) { // Replace some text with a link
+    !function($) { // Replace some text with links
         $(document).ready(function() {
             var source = $("#aboutContent");
-            var ruukinpaja_replacement = $("[data-link=\"ruukinpaja\"]")[0].outerHTML;
-            source.find("p").each(function() {
+            var replacements = [
+                {
+                    text : "Ruukinpaja",
+                    html : $("[data-link=\"ruukinpaja\"]")[0].outerHTML
+                },
+                {
+                    text : "Facebook",
+                    html : $("[data-link=\"facebook\"]")[0].outerHTML
+                }
+            ];
+            source.find("p:not([data-no_replace])").each(function() {
                 var p = this;
-                p.innerHTML = p.innerHTML.replace("Ruukinpaja", ruukinpaja_replacement);
+                for (replacement in replacements) {
+                    var repl_obj = replacements[replacement];
+                    p.innerHTML = p.innerHTML.replace(repl_obj.text, repl_obj.html);
+                }
             });
         });
     }(jQuery);
