@@ -10,7 +10,7 @@
                 {% if text.get_title|length %}
                     <strong>{{ text.get_title }}</strong>
                 {% endif %}
-                <p class="first-bold">{{ text.get_content }}</p>
+                <p class="first-bold">{{ text.get_content|nl2br }}</p>
             {% endfor %}
         </div>
     </div>
