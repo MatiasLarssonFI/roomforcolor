@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 09, 2016 at 06:25 PM
+-- Generation Time: Aug 09, 2016 at 11:46 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.19
 
@@ -65,18 +65,20 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
 (2, 3, 2, '2016-07-05 00:00:00', '2016-07-31 15:37:55'),
 (3, 1, 2, '2016-07-05 00:00:00', '2016-07-31 15:37:52'),
 (4, 4, 2, '2016-07-05 00:00:00', '0000-00-00 00:00:00'),
-(5, 18, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(6, 19, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(7, 20, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(8, 21, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(9, 22, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(10, 23, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(11, 24, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(13, 26, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(14, 27, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(15, 28, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(16, 29, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12'),
-(17, 30, 1, '2016-07-09 17:49:12', '2016-07-09 14:49:12');
+(18, 31, 14, '2016-08-09 22:40:08', '0000-00-00 00:00:00'),
+(19, 32, 14, '2016-08-09 22:40:08', '0000-00-00 00:00:00'),
+(20, 33, 14, '2016-08-09 22:40:08', '0000-00-00 00:00:00'),
+(21, 34, 14, '2016-08-09 22:40:08', '0000-00-00 00:00:00'),
+(22, 35, 14, '2016-08-09 22:40:08', '0000-00-00 00:00:00'),
+(23, 36, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(24, 37, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(25, 38, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(26, 39, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(27, 40, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(28, 41, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(29, 42, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(30, 43, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00'),
+(31, 44, 12, '2016-08-09 22:57:29', '0000-00-00 00:00:00');
 
 --
 -- Dumping data for table `gallery_name`
@@ -132,28 +134,30 @@ INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_ed
 (2, '/data/img/content/thumb/033.jpg', '/data/img/content/kids_rooms/033.jpg', 1, '2016-07-31 15:38:42', '2016-07-04 21:00:00'),
 (3, '/data/img/content/thumb/flower.jpg', '/data/img/content/front_page/flower.jpg', 1, '2016-07-31 15:40:07', '2016-07-04 21:00:00'),
 (4, '/data/img/content/thumb/iron.jpg', '/data/img/content/front_page/iron.jpg', 1, '2016-07-04 21:00:00', '2016-07-04 21:00:00'),
-(18, '/data/img/content/thumb/kids_rooms/049.jpg', '/data/img/content/kids_rooms/049.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(19, '/data/img/content/thumb/kids_rooms/045.jpg', '/data/img/content/kids_rooms/045.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(20, '/data/img/content/thumb/kids_rooms/107.jpg', '/data/img/content/kids_rooms/107.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(21, '/data/img/content/thumb/kids_rooms/117.jpg', '/data/img/content/kids_rooms/117.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(22, '/data/img/content/thumb/kids_rooms/111.jpg', '/data/img/content/kids_rooms/111.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(23, '/data/img/content/thumb/kids_rooms/106.jpg', '/data/img/content/kids_rooms/106.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(24, '/data/img/content/thumb/kids_rooms/047.jpg', '/data/img/content/kids_rooms/047.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(26, '/data/img/content/thumb/kids_rooms/108.jpg', '/data/img/content/kids_rooms/108.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(27, '/data/img/content/thumb/kids_rooms/048.jpg', '/data/img/content/kids_rooms/048.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(28, '/data/img/content/thumb/kids_rooms/112.jpg', '/data/img/content/kids_rooms/112.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(29, '/data/img/content/thumb/kids_rooms/050.jpg', '/data/img/content/kids_rooms/050.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00'),
-(30, '/data/img/content/thumb/kids_rooms/046.jpg', '/data/img/content/kids_rooms/046.jpg', 1, '2016-07-09 14:53:23', '2016-07-09 14:00:00');
+(31, '/data/img/content/thumb/drawings_additional/001.jpg', '/data/img/content/drawings_additional/001.jpg', 1, '2016-08-09 19:47:44', '0000-00-00 00:00:00'),
+(32, '/data/img/content/thumb/drawings_additional/003.jpg', '/data/img/content/drawings_additional/003.jpg', 1, '2016-08-09 19:47:44', '0000-00-00 00:00:00'),
+(33, '/data/img/content/thumb/drawings_additional/031.jpg', '/data/img/content/drawings_additional/031.jpg', 1, '2016-08-09 19:47:44', '0000-00-00 00:00:00'),
+(34, '/data/img/content/thumb/drawings_additional/032.jpg', '/data/img/content/drawings_additional/032.jpg', 1, '2016-08-09 19:47:44', '0000-00-00 00:00:00'),
+(35, '/data/img/content/thumb/drawings_additional/057.jpg', '/data/img/content/drawings_additional/057.jpg', 1, '2016-08-09 19:47:44', '0000-00-00 00:00:00'),
+(36, '/data/img/content/thumb/drawings_animals/9900026.jpg', '/data/img/content/drawings_animals/9900026.jpg', 1, NULL, '2016-08-09 19:55:01'),
+(37, '/data/img/content/thumb/drawings_animals/9900027.jpg', '/data/img/content/drawings_animals/9900027.jpg', 1, NULL, '2016-08-09 19:55:02'),
+(38, '/data/img/content/thumb/drawings_animals/9900058.jpg', '/data/img/content/drawings_animals/9900058.jpg', 1, NULL, '2016-08-09 19:55:02'),
+(39, '/data/img/content/thumb/drawings_animals/9900059.jpg', '/data/img/content/drawings_animals/9900059.jpg', 1, NULL, '2016-08-09 19:55:02'),
+(40, '/data/img/content/thumb/drawings_animals/9900060.jpg', '/data/img/content/drawings_animals/9900060.jpg', 1, NULL, '2016-08-09 19:55:02'),
+(41, '/data/img/content/thumb/drawings_animals/9900061.jpg', '/data/img/content/drawings_animals/9900061.jpg', 1, NULL, '2016-08-09 19:55:02'),
+(42, '/data/img/content/thumb/drawings_animals/9900097.jpg', '/data/img/content/drawings_animals/9900097.jpg', 1, NULL, '2016-08-09 19:55:02'),
+(43, '/data/img/content/thumb/drawings_animals/9900121.jpg', '/data/img/content/drawings_animals/9900121.jpg', 1, NULL, '2016-08-09 19:55:02'),
+(44, '/data/img/content/thumb/drawings_animals/9900125.jpg', '/data/img/content/drawings_animals/9900125.jpg', 1, NULL, '2016-08-09 19:55:02');
 
 --
 -- Dumping data for table `page_text`
 --
 
 INSERT INTO `page_text` (`id`, `page_code`, `language`, `content`, `order`, `time_edited`, `time_created`) VALUES
-(1, 'ABOUT', 'en', 'Welcome to my site Room for Color!\n\nHopefully you may find something or be inspired.\n\nMy name is Fiona Ansink and I am living since 2006 in Finland, land of my heart.\nI have been born in the Netherlands and after seeing several other countries I found my place in the land of over the thousand lakes.\n\nFrom the moment I discovered colour pencils and could hold them, I have been fascinated by colour and creating! \nBesides my love for drawing I am interested in everything that has to do with creating something: like building houses, creating and restoration of \nfurniture, designing, photography and painting. My passion for painting started out and has developed with painting of interior and exterior of houses.\nMy beloved father got my passion going since I was 12 years old.\n\nWhile working for Ruukinpaja in Karkkila, South-Finland, I got the opportunity to show my passion for renovating and decorative painting of furniture.\n\nYou can also visit me on my Facebook site.', 1, '2016-08-08 16:54:28', '2016-08-07 21:00:00'),
+(1, 'ABOUT', 'en', 'Welcome to my site Room for Color!\n\nHopefully you may find something or be inspired.\n\nMy name is Fiona Ansink and I am living since 2006 in Finland, land of my heart.\nI have been born in the Netherlands and after seeing several other countries I found my place in the land of over the thousand lakes.\n\nFrom the moment I discovered colour pencils and could hold them, I have been fascinated by colour and creating! \nBesides my love for drawing I am interested in everything that has to do with creating something: like building houses, creating and restoration of furniture, designing, photography and painting. My passion for painting started out and has developed with painting of interior and exterior of houses.\nMy beloved father got my passion going since I was 12 years old.\n\nWhile working for Ruukinpaja in Karkkila, South-Finland, I got the opportunity to show my passion for renovating and decorative painting of furniture.\n\nYou can also visit me on my Facebook site.', 1, '2016-08-09 20:39:42', '2016-08-07 21:00:00'),
 (2, 'ABOUT', 'nl', 'Welkom op mijn site Room for Color!\n\nDat U hier iets mag vinden of geïnspireerd mag raken.\n\nMijn naam is Fiona Ansink en woon sinds 2006 in Finland, het land naar mijn hart.\nBen geboren in Nederland en na meerdere landen te hebben doorgetrokken heb ik mijn stekje gevonden in het land van de ruim duizend meren.\n\nVanaf het moment dat ik de kleurpotloden ontdekte en vast kon houden heeft kleur en creëren mij gefascineerd!\nNaast mijn liefde voor tekenen, interesseert alles met het creëren van iets mij, zoals het bouwen van huizen, maken en restaureren van meubels, \nontwerpen, fotografie en schilderen. De grootte passie voor schilderen is ontstaan met het beschilderen van interieurs en exterieurs van huizen, \nwelke mijn geliefde vader heeft meegegeven sinds ik 12 jaar was.\n\nBij Ruukinpaja in Karkkila, Zuid-Finland, kreeg ik de mogelijkheid om mijn passie te laten zien, zoals het renoveren van meubels en het decoratief \nbeschilderen van meubels.\n\nU kunt ook mijn Facebook site bezoek.', 1, '2016-08-08 16:53:49', '2016-08-07 21:00:00'),
 (4, 'ABOUT', 'nl', 'Informatie over wat ik doe\r\n\r\nOp deze site kunt U een selectie vinden van de werken die ik tot nu toe heb gedaan, dit bevat muurschilderingen, decoratieve beschildering van \r\nmeubels: kasten, babybedjes, stoelen, tafels, kisten, dienbladen en naambordjes, waarvan ik sommige zelf heb gemaakt en ontworpen.\r\nDaarnaast maak ik ook kleurtekeningen en potloodtekeningen op verzoek.\r\nMijn passie en ervaring ligt in het realistisch weergeven van mensen, dieren, landschappen en planten.', 2, '2016-08-08 16:53:49', '2016-08-07 21:00:00'),
-(5, 'ABOUT', 'en', 'Information of what I can do\r\n\r\nOn this site you can find a selection of my work I have been doing so far, this contains wall paintings, decorative painting of furniture: cupboards, \r\nbaby cribs, chairs, tables, chests, trays and doorplates, some of these I have made myself and/or designed.\r\n\r\nFurther more I make colour pencil and pencil drawings on request.\r\nMy passion and experience is of realistic showing of people, animals, landscapes and plants.\r\n\r\nWall paintings can be for children rooms, bedrooms, living rooms, hallways, kitchens, restaurant, café, hospital, daycare, health facility or any other company.', 2, '2016-08-08 16:53:49', '2016-08-07 21:00:00'),
+(5, 'ABOUT', 'en', 'Information of what I can do\n\nOn this site you can find a selection of my work I have been doing so far, this contains wall paintings, decorative painting of furniture: cupboards, baby cribs, chairs, tables, chests, trays and doorplates, some of these I have made myself and/or designed.\n\nFurther more I make colour pencil and pencil drawings on request.\nMy passion and experience is of realistic showing of people, animals, landscapes and plants.\n\nWall paintings can be for children rooms, bedrooms, living rooms, hallways, kitchens, restaurant, café, hospital, daycare, health facility or any other company.', 2, '2016-08-09 20:42:35', '2016-08-07 21:00:00'),
 (8, 'ABOUT', 'fi', 'Tervetuloa Room for Color-sivuilleni!\n\nToivottavasti löydät jotakin inspiroivaa.\n\nNimeni on Fiona Ansink ja olen asunut Suomessa, lempimaassani, vuodesta 2006.\nOlen syntynyt Alankomaissa ja tutustuttuani moneen eri maahan olen löytänyt kotini täältä tuhansien järvien maasta.\n\nSiitä lähtien, kun olen pienenä tutustunut ja oppinut pitelemään värikyniä, olen ollut innostunut väreistä ja luomisesta. \nPiirtämisen lisäksi, olen kiinnostunut kaikesta, mikä liittyy luomiseen: talojen rakentaminen, huonekalujen tekeminen ja korjaaminen, vaatteiden suunnitteleminen, valokuvaaminen ja maalaaminen ovat kiinnostuksen kohteitani. Intohimoni maalaamiseen alkoi talojen ulko- ja sisäpintojen maalaamisesta, tämän intohimon sai syttymään rakas isäni, kun olin 12-vuotias.', 1, '2016-08-08 17:52:48', '2016-08-07 21:00:00'),
 (9, 'ABOUT', 'fi', 'Tässä taidonnäytteitäni\n\nTällä sivulla on esitelty töitäni, jotka olen tehnyt tai suunnitellut. Täältä löydät mm. seinämaalaukset, huonekalujen maalaukset, hyllyt, vauvojen sängyt, tuolit, pöydät, kaapit sekä ovikyltit.\n\nSeinämaalaukset voidaan toteuttaa lastenhuoneisiin, makuuhuoneisiin, eteishalleihin, keittiöihin, ravintoloihin, kahviloihin, sairaaloihin, päivähoitopaikkoihin, terveysalan yrityksiin ja muihinkin liiketiloihin.\n\nTäältä löydät valikoiman seinämaalauksiani ja kaappien, lastensänkyjen, tuolien ja pöytien maalauksia, joista osan olen itse suunnitellut ja tehnyt.\nVoin myös toteuttaa toiveesi minkä tahansa haluamasi huonekalun somistamisesta.\n\nTervetuloa myös Facebook-sivuilleni!', 2, '2016-08-08 17:52:52', '2016-08-07 21:00:00');
 
@@ -402,7 +406,7 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (134, 'nl', 'GUESTBOOK_LIST_TITLE', 'Aanbevelingen', NULL, '2016-07-23 21:00:00'),
 (135, 'nl', 'HEADER_PROMO', 'Muurschilderingen, Meubel decoratie en Tekenigen', NULL, '2016-07-24 21:00:00'),
 (136, 'en', 'HEADER_PROMO', 'Wallpaintings, furniture decoration and Drawings', NULL, '2016-07-24 21:00:00'),
-(137, 'fi', 'HEADER_PROMO', 'Seinämaalauksia, huonekalukoristeluja ja piirroksia', NULL, '2016-07-24 21:00:00'),
+(137, 'fi', 'HEADER_PROMO', 'Seinämaalaukset, Huonekalujen koristelut ja Piirrokset', '2016-08-09 20:38:49', '2016-07-24 21:00:00'),
 (138, 'en', 'NAV_FURNITURE', 'Furniture', NULL, '2016-07-30 21:00:00'),
 (139, 'en', 'NAV_DRAWINGS', 'Drawings', '2016-07-31 12:55:16', '2016-07-30 21:00:00'),
 (140, 'nl', 'NAV_FURNITURE', 'Meubels', NULL, '2016-07-30 21:00:00'),
