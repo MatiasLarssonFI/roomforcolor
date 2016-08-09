@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 07, 2016 at 08:17 PM
+-- Generation Time: Aug 09, 2016 at 06:22 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.19
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `time_created` datetime NOT NULL,
   `time_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=15 ;
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `gallery_image` (
   UNIQUE KEY `uniq` (`image_id`,`gallery_id`),
   KEY `image_id` (`image_id`),
   KEY `gallery_id` (`gallery_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=18 ;
 
 -- --------------------------------------------------------
 
@@ -138,6 +138,24 @@ CREATE TABLE IF NOT EXISTS `image` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `page_text`
+--
+
+CREATE TABLE IF NOT EXISTS `page_text` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `page_code` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
+  `language` varchar(10) COLLATE utf8_swedish_ci NOT NULL,
+  `content` text COLLATE utf8_swedish_ci NOT NULL,
+  `order` int(11) NOT NULL,
+  `time_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `time_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq` (`page_code`,`language`,`order`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=10 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `process_page`
 --
 
@@ -167,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `process_text` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq` (`process_page_id`,`language`,`order`) COMMENT 'Essentially prevents duplicate order values.',
   KEY `gallery_id` (`process_page_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=55 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=83 ;
 
 -- --------------------------------------------------------
 
