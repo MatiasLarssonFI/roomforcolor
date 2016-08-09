@@ -11,7 +11,7 @@ require_once(dirname(__FILE__) . "/../dbif.class.php");
 
 class ContactSubmitView extends AbstractView {
     protected function get_required_params() {
-        return array("__csrf_token", "name", "email", "subject", "message", "is_ajax", "url");
+        return array("__csrf_token", "name", "email", "message", "is_ajax", "url");
     }
     
     
@@ -28,7 +28,7 @@ class ContactSubmitView extends AbstractView {
             $errors = $this->get_form_errors($params, $text_storage);
             if (empty($errors)) {
                 $f = \ContactMessageFactory::get();
-                $message = $f->make_from_values($params["name"], $params["email"], $params["subject"], $params["message"]);
+                $message = $f->make_from_values($params["name"], $params["email"], $params["phone"], $params["message"]);
                 $mailer = $f->get_mailer();
                 \DBIF::get()->insert_contact_message($message);
                 $mailer->send($message);
@@ -42,9 +42,12 @@ class ContactSubmitView extends AbstractView {
                 "page_title" => $text_storage->text("CONTACT_TITLE"),
                 "field_name" => $text_storage->text("CONTACT_FIELD_NAME"),
                 "field_email" => $text_storage->text("CONTACT_FIELD_EMAIL"),
-                "field_subject" => $text_storage->text("CONTACT_FIELD_SUBJECT"),
+                "field_phone" => $text_storage->text("CONTACT_FIELD_PHONE"),
                 "field_message" => $text_storage->text("CONTACT_FIELD_MESSAGE"),
                 "submit" => $text_storage->text("CONTACT_SUBMIT")
+            ),
+            "placeholder" => array(
+                "message" => $text_storage->text("CONTACT_PLACEHOLDER_MESSAGE")
             ),
             "prefill" => $params,
             "errors" => $errors,
@@ -71,7 +74,9 @@ class ContactSubmitView extends AbstractView {
                         $at_pos !== $len - 1 &&
                         $len > 3;
             },
-            "subject" => "strlen",
+            "phone" => function($phone) {
+                return true;
+            },
             "message" => function($message) {
                 return strlen($message) > 3;
             }

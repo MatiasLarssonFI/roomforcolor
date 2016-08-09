@@ -14,7 +14,7 @@ class LangLink {
      * @oaram string $text
      * @oaram string $action
      */
-    public function __construct($language, $action) {
+    public function __construct($language, $text, $action) {
         $this->_language = $language;
         $this->_text = $text;
         $this->_action = $action;

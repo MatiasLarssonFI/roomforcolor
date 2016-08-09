@@ -57,7 +57,7 @@ class VideosPageVideo implements IVideo {
         $name_str = str_replace(" ", "-", strtolower($this->_name));
         // ä, ö and å to a, o and a
         $name_str = str_replace(array("ä", "ö", "å"), array("a", "o", "a"), $name_str);
-        // whitelist: a-z, 0-9, ä, ö and dash
+        // whitelist: a-z, 0-9 and dash
         return preg_replace("/[^a-z0-9\-]/", "", $name_str);
     }
     

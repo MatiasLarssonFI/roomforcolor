@@ -1,64 +1,55 @@
 {% extends "base.html" %}
 {% block head_extra %}
-<link rel="stylesheet" href="{{ __base_uri }}/lib/Gallery-2.18.2/css/blueimp-gallery.min.css">
-<link rel="stylesheet" href="{{ __base_uri }}/lib/Bootstrap-Image-Gallery-3.4.2/css/bootstrap-image-gallery.min.css">
+<link rel="stylesheet" type="text/css" href="{{ __base_uri }}/lib/slick/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="{{ __base_uri }}/lib/slick/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="{{ __base_uri }}/css/gallery.css">
 {% endblock %}
 {% block title %}{{ strings.page_title }}{% endblock %}
 
 {% block content %}
 <main>
-    <div id="wp-gallery-images" class="row">
-    {% for image in images %}
-        <div class="col-xs-4 col-md-2">
-            <a href="{{ __base_uri }}{{ image.get_original_url }}" title="{{ image.get_name }}" data-gallery data-img_id="{{ image.get_id }}">
-                <img class="img-responsive gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="{{ image.get_name }}">
-            </a>
-        </div>
-    {% endfor %}
-    </div>
-</main>
-
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <!-- The container for the modal slides -->
-    <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->
-    <div class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="r4c-gallery-stage">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <img class="img-responsive stage-img" src="{{ default_stage_image_url }}" alt="Missing image">
+                            </div>
+                        </div>
+                        <div class="r4c-gallery-stage-loader hidden"><img src="{{ __base_uri }}/data/img/ajax-spinner.gif" alt="Loading image"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <strong>{{ strings.previous }}</strong>
+                        </div>
+                        
+                        <div class="col-xs-6 text-right">
+                            <strong>{{ strings.next }}</strong>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body next"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        Previous
-                    </button>
-                    <button type="button" class="btn btn-primary next">
-                        Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
+            </div>
+            <div class="r4c-gallery-images row">
+                <div class="col-xs-12 r4c-gallery-images-list">
+                    <div class="r4c-gallery-images-container">
+                        {% for image in images %}
+                            <div class="r4c-gallery-image">
+                                <a href="{{ __base_uri }}{{ image.get_original_url }}" data-img_url="{{ __base_uri }}{{ image.get_original_url }}" data-img_id="{{ image.get_id }}">
+                                    <img class="gallery-img" src="{{ __base_uri }}{{ image.get_thumb_url }}" alt="Missing image">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script src="{{ __base_uri }}/lib/Gallery-2.18.2/js/jquery.blueimp-gallery.min.js"></script>
-<script src="{{ __base_uri }}/lib/Bootstrap-Image-Gallery-3.4.2/js/bootstrap-image-gallery.min.js"></script>
-<script src="{{ __base_uri }}/js/gallery.js"></script>
-<script>
-    !function($) {
-        $(document).ready(function() {
-            wp.gallery.update();
-        });
-    }(jQuery);
-</script>
+</main>
+{% endblock %}
+
+{% block js_link %}
+    <script type="text/javascript" src="{{ __base_uri }}/lib/slick/slick/slick.min.js"></script>
+    <script src="{{ __base_uri }}/js/gallery.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
 {% endblock %}

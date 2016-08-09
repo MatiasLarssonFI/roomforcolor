@@ -1,0 +1,41 @@
+# The rewrite rules:
+# 
+# If the first URI part has the length of two characters, those characters
+# define the requested language, e. g. "/fi/action" where "fi" is the language.
+#
+# The part following the language defines the requested action, and the
+# ones after that are parameters to that action, e. g. "/fi/action/param1/param2"
+# where "action" is the action and "param1" and "param2" are parameters
+# to "action".
+#
+# The action length always exceeds two characters. The action and
+# language may only contain characters in the range of A-z.
+#
+# Finally, all of these parts (language, action and parameters) are
+# optional. Language and action may both appear without need for the
+# other to be present. Action parameters may only appear if the action
+# is present.
+# 
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule "^/?$" "/index.php" [L]
+RewriteRule "^/?([a-zA-Z]{2})/?$" "/index.php?language=$1" [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule "^/?([a-zA-Z]{2})/([^/]+)/?$" "/index.php?language=$1&action=$2" [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule "^/?([a-zA-Z]{2})/([^/]+)/(.+)/?$" "/index.php?language=$1&action=$2&params=$3" [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule "^/?([a-zA-Z]{3,})/?$" "/index.php?action=$1" [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule "^/?([a-zA-Z]{3,})/([^/]+)/?$" "/index.php?action=$1&params=$2" [L]

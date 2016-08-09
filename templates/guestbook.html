@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}{{ strings.page_title }}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" type="text/css" href="{{ __base_uri }}/css/basic-form.css">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="row">
+       <div class="col-sm-10 col-sm-offset-1">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="first-bold first-large">{{ strings.page_title }}</p>
+                    {% for p in body_paragraphs %}
+                        <p{{ loop.first ? ' class="first-bold"' : '' }}>{{ p|nl2br }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="feedback">
+                &nbsp;
+            </div>
+            <button id="formShowBtn" class="btn btn-link" data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">{{ strings.show_form }}</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="collapseForm" class="collapse">
+                        {% include "guestbook_form.html" %}
+                    </div>
+                </div>
+            </div>
+            {% if has_recommendations %}
+                <hr>
+                <strong>{{ strings.recommendations }}</strong>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="well" id="submissions"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button id="loadTrigger" class="btn btn-link">{{ strings.load_messages }}</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 hidden" id="guestbookMessagesEnd">
+                        {{ strings.no_more_messages }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block js_link %}
+<script src="{{ __base_uri }}/js/guestbook_form.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
+<script src="{{ __base_uri }}/js/guestbook.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
+<script>
+    !function($) {
+        $(document).ready(function() {
+            rfc.guestbook.init({
+                base_url : "{{ __base_uri }}/{{ __lang }}"
+            });
+        });
+    }(jQuery);
+</script>
+{% endblock %}

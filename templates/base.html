@@ -1,53 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ __lang }}">
+    <!-- {{ "now"|date("Y") }} Matias Larsson -->
     <head>
         {% block head %}
             <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+            <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet"> 
             <link rel="stylesheet" href="{{ __base_uri }}/lib/bootstrap-3.3.6/css/bootstrap.min.css">
-            
-            <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
-            <script src="{{ __base_uri }}/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-            <script src="{{ __base_uri }}/js/rfc.js"></script>
             
             {% block head_extra %}{% endblock %}
             
-            <link rel="stylesheet" href="{{ __base_uri }}/css/layout.css">
-            <link rel="stylesheet" href="{{ __color_css_uri }}">
+            <link rel="stylesheet" href="{{ __base_uri }}/css/layout.css?v={{ __css_src_version }}">
+            <link rel="stylesheet" href="{{ __color_css_uri }}?v={{ __css_src_version }}">
             
             <title>{% block title %}{% endblock %} - Room for color</title>
-            
-            <script>
-                // all AJAX shall actually be asynchronous (duh!)
-                $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-                    options.async = true;
-                });
-            </script>
         {% endblock %}
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12" id="header">
-                    <img class="img-responsive" alt='WOODparts Finland' src="{{ __header_img_uri }}" id="header-img">
+        <div class="container" id="pageContainer">
+            <div class="row bg-top">
+                <div class="col-xs-12">
+                    <img alt="" src="{{ __base_uri }}/data/img/bg-top.jpg">
+                </div>
+            </div>
+            <div class="row" id="header">
+                <div class="col-xs-4 visible-xs-inline-block"></div>
+                <div class="col-xs-4 col-sm-3 col-md-2 logo">
+                   <a href="{{ __base_uri }}/{{ __lang }}"><img class="img-responsive" alt='Room for color' src="{{ __header_logo_uri }}"></a>
+                </div>
+                <div class="col-xs-4 visible-xs-inline-block"></div>
+                <div class="col-xs-12 col-sm-9 col-md-10">
+                    <div class="row">
+                        <div class="col-xs-12 slogan">
+                            <img class="img-responsive" alt='Where imagination becomes my creation' src="{{ __header_slogan_uri }}">
+                        </div>
+                    </div>
+                    <div class="row text-center promo">
+                        <div class="col-xs-12 col-sm-9 col-md-10">
+                            <span class="header-promo">{{ __header_promo_text }}</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-2">
+                            {% include "lang.html" %}
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-               <div class="col-xs-4 col-md-12">
-                   <div class="row">
-                       <div class="col-xs-12">
-                           {% include "nav.html" %}
-                       </div>
-                   </div>
+               <div class="col-xs-12">
+                   {% include "nav.html" %}
                </div>
-               <div class="col-xs-8 col-md-12">
+            </div>
+            <div class="col-xs-12 hidden-md hidden-lg contact-notopb">
+                {% include "contact_info.html" %}
+            </div>
+            <div class="row">
+               <div class="col-xs-12">
                 {% block content %}{% endblock %}
                </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12" id="footer">
-                    <img class="img-responsive" alt='solutions for wood design' src="{{ __footer_img_uri }}" id="footer-img">
-                </div>
+            <div class="contact-info-bottom-container hidden-xs hidden-sm">
+                {% include "contact_info.html" %}
             </div>
+            <div class="row bg-bottom">
+                <img alt="" src="{{ __base_uri }}/data/img/bg-bottom.jpg">
+            </div>
+            <div class="row top-link-container"><a class="top-link hidden" href="#top">{{ __str_up }} <img src="{{ base_uri }}/data/img/arrow-up.png"></a></div>
         </div>
+        <script src="{{ __base_uri }}/lib/jquery-1.12.1/jquery-1.12.1.min.js"></script>
+        <script src="{{ __base_uri }}/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+        <script src="{{ __base_uri }}/js/rfc.{{ __js_src_mode }}.js?v={{ __js_src_version }}"></script>
+        <script src="{{ __base_uri }}/js/txt.js?v={{ __js_src_version }}"></script>
+        <script>
+            // all AJAX shall actually be asynchronous (duh!)
+            $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+                options.async = true;
+            });
+            
+            {% for key, text in __js_texts %}
+                rfc.txt["{{ key }}"] = "{{ text }}";
+            {% endfor %}
+        </script>
+        {% block js_link %}{% endblock %}
     </body>
 </html>

@@ -7,8 +7,6 @@ class GalleryImage implements IGalleryImage {
     private $_id;
     private $_original_url;
     private $_thumb_url;
-    private $_name;
-    private $_description;
     
     
     /**
@@ -20,14 +18,11 @@ class GalleryImage implements IGalleryImage {
      * @param string $name
      * @param string $description
      */
-    public function __construct($id, $original_url, $thumb_url, $name, $description) {
+    public function __construct($id, $original_url, $thumb_url) {
         $this->_id = $id;
         $this->_original_url = $original_url;
         $this->_thumb_url = $thumb_url;
-        $this->_name = $name;
-        $this->_description = $description;
     }
-    
     
     
     public function get_thumb_url() {
@@ -42,15 +37,5 @@ class GalleryImage implements IGalleryImage {
     
     public function get_id() {
         return $this->_id;
-    }
-    
-    
-    public function get_name() {
-        return $this->_name;
-    }
-    
-    
-    public function get_description() {
-        return $this->_description;
     }
 }

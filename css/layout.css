@@ -1,19 +1,103 @@
-#header > img, #footer > img {
+main {
+    padding-top: 1em;
+    margin-bottom: 128px;
+}
+
+#pageContainer {
+    position: relative;
+}
+
+
+.bg-top {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+}
+
+.bg-bottom {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
     width: 100%;
 }
 
 
-main {
-    padding: 2em 0 0 1em;
+.bg-top img,
+.bg-bottom img {
+    width: 100%;
 }
 
 
-.img-bar-img, .gallery-img {
+#header {
+    margin-top: 1em;
+}
+
+#header .logo {
+    padding-bottom: 1em; /* NB! overridden in media qry below */
+}
+
+
+#header .promo {
+    padding-top: 2em;
+}
+
+.header-promo {
+    font-size: 112%;
+}
+
+
+.front-page-images img {
+    margin: 0 auto;
+}
+
+.front-page-images {
+    padding: 1em 2em 1em 2em;
     margin-bottom: 1em;
 }
 
 
-.woodparts-nav > li > a {
+img.fb-link {
+    width: 30px;
+    margin-top: 1.5em;
+}
+
+
+.margin-top-none {
+    margin-top: 0 !important;
+}
+
+
+.margin-bottom-none {
+    margin-bottom: 0 !important;
+}
+
+
+.padding-top-1 {
+    padding-top: 1em !important;
+}
+
+
+.r4c-nav {
+    text-align: center;
+    font-size: 112%;
+}
+
+
+.r4c-sub-nav {
+    font-size: 112%;
+}
+
+
+.r4c-nav > li,
+.r4c-sub-nav > li {
+    float: none;
+    display: inline-block;
+}
+
+
+.r4c-nav > li > a,
+.r4c-sub-nav > li > a {
     border-radius: 0px;
 }
 
@@ -29,8 +113,7 @@ main {
 
 
 .lang.downsize > li > a {
-    padding-bottom: .2em;
-    padding-top: .2em;
+    padding: .2em .6em .2em .6em;
 }
 
 
@@ -44,28 +127,102 @@ main {
 }
 
 
-.videos-list-container h3 {
-    padding: 0 0 .5em 0;
-    margin-bottom: 1em;
-    margin-top: 0;
+.contact-info-bottom-container {
+    position: absolute;
+    bottom: 28px;
+    width: 100%;
 }
 
 
-.videos-list-container {
-    padding: 1em;
+.r4c-contact-info address {
+    margin-bottom: 0;
 }
 
 
-.videos-list-container .row-video {
-    margin-bottom: 1em;
+.r4c-contact-info p {
+    margin: 2px 0 5px 0;
 }
 
 
-.video-container {
-    margin-bottom: 2em;
+.contact-component + .contact-component {
+    padding-left: .7em;
 }
 
 
-.video-container h2 {
-    font-size: 24px;
+.front-page-images img {
+    padding: .8em .5em .8em .5em;
+}
+
+
+.guestbook-message > .guestbook-message-col {
+    padding-top: .7em;
+    padding-bottom: .7em;
+}
+
+
+.top-link-container {
+    position: absolute;
+    bottom: 80px;
+    right: 70px;
+}
+
+
+.top-link-container *,
+.top-link-container *:hover,
+.top-link-container *:focus {
+    text-decoration: none;
+    font-size: 110%;
+}
+
+
+.top-link-container img {
+    width: 36px;
+    height: 36px;
+}
+
+
+@media (min-width: 768px) {
+    .r4c-nav > li > a,
+    .r4c-sub-nav > li > a {
+        padding: .2em .7em;
+    }
+    
+    #header .logo {
+        padding: 2em;
+        margin-bottom: -1em;
+        margin-top: -1em;
+    }
+
+    #header .slogan {
+        padding-top: 2.5em;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    main {
+        padding-top: 12em;
+        margin-bottom: 220px;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .top-link-container {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .front-page-images img {
+        padding: .5em .25em .5em .25em;
+    }
+    
+    p, form {
+        margin-left: 1em;
+    }
 }

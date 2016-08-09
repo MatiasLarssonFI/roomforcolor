@@ -8,6 +8,7 @@ require_once(dirname(__FILE__) . "/../site_config_factory.class.php");
 require_once(dirname(__FILE__) . "/../dbif.class.php");
 require_once(dirname(__FILE__) . "/../ui_text_storage.class.php");
 require_once(dirname(__FILE__) . "/../nav_link_factory.class.php");
+require_once(dirname(__FILE__) . "/../resource_config.class.php");
 
 require_once(dirname(__FILE__) . "/../../lib/Twig-1.24.0/Twig-1.24.0/lib/Twig/Autoloader.php");
 
@@ -43,17 +44,39 @@ abstract class AbstractView implements IView {
         
         $base_uri = \SiteConfigFactory::get()->get_site_config()->base_uri();
         $language = $text_storage->get_language();
+        $src_conf = \ResourceConfig::get();
+        $dbif = \DBIF::get();
         
         $data["__csrf_token"] = \Session::get()->get_csrf_token();
         $data["__base_uri"] = $base_uri;
-        $data["__header_img_uri"] = $base_uri . \DBIF::get()->get_header_img_uri();
-        $data["__footer_img_uri"] = $base_uri . \DBIF::get()->get_footer_img_uri();
-        $data["__color_css_uri"] = $base_uri . \DBIF::get()->get_color_css_uri();
+        $data["__contact_info"] = $this->make_contact_info($text_storage);
+        $data["__header_logo_uri"] = $base_uri . $dbif->get_header_logo_uri();
+        $data["__header_slogan_uri"] = $base_uri . $dbif->get_slogan_uri();
+        $data["__header_promo_text"] = $text_storage->text("HEADER_PROMO");
+        $data["__str_up"] = $text_storage->text("UP");
+        $data["__color_css_uri"] = $base_uri . $dbif->get_color_css_uri();
         $data["__lang"] = $language;
         $data["__nav_links"] = $this->_nlf->get_nav_links();
+        $data["__sub_nav_links"] = $this->_nlf->get_sub_nav_links();
         $data["__lang_links"] = $this->_nlf->get_lang_links();
+        $data["__js_texts"] = $this->get_js_texts();
+        $data["__js_src_mode"] = $src_conf->get_js_src_mode();
+        $data["__js_src_version"] = $src_conf->get_js_src_version();
+        $data["__css_src_version"] = $src_conf->get_css_src_version();
         
         echo $twig->render($this->get_template_name(), $data);
+    }
+    
+    
+    private function make_contact_info(\UITextStorage $text_storage) {
+        return array(
+            $text_storage->text("CONTACT_TEXT_NAME"),
+            $text_storage->text("CONTACT_TEXT_STREET_ADDRESS"),
+            $text_storage->text("CONTACT_TEXT_POSTAL_CODE"),
+            $text_storage->text("CONTACT_TEXT_CITY"),
+            $text_storage->text("CONTACT_TEXT_PHONE"),
+            $text_storage->text("CONTACT_TEXT_BUSINESS_ID"),
+        );
     }
     
     
@@ -89,4 +112,14 @@ abstract class AbstractView implements IView {
      * @return mixed[] e. g. [ "var_name" => "var value", ... ]
      */
     abstract protected function get_view_data(array $params);
+    
+    
+    /** 
+     * Returns the UI texts for JavaScript.
+     * 
+     * @return string[] [ "text_key" => "text string", ... ]
+     */
+    protected function get_js_texts() {
+        return [];
+    }
 }

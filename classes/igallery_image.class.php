@@ -23,20 +23,4 @@ interface IGalleryImage {
      * @return int
      */
     public function get_id();
-    
-    
-    /**
-     * Returns the image name.
-     * 
-     * @return string
-     */
-    public function get_name();
-    
-    
-    /**
-     * Returns the image description.
-     * 
-     * @return string
-     */
-    public function get_description();
 }
