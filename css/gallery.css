@@ -1,3 +1,8 @@
+main {
+    padding-top: 2em !important;
+}
+
+
 .r4c-gallery-images-list {
     padding: 1em;
 }
@@ -12,7 +17,7 @@
 
 
 .r4c-gallery-stage img {
-    height: 20em;
+    height: 350px;
     margin: auto;
 }
 
