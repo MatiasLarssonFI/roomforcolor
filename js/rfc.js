@@ -2,7 +2,7 @@
 
 var rfc = {};
 
-$(window).load(function() {
+var update_responsive = function() {
     // sub nav alignment with main nav
     !function () {
         var main_active = $("ul.r4c-nav > li.active"); // active main nav link
@@ -29,20 +29,20 @@ $(window).load(function() {
             sub_nav.css("padding-left", sub_nav_padding_left + "px");
         }
     }();
-    
-    
+};
+
+$(window).on("load resize", update_responsive);
+$(window).load(function () {
     // top-link
-    !function () {
-        var top_link = $(".top-link");
-        if (top_link.length) {
-            var node = $(window);
-            node.scroll(function() {
-                if (node.scrollTop() > 300) {
-                    top_link.removeClass("hidden");
-                } else if (node.scrollTop() < 200) {
-                    top_link.addClass("hidden");
-                }
-            });
-        }
-    }();
+    var top_link = $(".top-link");
+    if (top_link.length) {
+        var node = $(window);
+        node.scroll(function() {
+            if (node.scrollTop() > 300) {
+                top_link.removeClass("hidden");
+            } else if (node.scrollTop() < 200) {
+                top_link.addClass("hidden");
+            }
+        });
+    }
 });
