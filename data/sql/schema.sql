@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 09, 2016 at 06:22 PM
+-- Generation Time: Aug 10, 2016 at 11:31 PM
 -- Server version: 5.5.50-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.19
 
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `gallery_image` (
   UNIQUE KEY `uniq` (`image_id`,`gallery_id`),
   KEY `image_id` (`image_id`),
   KEY `gallery_id` (`gallery_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=98 ;
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `time_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq` (`original_uri`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=111 ;
 
 -- --------------------------------------------------------
 
