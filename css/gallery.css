@@ -13,12 +13,13 @@ main {
     margin-bottom: 1em;
     background-position: center;
     position: relative;
+    height: 350px;
 }
 
 
 .r4c-gallery-stage img {
-    height: 350px;
     margin: auto;
+    max-height: 323px;
 }
 
 
