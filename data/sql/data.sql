@@ -430,7 +430,7 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (22, 'en', 'CONTACT_FIELD_ERROR_MESSAGE', 'The message must be longer than three characters.', NULL, '0000-00-00 00:00:00'),
 (23, 'fi', 'CONTACT_FIELD_ERROR___CSRF_TOKEN', 'Pahoittelumme, mutta lomake on vanhentunut. Ole hyvä ja yritä uudelleen.', '2016-04-15 19:59:42', '2016-04-13 21:00:00'),
 (24, 'en', 'CONTACT_FIELD_ERROR___CSRF_TOKEN', 'We''re sorry but the form has expired. Please try again.', '2016-04-15 19:58:48', '2016-04-13 21:00:00'),
-(26, 'fi', 'NAV_FRONT_PAGE', 'Koti', '2016-06-21 18:14:52', '2016-03-11 20:00:00'),
+(26, 'fi', 'NAV_FRONT_PAGE', 'Etusivu', '2016-06-21 18:14:52', '2016-03-11 20:00:00'),
 (27, 'en', 'NAV_FRONT_PAGE', 'Home', '2016-06-21 18:14:54', '2016-03-11 20:00:00'),
 (28, 'en', 'NAV_CONTACT', 'Contact', NULL, '2016-03-11 20:00:00'),
 (30, 'fi', 'NAV_CONTACT', 'Yhteydenotto', NULL, '2016-03-11 20:00:00'),
