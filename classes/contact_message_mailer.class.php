@@ -35,7 +35,8 @@ class ContactMessageMailer implements IMailer {
         $mail->Port = 587;
 
         $mail->addReplyTo($contactmsg->get_email(), $contactmsg->get_name());
-        $mail->setFrom('contactform@{$host}', 'Room for color Contact Form');
+        $mail->FromName ='Room for color Contact Form';
+        $mail->From = "contactform@{$host}";
         $mail->addAddress($db->get_contact_email());     // recipient
         $mail->isHTML(true);                             // email format to HTML
     
