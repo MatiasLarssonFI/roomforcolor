@@ -128,7 +128,7 @@ img.fb-link {
 
 
 .contact-info-bottom-container {
-    position: absolute;
+    position: relative;
     bottom: 28px;
     width: 100%;
 }
