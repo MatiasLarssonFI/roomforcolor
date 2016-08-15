@@ -17,6 +17,8 @@
 # is present.
 # 
 
+Options -Indexes
+
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
