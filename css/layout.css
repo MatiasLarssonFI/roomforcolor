@@ -1,6 +1,6 @@
 main {
-    padding-top: 1em;
-    margin-bottom: 128px;
+    padding-top: 12em;
+    margin-bottom: 220px;
 }
 
 #pageContainer {
@@ -199,17 +199,12 @@ img.fb-link {
 }
 
 
-
-@media (min-width: 992px) {
-    main {
-        padding-top: 12em;
-        margin-bottom: 220px;
-    }
-}
-
-
-
 @media (max-width: 992px) {
+    main {
+        padding-top: 1em;
+        margin-bottom: 128px;
+    }
+
     .top-link-container {
         bottom: 20px;
         right: 20px;
