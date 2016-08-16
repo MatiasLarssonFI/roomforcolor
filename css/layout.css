@@ -33,8 +33,11 @@ main {
     margin-top: 1em;
 }
 
+
 #header .logo {
-    padding-bottom: 1em; /* NB! overridden in media qry below */
+    padding: 2em;
+    margin-bottom: -1em;
+    margin-top: -1em;
 }
 
 
@@ -99,6 +102,7 @@ img.fb-link {
 .r4c-nav > li > a,
 .r4c-sub-nav > li > a {
     border-radius: 0px;
+    padding: .2em .7em;
 }
 
 
@@ -182,19 +186,28 @@ img.fb-link {
 
 
 @media (min-width: 768px) {
-    .r4c-nav > li > a,
-    .r4c-sub-nav > li > a {
-        padding: .2em .7em;
-    }
-    
-    #header .logo {
-        padding: 2em;
-        margin-bottom: -1em;
-        margin-top: -1em;
-    }
-
     #header .slogan {
         padding-top: 2.5em;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .r4c-nav,
+    .r4c-sub-nav{
+        font-size: 100%;
+    }
+    
+    .r4c-nav > li > a,
+    .r4c-sub-nav > li > a {
+        padding: .2em .4em;
+    }
+    
+    
+    #header .logo {
+        padding: 1em;
+        margin-bottom: 0;
+        margin-top: 0;
     }
 }
 
@@ -209,6 +222,16 @@ img.fb-link {
         bottom: 20px;
         right: 20px;
     }
+    
+    
+    .r4c-nav > li > a,
+    .r4c-sub-nav > li > a {
+        padding: .2em .5em;
+    }
+    
+    #header .logo {
+        padding: 1.5em;
+    }
 }
 
 
@@ -219,5 +242,17 @@ img.fb-link {
     
     p, form {
         margin-left: 1em;
+    }
+    
+    
+    
+    .r4c-nav > li > a,
+    .r4c-sub-nav > li > a {
+        padding: .4em .7em;
+    }
+    
+    
+    #header .logo {
+        padding: .5em;
     }
 }
