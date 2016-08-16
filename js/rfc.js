@@ -16,8 +16,8 @@ var update_responsive = function() {
                 });
                 return ret;
             }());
-            var sub_nav_padding_left = parseFloat(sub_nav.css("padding-left")); // we change this to implement the alignment
-            var sub_nav_link_padding_left = parseFloat(sub_nav_links.first().find("a").css("padding-left")); // we use this to fine-tune the alignment
+            var sub_nav_padding_left = 0; // we change this to implement the alignment
+            var sub_nav_link_padding_left = parseFloat(sub_nav_links.last().find("a").css("padding-left")); // we use this to fine-tune the alignment
             var active_left = main_active.position().left;
             var sub_nav_inner_w = sub_nav.innerWidth();
             if (sub_navs_w + active_left < sub_nav_inner_w) { // can we align the sub nav left with the main active left?
