@@ -256,3 +256,8 @@ img.fb-link {
         padding: .5em;
     }
 }
+
+
+.r4c-sub-nav > li:first-child > a {
+    padding-left: 0; /* for the dynamic sub nav alignment */
+}
