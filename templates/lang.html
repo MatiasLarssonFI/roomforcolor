@@ -1,5 +1,5 @@
 <ul class="nav nav-pills lang downsize pull-right">
     {% for link in __lang_links %}
-        <li><a href='{{ __base_uri }}/{{ link.get_language }}/{{ link.get_action }}'><strong>{{ link.get_text }}</strong></a></li>
+        <li><a title="{{ link.get_language }}" href='{{ __base_uri }}/{{ link.get_language }}/{{ link.get_action }}'><img class="lang-flag" alt="{{ link.get_language }}" src="{{ __base_uri }}/data/img/flag-{{ link.get_language }}.png"></a></li>
     {% endfor %}
 </ul>
