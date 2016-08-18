@@ -137,6 +137,10 @@ p.first-large:first-letter {
     font-weight: bold;
 }
 
+img.lang-flag {
+    border: 1px solid #ddd;
+}
+
 
 @media (max-width: 768px) {
     .front-page-images img {
