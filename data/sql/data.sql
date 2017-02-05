@@ -143,7 +143,16 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
 (94, 107, 7, '2016-08-10 22:38:57', '0000-00-00 00:00:00'),
 (95, 108, 7, '2016-08-10 22:38:57', '0000-00-00 00:00:00'),
 (96, 109, 7, '2016-08-10 22:38:57', '0000-00-00 00:00:00'),
-(97, 110, 7, '2016-08-10 22:38:57', '0000-00-00 00:00:00');
+(97, 110, 7, '2016-08-10 22:38:57', '0000-00-00 00:00:00'),
+(106, 119, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(105, 118, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(104, 117, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(103, 116, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(102, 115, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(101, 114, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(100, 113, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(99, 112, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(98, 111, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00');
 
 --
 -- Dumping data for table `gallery_name`
@@ -275,7 +284,16 @@ INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_ed
 (107, '/data/img/content/thumb/furniture_cupboards/99086.jpg', '/data/img/content/furniture_cupboards/99086.jpg', 1, NULL, '2016-08-10 19:36:44'),
 (108, '/data/img/content/thumb/furniture_cupboards/99087.jpg', '/data/img/content/furniture_cupboards/99087.jpg', 1, NULL, '2016-08-10 19:36:44'),
 (109, '/data/img/content/thumb/furniture_cupboards/99092-1.jpg', '/data/img/content/furniture_cupboards/99092-1.jpg', 1, NULL, '2016-08-10 19:36:44'),
-(110, '/data/img/content/thumb/furniture_cupboards/99095.jpg', '/data/img/content/furniture_cupboards/99095.jpg', 1, NULL, '2016-08-10 19:36:44');
+(110, '/data/img/content/thumb/furniture_cupboards/99095.jpg', '/data/img/content/furniture_cupboards/99095.jpg', 1, NULL, '2016-08-10 19:36:44'),
+(119, '/data/img/content/thumb/drawings_animals/001_12-01-17.jpg', '/data/img/content/drawings_animals/001_12-01-17.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
+(118, '/data/img/content/thumb/drawings_animals/020_Eagle_16-12-16.JPG', '/data/img/content/drawings_animals/020_Eagle_16-12-16.JPG', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
+(117, '/data/img/content/thumb/drawings_animals/018_eagle_15-12-16.JPG', '/data/img/content/drawings_animals/018_eagle_15-12-16.JPG', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
+(116, '/data/img/content/thumb/drawings_animals/017_13-12-16_009_Mountain_blue_bird.JPG', '/data/img/content/drawings_animals/017_13-12-16_009_Mountain_blue_bird.JPG', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
+(115, '/data/img/content/thumb/drawings_animals/014_20-10-16_Harco_Jersey_Sir_William_Laura.jpg', '/data/img/content/drawings_animals/014_20-10-16_Harco_Jersey_Sir_William_Laura.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
+(114, '/data/img/content/thumb/drawings_animals/005_25-01-17.jpg', '/data/img/content/drawings_animals/005_25-01-17.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
+(113, '/data/img/content/thumb/drawings_animals/004_24-01-17-1.jpg', '/data/img/content/drawings_animals/004_24-01-17-1.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
+(112, '/data/img/content/thumb/drawings_animals/003_16-01-17.jpg', '/data/img/content/drawings_animals/003_16-01-17.jpg', 1, '2017-02-05 13:38:55', '2017-02-04 22:00:00'),
+(111, '/data/img/content/thumb/drawings_animals/002_13-01-17.jpg', '/data/img/content/drawings_animals/002_13-01-17.jpg', 1, '2017-02-05 13:33:57', '2017-02-04 22:00:00');
 
 --
 -- Dumping data for table `page_text`
