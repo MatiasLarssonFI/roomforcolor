@@ -71,6 +71,7 @@ abstract class AbstractView implements IView {
     private function make_contact_info(\UITextStorage $text_storage) {
         return array(
             $text_storage->text("CONTACT_TEXT_NAME"),
+            $text_storage->text("CONTACT_TEXT_EMAIL_ADDRESS"),
             $text_storage->text("CONTACT_TEXT_STREET_ADDRESS"),
             $text_storage->text("CONTACT_TEXT_POSTAL_CODE"),
             $text_storage->text("CONTACT_TEXT_CITY"),
