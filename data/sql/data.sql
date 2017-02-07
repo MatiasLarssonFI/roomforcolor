@@ -55,7 +55,8 @@ INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES
 (12, 'drawings', '2016-07-31 00:00:00', NULL),
 (13, 'drawings', '2016-07-31 00:00:00', NULL),
 (14, 'drawings', '2016-07-31 00:00:00', NULL),
-(15, 'wallpaintings', '2016-07-31 00:00:00', NULL);
+(15, 'wallpaintings', '2016-07-31 00:00:00', NULL),
+(16, 'wallpaintings', '2016-07-31 00:00:00', NULL);
 
 --
 -- Dumping data for table `gallery_image`
@@ -167,7 +168,8 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
 (110, 123, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
 (109, 122, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
 (108, 121, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
-(107, 120, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35');
+(107, 120, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(107, 134, 16, '2017-02-05 19:03:35', '2017-02-05 17:03:35');
 
 --
 -- Dumping data for table `gallery_name`
@@ -212,7 +214,10 @@ INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_cre
 (43, 14, 'fi', 'Muuta', '2016-07-31 00:00:00', '2016-08-09 15:18:28'),
 (46, 15, 'nl', 'Schilderijen', '2017-02-05 00:00:00', NULL),
 (45, 15, 'en', 'Paintings', '2017-02-05 00:00:00', NULL),
-(44, 15, 'fi', 'Taulut', '2017-02-05 00:00:00', NULL);
+(44, 15, 'fi', 'Taulut', '2017-02-05 00:00:00', NULL),
+(49, 16, 'nl', 'Kinderdagverblijf', '2017-02-07 00:00:00', NULL),
+(48, 16, 'en', 'Daycare', '2017-02-07 00:00:00', NULL),
+(47, 16, 'fi', 'Päiväkoti', '2017-02-07 00:00:00', NULL);
 
 --
 -- Dumping data for table `image`
@@ -325,7 +330,8 @@ INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_ed
 (123, '/data/img/content/thumb/wallpaintings_paintings/005_08-09-16.jpg', '/data/img/content/wallpaintings_paintings/005_08-09-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39'),
 (122, '/data/img/content/thumb/wallpaintings_paintings/004_01-09-16.jpg', '/data/img/content/wallpaintings_paintings/004_01-09-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39'),
 (121, '/data/img/content/thumb/wallpaintings_paintings/003_30-08-16.jpg', '/data/img/content/wallpaintings_paintings/003_30-08-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39'),
-(120, '/data/img/content/thumb/wallpaintings_paintings/002_25-08-16.jpg', '/data/img/content/wallpaintings_paintings/002_25-08-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39');
+(120, '/data/img/content/thumb/wallpaintings_paintings/002_25-08-16.jpg', '/data/img/content/wallpaintings_paintings/002_25-08-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39'),
+(134, '/data/img/content/thumb/wallpaintings_daycare/006_01-02-17.jpg', '/data/img/content/wallpaintings_daycare/006_01-02-17.jpg', 1, '2017-02-07 16:20:40', '2017-02-07 16:20:40');
 
 --
 -- Dumping data for table `page_text`
