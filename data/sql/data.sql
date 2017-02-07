@@ -54,7 +54,8 @@ INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES
 (11, 'furniture', '2016-07-31 00:00:00', NULL),
 (12, 'drawings', '2016-07-31 00:00:00', NULL),
 (13, 'drawings', '2016-07-31 00:00:00', NULL),
-(14, 'drawings', '2016-07-31 00:00:00', NULL);
+(14, 'drawings', '2016-07-31 00:00:00', NULL),
+(15, 'wallpaintings', '2016-07-31 00:00:00', NULL);
 
 --
 -- Dumping data for table `gallery_image`
@@ -152,7 +153,21 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
 (101, 114, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (100, 113, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (99, 112, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
-(98, 111, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00');
+(98, 111, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
+(120, 133, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
+(119, 132, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
+(118, 131, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
+(117, 130, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
+(116, 129, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
+(115, 128, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(114, 127, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(113, 126, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(112, 125, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(111, 124, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(110, 123, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(109, 122, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(108, 121, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35'),
+(107, 120, 15, '2017-02-05 19:03:35', '2017-02-05 17:03:35');
 
 --
 -- Dumping data for table `gallery_name`
@@ -194,7 +209,10 @@ INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_cre
 (40, 13, 'fi', 'Maisemat', '2016-07-31 00:00:00', '2016-07-31 13:27:30'),
 (41, 14, 'en', 'Additional', '2016-07-31 00:00:00', '2016-07-31 13:28:49'),
 (42, 14, 'nl', 'Overig', '2016-07-31 00:00:00', '2016-07-31 13:28:49'),
-(43, 14, 'fi', 'Muuta', '2016-07-31 00:00:00', '2016-08-09 15:18:28');
+(43, 14, 'fi', 'Muuta', '2016-07-31 00:00:00', '2016-08-09 15:18:28'),
+(46, 15, 'nl', 'Schilderijen', '2017-02-05 00:00:00', NULL),
+(45, 15, 'en', 'Paintings', '2017-02-05 00:00:00', NULL),
+(44, 15, 'fi', 'Taulut', '2017-02-05 00:00:00', NULL);
 
 --
 -- Dumping data for table `image`
@@ -293,7 +311,21 @@ INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_ed
 (114, '/data/img/content/thumb/drawings_animals/005_25-01-17.jpg', '/data/img/content/drawings_animals/005_25-01-17.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
 (113, '/data/img/content/thumb/drawings_animals/004_24-01-17-1.jpg', '/data/img/content/drawings_animals/004_24-01-17-1.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
 (112, '/data/img/content/thumb/drawings_animals/003_16-01-17.jpg', '/data/img/content/drawings_animals/003_16-01-17.jpg', 1, '2017-02-05 13:38:55', '2017-02-04 22:00:00'),
-(111, '/data/img/content/thumb/drawings_animals/002_13-01-17.jpg', '/data/img/content/drawings_animals/002_13-01-17.jpg', 1, '2017-02-05 13:33:57', '2017-02-04 22:00:00');
+(111, '/data/img/content/thumb/drawings_animals/002_13-01-17.jpg', '/data/img/content/drawings_animals/002_13-01-17.jpg', 1, '2017-02-05 13:33:57', '2017-02-04 22:00:00'),
+(133, '/data/img/content/thumb/wallpaintings_paintings/16_24-11-16_Yellow_boots_day.jpg', '/data/img/content/wallpaintings_paintings/16_24-11-16_Yellow_boots_day.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(132, '/data/img/content/thumb/wallpaintings_paintings/015_08-11-16_little_bird.jpg', '/data/img/content/wallpaintings_paintings/015_08-11-16_little_bird.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(131, '/data/img/content/thumb/wallpaintings_paintings/013_12-10-16-1.jpg', '/data/img/content/wallpaintings_paintings/013_12-10-16-1.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(130, '/data/img/content/thumb/wallpaintings_paintings/012_11-10-16-1.jpg', '/data/img/content/wallpaintings_paintings/012_11-10-16-1.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(129, '/data/img/content/thumb/wallpaintings_paintings/011_06-10-16.jpg', '/data/img/content/wallpaintings_paintings/011_06-10-16.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(128, '/data/img/content/thumb/wallpaintings_paintings/010_05-10-16.jpg', '/data/img/content/wallpaintings_paintings/010_05-10-16.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(127, '/data/img/content/thumb/wallpaintings_paintings/009_03-10-16_The_Fall.jpg', '/data/img/content/wallpaintings_paintings/009_03-10-16_The_Fall.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(126, '/data/img/content/thumb/wallpaintings_paintings/008_28-09-16.jpg', '/data/img/content/wallpaintings_paintings/008_28-09-16.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(125, '/data/img/content/thumb/wallpaintings_paintings/007_25-09-16.jpg', '/data/img/content/wallpaintings_paintings/007_25-09-16.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(124, '/data/img/content/thumb/wallpaintings_paintings/006_23-09-16.jpg', '/data/img/content/wallpaintings_paintings/006_23-09-16.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
+(123, '/data/img/content/thumb/wallpaintings_paintings/005_08-09-16.jpg', '/data/img/content/wallpaintings_paintings/005_08-09-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39'),
+(122, '/data/img/content/thumb/wallpaintings_paintings/004_01-09-16.jpg', '/data/img/content/wallpaintings_paintings/004_01-09-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39'),
+(121, '/data/img/content/thumb/wallpaintings_paintings/003_30-08-16.jpg', '/data/img/content/wallpaintings_paintings/003_30-08-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39'),
+(120, '/data/img/content/thumb/wallpaintings_paintings/002_25-08-16.jpg', '/data/img/content/wallpaintings_paintings/002_25-08-16.jpg', 1, '2017-02-05 16:20:39', '2017-02-05 16:20:39');
 
 --
 -- Dumping data for table `page_text`
