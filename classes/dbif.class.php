@@ -184,7 +184,8 @@ class DBIF {
                             inner join gallery_image gi on gi.gallery_id = :g_id
                             inner join image on gi.image_id = image.id
                             where is_published
-                            group by image.id, image.thumb_uri, image.original_uri");
+                            group by image.id, image.thumb_uri, image.original_uri
+                            order by image.time_created desc");
         $stm->bindParam(":g_id", $gallery_id, PDO::PARAM_INT);
         $stm->execute();
         
