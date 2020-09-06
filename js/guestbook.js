@@ -53,6 +53,7 @@
         _bindCollapse : function() {
             var self = this;
             self._nodes.collapse.on("show.bs.collapse", function() {
+                self._nodes.form.find(".contact-url").attr("tabindex", "-1");
                 self._nodes.form.append("<input type='hidden' name='egz83SiQXYDz7yrrQcX7fg' value=''>");
             });
         },

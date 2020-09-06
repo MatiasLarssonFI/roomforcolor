@@ -1,6 +1,9 @@
 !function($) {
     rfc.contact = {
         init : function() {
+            
+            $(".contact-url").attr("tabindex", "-1");
+            
             $("#contact-form").unbind("submit").submit(function(e) {
                 e.preventDefault();
                 
