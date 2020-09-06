@@ -5,7 +5,7 @@
 <form method="post" action="{{ __base_uri }}/{{ lang }}/contact_submit" id="contact-form">
     <input type="hidden" name="__csrf_token" value="{{ __csrf_token }}">
     <input type="hidden" id="is_ajax" name="is_ajax" value="0">
-    <input type="text" name="url" class="contact-url" value="{{ prefill.url }}">
+    <input type="text" name="url" class="contact-url" value="{{ prefill.url }}" autocomplete="off">
     <div class="form-group {{ errors.name is defined ? 'has-error': '' }}">
         <label for="name">* {{ strings.field_name }}</label>
         <input type="text" id="name" name="name" class="form-control" value="{{ prefill.name }}" autofocus required>
@@ -35,6 +35,7 @@
         {% endif %}
     </div>
     <div class="form-group">
+        <input type="text" name="company" class="contact-url" value="{{ prefill.company }}" autocomplete="off">
         <button type="submit" class="btn btn-primary">{{ strings.submit }}</button>
         <img id="ajax-spinner" src="{{ __base_uri }}/data/img/ajax-spinner.gif" alt="">
     </div>

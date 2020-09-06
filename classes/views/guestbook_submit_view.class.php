@@ -11,7 +11,7 @@ require_once(dirname(__FILE__) . "/../dbif.class.php");
 
 class GuestbookSubmitView extends AbstractView {
     protected function get_required_params() {
-        return array("__csrf_token", "name", "message", "is_ajax", "url");
+        return array("__csrf_token", "name", "message", "is_ajax", "url", "egz83SiQXYDz7yrrQcX7fg");
     }
     
     
