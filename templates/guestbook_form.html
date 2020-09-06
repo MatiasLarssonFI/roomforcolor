@@ -5,7 +5,7 @@
 <form method="post" action="{{ __base_uri }}/{{ __lang }}/guestbook_submit" class="form-horizontal" id="guestbook-form">
     <input type="hidden" name="__csrf_token" value="{{ __csrf_token }}">
     <input type="hidden" id="is_ajax" name="is_ajax" value="0">
-    <input type="text" name="url" class="contact-url" value="{{ prefill.url }}">
+    <input type="text" name="url" class="contact-url" value="{{ prefill.url }}" autocomplete="off">
     <div class="form-group {{ errors.name is defined ? 'has-error': '' }}">
         <label for="name" class="col-sm-4">* {{ strings.field_name }}</label>
         <div class="col-sm-8">
