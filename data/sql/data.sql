@@ -508,9 +508,9 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (65, 'fi', 'CONTACT_PLACEHOLDER_MESSAGE', 'Ole hyvä ja yritä kertoa kysymyksesi ja kommenttisi mahdollisimman selvästi.', '2016-08-10 20:03:27', '1970-01-10 00:00:00'),
 (66, 'nl', 'CONTACT_SUBMIT_TEXT', 'Dank je. Ik zal binnenkort contact met u op.', '2016-08-08 17:11:04', '2016-04-02 21:00:00'),
 (67, 'fi', 'CONTACT_PAGE_TEXT', 'Onko sinulla kysymyksiä ja/tai kommentteja? Ole hyvä ja täytä tämä lomake.\nOtan sinun yhteyttä niin pian kuin mahdollista.', '2016-08-10 20:02:41', '1970-01-10 00:00:00'),
-(68, 'en', 'NAV_WALLPAINTINGS', 'Wallpaintings', '2016-07-02 11:33:21', '2016-07-01 21:00:00'),
-(69, 'nl', 'NAV_WALLPAINTINGS', 'Muurschilderingen', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
-(70, 'fi', 'NAV_WALLPAINTINGS', 'Seinämaalaukset', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
+(68, 'en', 'NAV_WALLPAINTINGS', 'Paintings', '2016-07-02 11:33:21', '2016-07-01 21:00:00'),
+(69, 'nl', 'NAV_WALLPAINTINGS', 'Schilderijen', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
+(70, 'fi', 'NAV_WALLPAINTINGS', 'Maalaukset', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
 (71, 'fi', 'GALLERY_NO_MORE_IMAGES', 'Ei enempää kuvia.', '2016-07-23 10:36:44', '2016-07-09 21:00:00'),
 (72, 'en', 'GALLERY_NO_MORE_IMAGES', 'No more images.', NULL, '2016-07-09 21:00:00'),
 (73, 'nl', 'GALLERY_NO_MORE_IMAGES', 'Geen afbeeldingen.', NULL, '2016-07-09 21:00:00'),
@@ -607,6 +607,95 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (167, 'nl', 'CONTACT_TEXT_EMAIL_ADDRESS', 'fiona@roomforcolor.fi', NULL, '2017-02-04 22:00:00'),
 (166, 'en', 'CONTACT_TEXT_EMAIL_ADDRESS', 'fiona@roomforcolor.fi', NULL, '2017-02-04 22:00:00'),
 (165, 'fi', 'CONTACT_TEXT_EMAIL_ADDRESS', 'fiona@roomforcolor.fi', NULL, '2017-02-04 22:00:00');
+
+-- 210327
+
+INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES (17, 'wallpaintings', '2021-03-27 14:52:59', NULL);
+
+INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_created`, `time_edited`) VALUES
+      (NULL, '17', 'fi', 'Akryylikaato', '2021-03-27 14:54:25', NULL)
+    , (NULL, '17', 'en', 'Acrylic Pouring', '2021-03-27 14:54:25', NULL)
+    , (NULL, '17', 'nl', 'Acryl gieten', '2021-03-27 14:54:25', NULL)
+    ;
+
+INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES (18, 'wallpaintings', '2021-03-27 14:52:59', NULL);
+
+INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_created`, `time_edited`) VALUES
+      (NULL, '18', 'fi', 'Ennen ja jälkeen', '2021-03-27 14:54:25', NULL)
+    , (NULL, '18', 'en', 'Before and after', '2021-03-27 14:54:25', NULL)
+    , (NULL, '18', 'nl', 'Voor en na', '2021-03-27 14:54:25', NULL)
+    ;
+
+INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES (19, 'wallpaintings', '2021-03-27 14:52:59', NULL);
+
+INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_created`, `time_edited`) VALUES
+      (NULL, '19', 'fi', 'Seinämaalaukset', '2021-03-27 14:54:25', NULL)
+    , (NULL, '19', 'en', 'Wallpaintings', '2021-03-27 14:54:25', NULL)
+    , (NULL, '19', 'nl', 'Muurschilderingen', '2021-03-27 14:54:25', NULL)
+    ;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (135, '/data/img/content/thumb/paintings_acrylic_pouring/1.jpg', '/data/img/content/paintings_acrylic_pouring/1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (136, '/data/img/content/thumb/paintings_acrylic_pouring/2.jpg', '/data/img/content/paintings_acrylic_pouring/2.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (137, '/data/img/content/thumb/paintings_acrylic_pouring/3.jpg', '/data/img/content/paintings_acrylic_pouring/3.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (138, '/data/img/content/thumb/paintings_acrylic_pouring/4.jpg', '/data/img/content/paintings_acrylic_pouring/4.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (139, '/data/img/content/thumb/paintings_acrylic_pouring/5.jpg', '/data/img/content/paintings_acrylic_pouring/5.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (140, '/data/img/content/thumb/paintings_acrylic_pouring/6.jpg', '/data/img/content/paintings_acrylic_pouring/6.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (141, '/data/img/content/thumb/paintings_acrylic_pouring/7.jpg', '/data/img/content/paintings_acrylic_pouring/7.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (142, '/data/img/content/thumb/paintings_acrylic_pouring/8.jpg', '/data/img/content/paintings_acrylic_pouring/8.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (143, '/data/img/content/thumb/paintings_acrylic_pouring/9.jpg', '/data/img/content/paintings_acrylic_pouring/9.jpg', '1', NULL, '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 135, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 136, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 137, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 138, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 139, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 140, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 141, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 142, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 143, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (144, '/data/img/content/thumb/paintings_before_and_after/1.jpg', '/data/img/content/paintings_before_and_after/1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (145, '/data/img/content/thumb/paintings_before_and_after/2.jpg', '/data/img/content/paintings_before_and_after/2.jpg', '1', NULL, '2021-03-27 15:42:53')
+    ;
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 144, 18, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 145, 18, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (146, '/data/img/content/thumb/wallpaintings/1.jpg', '/data/img/content/wallpaintings/1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (147, '/data/img/content/thumb/wallpaintings/2.jpg', '/data/img/content/wallpaintings/2.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (148, '/data/img/content/thumb/wallpaintings/3.jpg', '/data/img/content/wallpaintings/3.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (149, '/data/img/content/thumb/wallpaintings/4.1.jpg', '/data/img/content/wallpaintings/4.1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (150, '/data/img/content/thumb/wallpaintings/4.jpg', '/data/img/content/wallpaintings/4.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (151, '/data/img/content/thumb/wallpaintings/5.jpg', '/data/img/content/wallpaintings/5.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (152, '/data/img/content/thumb/wallpaintings/6.jpg', '/data/img/content/wallpaintings/6.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (153, '/data/img/content/thumb/wallpaintings/7.jpg', '/data/img/content/wallpaintings/7.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (154, '/data/img/content/thumb/wallpaintings/8.jpg', '/data/img/content/wallpaintings/8.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (155, '/data/img/content/thumb/wallpaintings/9.jpg', '/data/img/content/wallpaintings/9.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (156, '/data/img/content/thumb/wallpaintings/10.jpg', '/data/img/content/wallpaintings/10.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (157, '/data/img/content/thumb/wallpaintings/11.jpg', '/data/img/content/wallpaintings/11.jpg', '1', NULL, '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+        (NULL, 146, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 147, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 148, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 149, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 150, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 151, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 152, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 153, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 154, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 155, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 156, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 157, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
