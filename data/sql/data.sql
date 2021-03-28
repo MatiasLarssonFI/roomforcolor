@@ -697,6 +697,38 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
       , (NULL, 157, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
       ;
 
+-- 210328 (1)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (158, '/data/img/content/thumb/wallpaintings_paintings/2019-03.jpg', '/data/img/content/wallpaintings_paintings/2019-03.jpg', '1', NULL, '2021-03-28 15:42:53')
+    , (159, '/data/img/content/thumb/wallpaintings_paintings/2019-04.jpg', '/data/img/content/wallpaintings_paintings/2019-04.jpg', '1', NULL, '2021-03-28 15:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 158, 15, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 159, 15, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+;
+
+-- 210328 (2)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (160, '/data/img/content/thumb/drawings_animals/210328-1.jpeg', '/data/img/content/drawings_animals/210328-1.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (161, '/data/img/content/thumb/drawings_animals/210328-2.jpeg', '/data/img/content/drawings_animals/210328-2.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (162, '/data/img/content/thumb/drawings_animals/210328-3.jpeg', '/data/img/content/drawings_animals/210328-3.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (163, '/data/img/content/thumb/drawings_animals/210328-4.jpeg', '/data/img/content/drawings_animals/210328-4.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (164, '/data/img/content/thumb/drawings_animals/210328-5.jpeg', '/data/img/content/drawings_animals/210328-5.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (165, '/data/img/content/thumb/drawings_animals/210328-6.jpeg', '/data/img/content/drawings_animals/210328-6.jpeg', '1', NULL, '2021-03-28 15:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 160, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 161, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 162, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 163, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 164, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 165, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
