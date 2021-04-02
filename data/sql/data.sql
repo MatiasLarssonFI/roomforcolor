@@ -729,6 +729,68 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
     , (NULL, 165, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
 ;
 
+-- 210402 (1)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (166, '/data/img/content/thumb/drawings_animals/210402a-1.jpg', '/data/img/content/drawings_animals/210402a-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (167, '/data/img/content/thumb/drawings_animals/210402a-2.jpg', '/data/img/content/drawings_animals/210402a-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (168, '/data/img/content/thumb/drawings_animals/210402a-3.jpg', '/data/img/content/drawings_animals/210402a-3.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (169, '/data/img/content/thumb/drawings_animals/210402a-4.jpg', '/data/img/content/drawings_animals/210402a-4.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (170, '/data/img/content/thumb/drawings_animals/210402a-5.jpg', '/data/img/content/drawings_animals/210402a-5.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (171, '/data/img/content/thumb/drawings_animals/210402a-6.jpg', '/data/img/content/drawings_animals/210402a-6.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (172, '/data/img/content/thumb/drawings_animals/210402a-7.jpg', '/data/img/content/drawings_animals/210402a-7.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (173, '/data/img/content/thumb/drawings_animals/210402a-8.jpg', '/data/img/content/drawings_animals/210402a-8.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (174, '/data/img/content/thumb/drawings_animals/210402a-9.jpg', '/data/img/content/drawings_animals/210402a-9.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (175, '/data/img/content/thumb/drawings_portraits/210402p-1.jpg', '/data/img/content/drawings_portraits/210402p-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (176, '/data/img/content/thumb/drawings_portraits/210402p-2.jpg', '/data/img/content/drawings_portraits/210402p-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (177, '/data/img/content/thumb/drawings_additional/210402o-1.jpg', '/data/img/content/drawings_additional/210402o-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (178, '/data/img/content/thumb/drawings_additional/210402o-2.jpg', '/data/img/content/drawings_additional/210402o-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 166, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 167, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 168, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 169, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 170, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 171, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 172, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 173, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 174, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 175, 6, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 176, 6, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 177, 14, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 178, 14, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
+
+-- 210402 (2)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (179, '/data/img/content/thumb/front_page/210402-1.jpg', '/data/img/content/front_page/210402-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (180, '/data/img/content/thumb/front_page/210402-2.jpg', '/data/img/content/front_page/210402-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (181, '/data/img/content/thumb/front_page/210402-3.jpg', '/data/img/content/front_page/210402-3.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+DELETE from gallery_image where gallery_id = 2;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 179, 2, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 180, 2, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 181, 2, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
