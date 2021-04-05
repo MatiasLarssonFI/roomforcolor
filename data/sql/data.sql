@@ -66,15 +66,11 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
 (2, 1, 2, '2016-07-05 00:00:00', '2016-08-10 19:08:52'),
 (3, 3, 2, '2016-07-05 00:00:00', '2016-08-10 19:08:54'),
 (4, 4, 2, '2016-07-05 00:00:00', '1970-01-10 00:00:00'),
-(18, 31, 14, '2016-08-09 22:40:08', '1970-01-10 00:00:00'),
-(19, 32, 14, '2016-08-09 22:40:08', '1970-01-10 00:00:00'),
 (20, 33, 14, '2016-08-09 22:40:08', '1970-01-10 00:00:00'),
 (21, 34, 14, '2016-08-09 22:40:08', '1970-01-10 00:00:00'),
 (22, 35, 14, '2016-08-09 22:40:08', '1970-01-10 00:00:00'),
 (23, 36, 12, '2016-08-09 22:57:29', '1970-01-10 00:00:00'),
 (24, 37, 12, '2016-08-09 22:57:29', '1970-01-10 00:00:00'),
-(25, 38, 12, '2016-08-09 22:57:29', '1970-01-10 00:00:00'),
-(26, 39, 12, '2016-08-09 22:57:29', '1970-01-10 00:00:00'),
 (27, 40, 12, '2016-08-09 22:57:29', '1970-01-10 00:00:00'),
 (28, 41, 12, '2016-08-09 22:57:29', '1970-01-10 00:00:00'),
 (29, 42, 12, '2016-08-09 22:57:29', '1970-01-10 00:00:00'),
@@ -149,12 +145,9 @@ INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `ti
 (106, 119, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (105, 118, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (104, 117, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
-(103, 116, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (102, 115, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (101, 114, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (100, 113, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
-(99, 112, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
-(98, 111, 12, '2017-02-05 00:00:00', '2017-02-04 22:00:00'),
 (120, 133, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
 (119, 132, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
 (118, 131, 15, '2017-02-05 19:03:36', '2017-02-05 17:03:36'),
@@ -228,15 +221,11 @@ INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_ed
 (2, '/data/img/content/thumb/033.jpg', '/data/img/content/kids_rooms/033.jpg', 1, '2016-07-31 15:38:42', '2016-07-04 21:00:00'),
 (3, '/data/img/content/thumb/flower.jpg', '/data/img/content/front_page/flower.jpg', 1, '2016-07-31 15:40:07', '2016-07-04 21:00:00'),
 (4, '/data/img/content/thumb/iron.jpg', '/data/img/content/front_page/iron.jpg', 1, '2016-07-04 21:00:00', '2016-07-04 21:00:00'),
-(31, '/data/img/content/thumb/drawings_additional/001.jpg', '/data/img/content/drawings_additional/001.jpg', 1, '2016-08-09 19:47:44', '1970-01-10 00:00:00'),
-(32, '/data/img/content/thumb/drawings_additional/003.jpg', '/data/img/content/drawings_additional/003.jpg', 1, '2016-08-09 19:47:44', '1970-01-10 00:00:00'),
 (33, '/data/img/content/thumb/drawings_additional/031.jpg', '/data/img/content/drawings_additional/031.jpg', 1, '2016-08-09 19:47:44', '1970-01-10 00:00:00'),
 (34, '/data/img/content/thumb/drawings_additional/032.jpg', '/data/img/content/drawings_additional/032.jpg', 1, '2016-08-09 19:47:44', '1970-01-10 00:00:00'),
 (35, '/data/img/content/thumb/drawings_additional/057.jpg', '/data/img/content/drawings_additional/057.jpg', 1, '2016-08-09 19:47:44', '1970-01-10 00:00:00'),
 (36, '/data/img/content/thumb/drawings_animals/9900026.jpg', '/data/img/content/drawings_animals/9900026.jpg', 1, NULL, '2016-08-09 19:55:01'),
 (37, '/data/img/content/thumb/drawings_animals/9900027.jpg', '/data/img/content/drawings_animals/9900027.jpg', 1, NULL, '2016-08-09 19:55:02'),
-(38, '/data/img/content/thumb/drawings_animals/9900058.jpg', '/data/img/content/drawings_animals/9900058.jpg', 1, NULL, '2016-08-09 19:55:02'),
-(39, '/data/img/content/thumb/drawings_animals/9900059.jpg', '/data/img/content/drawings_animals/9900059.jpg', 1, NULL, '2016-08-09 19:55:02'),
 (40, '/data/img/content/thumb/drawings_animals/9900060.jpg', '/data/img/content/drawings_animals/9900060.jpg', 1, NULL, '2016-08-09 19:55:02'),
 (41, '/data/img/content/thumb/drawings_animals/9900061.jpg', '/data/img/content/drawings_animals/9900061.jpg', 1, NULL, '2016-08-09 19:55:02'),
 (42, '/data/img/content/thumb/drawings_animals/9900097.jpg', '/data/img/content/drawings_animals/9900097.jpg', 1, NULL, '2016-08-09 19:55:02'),
@@ -311,12 +300,9 @@ INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_ed
 (119, '/data/img/content/thumb/drawings_animals/001_12-01-17.jpg', '/data/img/content/drawings_animals/001_12-01-17.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
 (118, '/data/img/content/thumb/drawings_animals/020_Eagle_16-12-16.JPG', '/data/img/content/drawings_animals/020_Eagle_16-12-16.JPG', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
 (117, '/data/img/content/thumb/drawings_animals/018_eagle_15-12-16.JPG', '/data/img/content/drawings_animals/018_eagle_15-12-16.JPG', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
-(116, '/data/img/content/thumb/drawings_animals/017_13-12-16_009_Mountain_blue_bird.JPG', '/data/img/content/drawings_animals/017_13-12-16_009_Mountain_blue_bird.JPG', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
 (115, '/data/img/content/thumb/drawings_animals/014_20-10-16_Harco_Jersey_Sir_William_Laura.jpg', '/data/img/content/drawings_animals/014_20-10-16_Harco_Jersey_Sir_William_Laura.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
 (114, '/data/img/content/thumb/drawings_animals/005_25-01-17.jpg', '/data/img/content/drawings_animals/005_25-01-17.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
 (113, '/data/img/content/thumb/drawings_animals/004_24-01-17-1.jpg', '/data/img/content/drawings_animals/004_24-01-17-1.jpg', 1, '2017-02-05 13:47:44', '2017-02-05 13:47:44'),
-(112, '/data/img/content/thumb/drawings_animals/003_16-01-17.jpg', '/data/img/content/drawings_animals/003_16-01-17.jpg', 1, '2017-02-05 13:38:55', '2017-02-04 22:00:00'),
-(111, '/data/img/content/thumb/drawings_animals/002_13-01-17.jpg', '/data/img/content/drawings_animals/002_13-01-17.jpg', 1, '2017-02-05 13:33:57', '2017-02-04 22:00:00'),
 (133, '/data/img/content/thumb/wallpaintings_paintings/16_24-11-16_Yellow_boots_day.jpg', '/data/img/content/wallpaintings_paintings/16_24-11-16_Yellow_boots_day.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
 (132, '/data/img/content/thumb/wallpaintings_paintings/015_08-11-16_little_bird.jpg', '/data/img/content/wallpaintings_paintings/015_08-11-16_little_bird.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
 (131, '/data/img/content/thumb/wallpaintings_paintings/013_12-10-16-1.jpg', '/data/img/content/wallpaintings_paintings/013_12-10-16-1.jpg', 1, '2017-02-05 16:20:40', '2017-02-05 16:20:40'),
@@ -508,8 +494,8 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (51, 'en', 'ABOUT_PAGE_TITLE', 'About me', NULL, '1970-01-10 00:00:00'),
 (52, 'nl', 'ABOUT_PAGE_TITLE', 'Wie en Wat', NULL, '1970-01-10 00:00:00'),
 (53, 'fi', 'ABOUT_PAGE_TITLE', 'Tietoa minusta', NULL, '1970-01-10 00:00:00'),
-(54, 'en', 'CONTACT_PAGE_TEXT', 'Would You have questions and/or comments? Please fill in this form.\r\nI will get in contact with You as soon as possible.\r\n\r\nWould You rather call? You can use this following number: (+358) 0440610497', NULL, '1970-01-10 00:00:00'),
-(55, 'nl', 'CONTACT_PAGE_TEXT', 'Heeft U vragen en/of opmerkingen? Vul dan het onderstaand formulier in.\r\nIk neem dan zo spoedig mogelijk contact met U op.\r\n\r\nOf wilt U liever direct bellen? Bel dan: (+358) 0440610497', NULL, '1970-01-10 00:00:00'),
+(54, 'en', 'CONTACT_PAGE_TEXT', 'Would You have questions and/or comments? Please fill in this form.\r\nI will get in contact with You as soon as possible.', NULL, '1970-01-10 00:00:00'),
+(55, 'nl', 'CONTACT_PAGE_TEXT', 'Heeft U vragen en/of opmerkingen? Vul dan het onderstaand formulier in.\r\nIk neem dan zo spoedig mogelijk contact met U op.', NULL, '1970-01-10 00:00:00'),
 (56, 'en', 'CONTACT_PLACEHOLDER_MESSAGE', 'Please try to give a complete description.', '2016-06-26 14:27:00', '1970-01-10 00:00:00'),
 (57, 'nl', 'CONTACT_PLACEHOLDER_MESSAGE', 'Geef a.u.b. een zo volledig mogelijke omschrijving.', NULL, '1970-01-10 00:00:00'),
 (58, 'en', 'CONTACT_FIELD_PHONE', 'Telephone number', NULL, '1970-01-10 00:00:00'),
@@ -521,10 +507,10 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (64, 'fi', 'CONTACT_FIELD_PHONE', 'Puhelinnumero', NULL, '1970-01-10 00:00:00'),
 (65, 'fi', 'CONTACT_PLACEHOLDER_MESSAGE', 'Ole hyvä ja yritä kertoa kysymyksesi ja kommenttisi mahdollisimman selvästi.', '2016-08-10 20:03:27', '1970-01-10 00:00:00'),
 (66, 'nl', 'CONTACT_SUBMIT_TEXT', 'Dank je. Ik zal binnenkort contact met u op.', '2016-08-08 17:11:04', '2016-04-02 21:00:00'),
-(67, 'fi', 'CONTACT_PAGE_TEXT', 'Onko sinulla kysymyksiä ja/tai kommentteja? Ole hyvä ja täytä tämä lomake.\nOtan sinun yhteyttä niin pian kuin mahdollista.\n\nHaluatko mieluummin soittaa? Voit myös ottaa yhteyttä: (+358) 0440610497', '2016-08-10 20:02:41', '1970-01-10 00:00:00'),
-(68, 'en', 'NAV_WALLPAINTINGS', 'Wallpaintings', '2016-07-02 11:33:21', '2016-07-01 21:00:00'),
-(69, 'nl', 'NAV_WALLPAINTINGS', 'Muurschilderingen', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
-(70, 'fi', 'NAV_WALLPAINTINGS', 'Seinämaalaukset', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
+(67, 'fi', 'CONTACT_PAGE_TEXT', 'Onko sinulla kysymyksiä ja/tai kommentteja? Ole hyvä ja täytä tämä lomake.\nOtan sinun yhteyttä niin pian kuin mahdollista.', '2016-08-10 20:02:41', '1970-01-10 00:00:00'),
+(68, 'en', 'NAV_WALLPAINTINGS', 'Paintings', '2016-07-02 11:33:21', '2016-07-01 21:00:00'),
+(69, 'nl', 'NAV_WALLPAINTINGS', 'Schilderijen', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
+(70, 'fi', 'NAV_WALLPAINTINGS', 'Maalaukset', '2016-07-02 11:33:24', '2016-07-01 21:00:00'),
 (71, 'fi', 'GALLERY_NO_MORE_IMAGES', 'Ei enempää kuvia.', '2016-07-23 10:36:44', '2016-07-09 21:00:00'),
 (72, 'en', 'GALLERY_NO_MORE_IMAGES', 'No more images.', NULL, '2016-07-09 21:00:00'),
 (73, 'nl', 'GALLERY_NO_MORE_IMAGES', 'Geen afbeeldingen.', NULL, '2016-07-09 21:00:00'),
@@ -601,19 +587,19 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (145, 'nl', 'UP', 'Terug', NULL, '2016-08-02 21:00:00'),
 (146, 'fi', 'UP', 'Ylös', NULL, '2016-08-02 21:00:00'),
 (147, 'fi', 'CONTACT_TEXT_NAME', 'Fiona Ansink', NULL, '2016-08-07 12:37:37'),
-(148, 'fi', 'CONTACT_TEXT_STREET_ADDRESS', 'Valtatie 10', NULL, '2016-08-07 12:37:37'),
+(148, 'fi', 'CONTACT_TEXT_STREET_ADDRESS', 'Värjärinkatu 9', NULL, '2016-08-07 12:37:37'),
 (149, 'fi', 'CONTACT_TEXT_POSTAL_CODE', '03600', NULL, '2016-08-07 12:37:37'),
 (150, 'fi', 'CONTACT_TEXT_CITY', 'Karkkila,', '2016-08-07 16:01:35', '2016-08-07 12:37:37'),
 (151, 'fi', 'CONTACT_TEXT_PHONE', '(00358) 0440610497', NULL, '2016-08-07 12:37:37'),
 (152, 'fi', 'CONTACT_TEXT_BUSINESS_ID', 'Y-tunnus: 2755838-9', NULL, '2016-08-07 12:37:37'),
 (153, 'nl', 'CONTACT_TEXT_NAME', 'Fiona Ansink', NULL, '2016-08-07 12:37:37'),
-(154, 'nl', 'CONTACT_TEXT_STREET_ADDRESS', 'Valtatie 10', NULL, '2016-08-07 12:37:37'),
+(154, 'nl', 'CONTACT_TEXT_STREET_ADDRESS', 'Värjärinkatu 9', NULL, '2016-08-07 12:37:37'),
 (155, 'nl', 'CONTACT_TEXT_POSTAL_CODE', '03600', NULL, '2016-08-07 12:37:37'),
 (156, 'nl', 'CONTACT_TEXT_CITY', 'Karkkila,', '2016-08-07 16:01:41', '2016-08-07 12:37:37'),
 (157, 'nl', 'CONTACT_TEXT_PHONE', '(00358) 0440610497', NULL, '2016-08-07 12:37:37'),
 (158, 'nl', 'CONTACT_TEXT_BUSINESS_ID', 'Zakelijke ID: 2755838-9', NULL, '2016-08-07 12:37:37'),
 (159, 'en', 'CONTACT_TEXT_NAME', 'Fiona Ansink', NULL, '2016-08-07 12:37:37'),
-(160, 'en', 'CONTACT_TEXT_STREET_ADDRESS', 'Valtatie 10', NULL, '2016-08-07 12:37:37'),
+(160, 'en', 'CONTACT_TEXT_STREET_ADDRESS', 'Värjärinkatu 9', NULL, '2016-08-07 12:37:37'),
 (161, 'en', 'CONTACT_TEXT_POSTAL_CODE', '03600', NULL, '2016-08-07 12:37:37'),
 (162, 'en', 'CONTACT_TEXT_CITY', 'Karkkila,', '2016-08-07 16:01:44', '2016-08-07 12:37:37'),
 (163, 'en', 'CONTACT_TEXT_PHONE', '(00358) 0440610497', NULL, '2016-08-07 12:37:37'),
@@ -621,6 +607,189 @@ INSERT INTO `ui_text` (`id`, `language`, `code`, `content`, `time_edited`, `time
 (167, 'nl', 'CONTACT_TEXT_EMAIL_ADDRESS', 'fiona@roomforcolor.fi', NULL, '2017-02-04 22:00:00'),
 (166, 'en', 'CONTACT_TEXT_EMAIL_ADDRESS', 'fiona@roomforcolor.fi', NULL, '2017-02-04 22:00:00'),
 (165, 'fi', 'CONTACT_TEXT_EMAIL_ADDRESS', 'fiona@roomforcolor.fi', NULL, '2017-02-04 22:00:00');
+
+-- 210327
+
+INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES (17, 'wallpaintings', '2021-03-27 14:52:59', NULL);
+
+INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_created`, `time_edited`) VALUES
+      (NULL, '17', 'fi', 'Akryylikaato', '2021-03-27 14:54:25', NULL)
+    , (NULL, '17', 'en', 'Acrylic Pouring', '2021-03-27 14:54:25', NULL)
+    , (NULL, '17', 'nl', 'Acryl gieten', '2021-03-27 14:54:25', NULL)
+    ;
+
+INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES (18, 'wallpaintings', '2021-03-27 14:52:59', NULL);
+
+INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_created`, `time_edited`) VALUES
+      (NULL, '18', 'fi', 'Ennen ja jälkeen', '2021-03-27 14:54:25', NULL)
+    , (NULL, '18', 'en', 'Before and after', '2021-03-27 14:54:25', NULL)
+    , (NULL, '18', 'nl', 'Voor en na', '2021-03-27 14:54:25', NULL)
+    ;
+
+INSERT INTO `gallery` (`id`, `action`, `time_created`, `time_edited`) VALUES (19, 'wallpaintings', '2021-03-27 14:52:59', NULL);
+
+INSERT INTO `gallery_name` (`id`, `gallery_id`, `language`, `content`, `time_created`, `time_edited`) VALUES
+      (NULL, '19', 'fi', 'Seinämaalaukset', '2021-03-27 14:54:25', NULL)
+    , (NULL, '19', 'en', 'Wallpaintings', '2021-03-27 14:54:25', NULL)
+    , (NULL, '19', 'nl', 'Muurschilderingen', '2021-03-27 14:54:25', NULL)
+    ;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (135, '/data/img/content/thumb/paintings_acrylic_pouring/1.jpg', '/data/img/content/paintings_acrylic_pouring/1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (136, '/data/img/content/thumb/paintings_acrylic_pouring/2.jpg', '/data/img/content/paintings_acrylic_pouring/2.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (137, '/data/img/content/thumb/paintings_acrylic_pouring/3.jpg', '/data/img/content/paintings_acrylic_pouring/3.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (138, '/data/img/content/thumb/paintings_acrylic_pouring/4.jpg', '/data/img/content/paintings_acrylic_pouring/4.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (139, '/data/img/content/thumb/paintings_acrylic_pouring/5.jpg', '/data/img/content/paintings_acrylic_pouring/5.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (140, '/data/img/content/thumb/paintings_acrylic_pouring/6.jpg', '/data/img/content/paintings_acrylic_pouring/6.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (141, '/data/img/content/thumb/paintings_acrylic_pouring/7.jpg', '/data/img/content/paintings_acrylic_pouring/7.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (142, '/data/img/content/thumb/paintings_acrylic_pouring/8.jpg', '/data/img/content/paintings_acrylic_pouring/8.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (143, '/data/img/content/thumb/paintings_acrylic_pouring/9.jpg', '/data/img/content/paintings_acrylic_pouring/9.jpg', '1', NULL, '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 135, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 136, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 137, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 138, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 139, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 140, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 141, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 142, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 143, 17, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (144, '/data/img/content/thumb/paintings_before_and_after/1.jpg', '/data/img/content/paintings_before_and_after/1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (145, '/data/img/content/thumb/paintings_before_and_after/2.jpg', '/data/img/content/paintings_before_and_after/2.jpg', '1', NULL, '2021-03-27 15:42:53')
+    ;
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 144, 18, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    , (NULL, 145, 18, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (146, '/data/img/content/thumb/wallpaintings/1.jpg', '/data/img/content/wallpaintings/1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (147, '/data/img/content/thumb/wallpaintings/2.jpg', '/data/img/content/wallpaintings/2.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (148, '/data/img/content/thumb/wallpaintings/3.jpg', '/data/img/content/wallpaintings/3.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (149, '/data/img/content/thumb/wallpaintings/4.1.jpg', '/data/img/content/wallpaintings/4.1.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (150, '/data/img/content/thumb/wallpaintings/4.jpg', '/data/img/content/wallpaintings/4.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (151, '/data/img/content/thumb/wallpaintings/5.jpg', '/data/img/content/wallpaintings/5.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (152, '/data/img/content/thumb/wallpaintings/6.jpg', '/data/img/content/wallpaintings/6.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (153, '/data/img/content/thumb/wallpaintings/7.jpg', '/data/img/content/wallpaintings/7.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (154, '/data/img/content/thumb/wallpaintings/8.jpg', '/data/img/content/wallpaintings/8.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (155, '/data/img/content/thumb/wallpaintings/9.jpg', '/data/img/content/wallpaintings/9.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (156, '/data/img/content/thumb/wallpaintings/10.jpg', '/data/img/content/wallpaintings/10.jpg', '1', NULL, '2021-03-27 15:42:53')
+    , (157, '/data/img/content/thumb/wallpaintings/11.jpg', '/data/img/content/wallpaintings/11.jpg', '1', NULL, '2021-03-27 15:42:53')
+    ;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+        (NULL, 146, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 147, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 148, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 149, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 150, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 151, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 152, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 153, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 154, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 155, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 156, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      , (NULL, 157, 19, '2021-03-27 15:42:53', '2021-03-27 15:42:53')
+      ;
+
+-- 210328 (1)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (158, '/data/img/content/thumb/wallpaintings_paintings/2019-03.jpg', '/data/img/content/wallpaintings_paintings/2019-03.jpg', '1', NULL, '2021-03-28 15:42:53')
+    , (159, '/data/img/content/thumb/wallpaintings_paintings/2019-04.jpg', '/data/img/content/wallpaintings_paintings/2019-04.jpg', '1', NULL, '2021-03-28 15:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 158, 15, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 159, 15, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+;
+
+-- 210328 (2)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (160, '/data/img/content/thumb/drawings_animals/210328-1.jpeg', '/data/img/content/drawings_animals/210328-1.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (161, '/data/img/content/thumb/drawings_animals/210328-2.jpeg', '/data/img/content/drawings_animals/210328-2.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (162, '/data/img/content/thumb/drawings_animals/210328-3.jpeg', '/data/img/content/drawings_animals/210328-3.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (163, '/data/img/content/thumb/drawings_animals/210328-4.jpeg', '/data/img/content/drawings_animals/210328-4.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (164, '/data/img/content/thumb/drawings_animals/210328-5.jpeg', '/data/img/content/drawings_animals/210328-5.jpeg', '1', NULL, '2021-03-28 15:42:53')
+    , (165, '/data/img/content/thumb/drawings_animals/210328-6.jpeg', '/data/img/content/drawings_animals/210328-6.jpeg', '1', NULL, '2021-03-28 15:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 160, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 161, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 162, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 163, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 164, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+    , (NULL, 165, 12, '2021-03-28 15:42:53', '2021-03-28 15:42:53')
+;
+
+-- 210402 (1)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (166, '/data/img/content/thumb/drawings_animals/210402a-1.jpg', '/data/img/content/drawings_animals/210402a-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (167, '/data/img/content/thumb/drawings_animals/210402a-2.jpg', '/data/img/content/drawings_animals/210402a-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (168, '/data/img/content/thumb/drawings_animals/210402a-3.jpg', '/data/img/content/drawings_animals/210402a-3.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (169, '/data/img/content/thumb/drawings_animals/210402a-4.jpg', '/data/img/content/drawings_animals/210402a-4.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (170, '/data/img/content/thumb/drawings_animals/210402a-5.jpg', '/data/img/content/drawings_animals/210402a-5.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (171, '/data/img/content/thumb/drawings_animals/210402a-6.jpg', '/data/img/content/drawings_animals/210402a-6.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (172, '/data/img/content/thumb/drawings_animals/210402a-7.jpg', '/data/img/content/drawings_animals/210402a-7.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (173, '/data/img/content/thumb/drawings_animals/210402a-8.jpg', '/data/img/content/drawings_animals/210402a-8.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (174, '/data/img/content/thumb/drawings_animals/210402a-9.jpg', '/data/img/content/drawings_animals/210402a-9.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (175, '/data/img/content/thumb/drawings_portraits/210402p-1.jpg', '/data/img/content/drawings_portraits/210402p-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (176, '/data/img/content/thumb/drawings_portraits/210402p-2.jpg', '/data/img/content/drawings_portraits/210402p-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (177, '/data/img/content/thumb/drawings_additional/210402o-1.jpg', '/data/img/content/drawings_additional/210402o-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (178, '/data/img/content/thumb/drawings_additional/210402o-2.jpg', '/data/img/content/drawings_additional/210402o-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 166, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 167, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 168, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 169, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 170, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 171, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 172, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 173, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 174, 12, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 175, 6, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 176, 6, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 177, 14, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 178, 14, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
+
+-- 210402 (2)
+
+INSERT INTO `image` (`id`, `thumb_uri`, `original_uri`, `is_published`, `time_edited`, `time_created`) VALUES
+      (179, '/data/img/content/thumb/front_page/210402-1.jpg', '/data/img/content/front_page/210402-1.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (180, '/data/img/content/thumb/front_page/210402-2.jpg', '/data/img/content/front_page/210402-2.jpg', '1', NULL, '2021-04-02 12:42:53')
+    , (181, '/data/img/content/thumb/front_page/210402-3.jpg', '/data/img/content/front_page/210402-3.jpg', '1', NULL, '2021-04-02 12:42:53')
+;
+
+DELETE from gallery_image where gallery_id = 2;
+
+INSERT INTO `gallery_image` (`id`, `image_id`, `gallery_id`, `time_created`, `time_edited`) VALUES
+      (NULL, 179, 2, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 180, 2, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+    , (NULL, 181, 2, '2021-04-02 12:42:53', '2021-04-02 12:42:53')
+;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

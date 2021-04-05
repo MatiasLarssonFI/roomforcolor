@@ -75,7 +75,7 @@ abstract class AbstractView implements IView {
             $text_storage->text("CONTACT_TEXT_STREET_ADDRESS"),
             $text_storage->text("CONTACT_TEXT_POSTAL_CODE"),
             $text_storage->text("CONTACT_TEXT_CITY"),
-            $text_storage->text("CONTACT_TEXT_PHONE"),
+            //$text_storage->text("CONTACT_TEXT_PHONE"),
             $text_storage->text("CONTACT_TEXT_BUSINESS_ID"),
         );
     }
