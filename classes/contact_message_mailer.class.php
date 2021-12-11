@@ -1,21 +1,21 @@
 <?php
 
-require_once(dirname(__FILE__) . "/iemail_message.class.php");
-require_once(dirname(__FILE__) . "/imailer.class.php");
-require_once(dirname(__FILE__) . "/dbif.class.php");
-require_once(dirname(__FILE__) . "/site_config_factory.class.php");
+require_once(__DIR__ . "/iemail_message.class.php");
+require_once(__DIR__ . "/imailer.class.php");
+require_once(__DIR__ . "/dbif.class.php");
+require_once(__DIR__ . "/site_config_factory.class.php");
 
-require_once(dirname(__FILE__) . "/../lib/Twig-1.24.0/Twig-1.24.0/lib/Twig/Autoloader.php");
-require_once(dirname(__FILE__) . "/../lib/PHPMailer-5.2.14/PHPMailerAutoload.php");
-
+require_once(__DIR__ . "/../lib/PHPMailer-5.2.14/PHPMailerAutoload.php");
+require_once(__DIR__ . "/../lib_autoload.php");
 
 class ContactMessageMailer implements IMailer {
     public function send(IEmailMessage $contactmsg) {
         $mail = new PHPMailer;
         
-        \Twig_Autoloader::register();
-        $loader = new \Twig_Loader_Filesystem(dirname(__FILE__) . "/../templates");
-        $twig = new \Twig_Environment($loader, array());
+        $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . "/../templates");
+        $twig = new \Twig\Environment($loader, [
+            "cache" => __DIR__ . "/../../twig_compilation_cache",
+        ]);
         
         $host = \SiteConfigFactory::get()->get_site_config()->host();
         $db = \DBIF::get();
@@ -34,6 +34,9 @@ class ContactMessageMailer implements IMailer {
         
         $mail->Port = 587;
 
+        $html_tmpl = $twig->load("contact_email.html");
+        $text_tmpl = $twig->load("contact_email.txt");
+        
         $mail->addReplyTo($contactmsg->get_email(), $contactmsg->get_name());
         $mail->FromName ='Room for color Contact Form';
         $mail->From = "contactform@{$host}";
@@ -42,8 +45,8 @@ class ContactMessageMailer implements IMailer {
     
         $mail->CharSet = 'UTF-8';
         $mail->Subject = "RFC-CONTACT: {$contactmsg->get_subject()}";
-        $mail->Body    = $twig->render("contact_email.html", array("message" => $contactmsg));
-        $mail->AltBody = $twig->render("contact_email.txt", array("message" => $contactmsg));
+        $mail->Body    = $html_tmpl->render([ "message" => $contactmsg ]);
+        $mail->AltBody = $text_tmpl->render([ "message" => $contactmsg ]);
 
         if(!$mail->send()) {
             file_put_contents(__DIR__ . "/../contact_email_error_log", "{$mail->ErrorInfo}\n", FILE_APPEND);
